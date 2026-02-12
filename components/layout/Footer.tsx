@@ -54,7 +54,7 @@ const instagramImages = [
 const Footer = () => {
   return (
     <Section
-      sectionClassName={`relative pt-15 pb-[65px] bg-[url(/images/footer-index-img.jpg)] bg-cover bg-center -mt-[136px] pt-[254px] pb-[132px]`}
+      sectionClassName={`relative pt-15 pb-[65px] bg-[url(/images/footer-index-img.jpg)] bg-cover bg-center -mt-[136px] pt-[254px] pb-[132px] z-0`}
     >
       <footer className={"bg-transparent"}>
         <div className="flex flex-col items-start justify-center md:justify-between md:flex-row">

@@ -4,7 +4,7 @@ import MainNav from "@/components/layout/MainNav";
 
 const Header = () => {
   return (
-    <Section sectionClassName={""}>
+    <Section>
       <header className={"flex items-center justify-between pt-9.5"}>
         {/*  Logo */}
         <Logo />

@@ -13,8 +13,10 @@ const Section = ({
   childClassName,
 }: SectionProps) => {
   return (
-    <section className={cn("bg-transparent", sectionClassName)}>
-      <div className={cn(`container mx-auto`, childClassName)}>{children}</div>
+    <section className={cn("bg-transparent relative z-10", sectionClassName)}>
+      <div className={cn(`container mx-auto my-3.75`, childClassName)}>
+        {children}
+      </div>
     </section>
   );
 };
