@@ -60,10 +60,6 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
-body {
-  font-family: var(--font-primary), sans-serif;
-}
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -140,4 +136,9 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+body {
+  font-family: var(--font-primary), sans-serif;
+  background-color: #fff;
 }
