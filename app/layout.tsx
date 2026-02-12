@@ -4,6 +4,7 @@ import "./globals.css";
 import React from "react";
 import Chyron from "@/components/header/Chyron";
 import Header from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -39,11 +40,12 @@ export default function RootLayout({
       {/* todo: remove "cz-shortcut-listen="false"" when the hydration issue is resolved. This is a temporary workaround to prevent hydration mismatch warnings in development mode.*/}
 
       <body className={`antialiased`} cz-shortcut-listen="false">
-        <div>
+        <div className={"relative z-10"}>
           <Chyron />
           <Header />
         </div>
-        {children}
+        <main className={"relative z-10"}>{children}</main>
+        <Footer />
       </body>
     </html>
   );
