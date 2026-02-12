@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Open_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import React from "react";
-import Chyron from "@/components/header/Chyron";
-import Header from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import Chyron from "@/components/layout/Chyron";
+import Header from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -40,11 +40,11 @@ export default function RootLayout({
       {/* todo: remove "cz-shortcut-listen="false"" when the hydration issue is resolved. This is a temporary workaround to prevent hydration mismatch warnings in development mode.*/}
 
       <body className={`antialiased`} cz-shortcut-listen="false">
-        <div className={"relative z-10"}>
+        <div>
           <Chyron />
           <Header />
         </div>
-        <main className={"relative z-10"}>{children}</main>
+        <main className={""}>{children}</main>
         <Footer />
       </body>
     </html>
