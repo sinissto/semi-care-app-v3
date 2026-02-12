@@ -1,9 +1,9 @@
-import Section from "@/components/Section";
+import Section from "@/components/layout/Section";
 
 export default function Home() {
   return (
     <>
-      <Section childClassName="bg-gray-100">
+      <Section childClassName="bg-gray-300 p-8 rounded-lg">
         <main>
           <h1 className="text-4xl font-bold mb-4">MAIN PAGE</h1>
           <p className="text-lg mb-4">
