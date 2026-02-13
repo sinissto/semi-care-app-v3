@@ -33,7 +33,7 @@ const OfferSection = () => {
     // todo: Primeniti linear-gradient kada se resi problem sa pozadinom hedera (trenutno se koristi kao obicna bela pozadina zbog problema sa slikom pozadine hedera, i treba prilagoditi kada se heder pozadina reši)
     <Section
       sectionClassName={
-        "mt-[150px] mb-[96px] bg-linear-to-b from-[#fff] to-[#fff]"
+        "md:mt-[30px] lg:mt-[160px] mb-[96px] bg-linear-to-b from-[#fff] to-[#fff]"
       }
     >
       <div
@@ -43,7 +43,7 @@ const OfferSection = () => {
       >
         <h1
           className={
-            "text-5xl/[64px] text-black font-secondary font-normal mb-16.5"
+            "text-[26px]/[30px] lg:text-5xl/[64px] text-black font-secondary font-normal mb-7  md:mb-16.5"
           }
         >
           We offer you the <span className={"text-primary"}>best support</span>
@@ -51,11 +51,14 @@ const OfferSection = () => {
 
         <div
           className={
-            "flex items-center justify-center px-8.25 pt-9.25 pb-13.75"
+            "flex items-center justify-center px-8.25 pt-9.25 flex-wrap lg:flex-nowrap pb-13.75"
           }
         >
           {offers.map((offer, offerIdx) => (
-            <div key={offerIdx} className={"max-w-1/3  px-3.75"}>
+            <div
+              key={offerIdx}
+              className="basis-full md:basis-1/2 lg:basis-1/3 px-3.75 mb-4 lg:mb-0"
+            >
               <div
                 className={
                   "group bg-white flex flex-col items-center px-8.25 pt-9.25 pb-13.75 shadow-[0px_6px_38px_0_#dae0e5] border border-white rounded-4xl hover:bg-primary hover:border-primary transition duration-300"
