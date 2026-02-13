@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import OfferSection from "@/components/OfferSection";
+import { AboutUs } from "@/components/AboutUs";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
 
       {/* Offer section */}
       <OfferSection />
+      <AboutUs />
     </>
   );
 }
