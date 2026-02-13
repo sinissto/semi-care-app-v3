@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import OfferSection from "@/components/OfferSection";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         }
       ></div>
 
+      {/* Hero section */}
       <Hero
         heading={"We give seniors the love they deserve"}
         description={
@@ -19,6 +21,9 @@ export default function Home() {
           alt: "Hero section demo image showing interface components",
         }}
       />
+
+      {/* Offer section */}
+      <OfferSection />
     </>
   );
 }
