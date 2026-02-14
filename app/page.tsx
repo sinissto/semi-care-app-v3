@@ -2,6 +2,7 @@ import { Hero } from "@/components/Hero";
 import OfferSection from "@/components/OfferSection";
 import { AboutUs } from "@/components/AboutUs";
 import Counter from "@/components/Counter";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <OfferSection />
       <AboutUs />
       <Counter />
+      <Services />
     </>
   );
 }
