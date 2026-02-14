@@ -3,6 +3,7 @@ import OfferSection from "@/components/OfferSection";
 import { AboutUs } from "@/components/AboutUs";
 import Counter from "@/components/Counter";
 import Services from "@/components/Services";
+import TestimonialCard from "@/components/Testimonial";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <AboutUs />
       <Counter />
       <Services />
+      <TestimonialCard />
     </>
   );
 }
