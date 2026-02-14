@@ -1,41 +1,96 @@
-import Section from "@/components/layout/Section";
+import React from "react";
+import { FileText, Ambulance, MessageCircle, Phone } from "lucide-react";
 
-const Services = () => {
+import serviceImg from "@/assets/images/service-offer-left-img.png";
+import offerIcon1 from "@/assets/images/offer-icon1.png";
+import offerIcon2 from "@/assets/images/offer-icon2.png";
+import offerIcon3 from "@/assets/images/offer-icon3.png";
+import offerIcon4 from "@/assets/images/offer-icon4.png";
+import Section from "@/components/layout/Section";
+import Tile from "@/components/Tile";
+
+const services = [
+  {
+    icon: offerIcon1,
+    alt: "Medical record icon",
+    title: "Medical Record",
+    desc: "Duis aute irure dolor in reprehen voluptate velit esse cillum.",
+  },
+  {
+    icon: offerIcon2,
+    alt: "Ambulance icon",
+    title: "Ambulance",
+    desc: "Duis aute irure dolor in reprehen voluptate velit esse cillum.",
+  },
+  {
+    icon: offerIcon3,
+    alt: "Doctor icon",
+    title: "Medical Advice",
+    desc: "Duis aute irure dolor in reprehen voluptate velit esse cillum.",
+  },
+  {
+    icon: offerIcon4,
+    alt: "Phone icon",
+    title: "24/7 Support",
+    desc: "Duis aute irure dolor in reprehen voluptate velit esse cillum.",
+  },
+];
+
+export default function ServicesSection() {
   return (
-    <Section>
-      <div
-        className={
-          "flex flex-col items-center justify-center py-6.25 gap-8 mt-20"
-        }
-      >
-        {/* Heading and description paragraph */}
-        <div className={"flex flex-col items-center justify-center mb-22.75"}>
-          <h2 className={"text-5xl/[64px] text-black font-secondary mb-4.25"}>
-            Services We <span className={"text-primary"}>Offer</span>
-          </h2>
-          <p
-            className={
-              "text-[16px]/[24px] text-center text-gray-primary max-w-3/5"
-            }
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
+    <Section sectionClassName={"py-[36px]"}>
+      {/* Header */}
+      <div className="text-center">
+        <h2 className="text-[26px]/[30px] lg:text-[42px]/[44px] xl:text-[48px]/[64px] text-black font-secondary mb-4 xl:mb-4.25">
+          Services We <span className="text-primary">Offer</span>
+        </h2>
+        <p className="text-[16px]/[24px] lg:text-[16px]/[24px] text-gray-primary px-2 lg:max-w-[85%] xl:max-w-[75%] mx-auto mb-5 lg:mb-10 xl:mb-22.75">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+      </div>
+
+      {/* Content */}
+      <div className="grid md:grid-cols-2 gap-6 md:gap-0 items-center">
+        {/* Left Image */}
+        <div className={"flex items-center justify-center px-3.75"}>
+          <figure className={""}>
+            <img
+              src={serviceImg.src}
+              alt="Elder care"
+              className="w-full object-cover overflow-hidden px-2"
+            />
+          </figure>
         </div>
 
-        {/* Part with image on left and service tiles on the right */}
-        <div>
-          {/* Image */}
-          <div></div>
+        {/* Right Services Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 px-3.75">
+          {services.map((service, index) => (
+            // <div key={index}>
+            //   <img
+            //     src={imgSrc.src}
+            //     className="w-10 h-10 text-green-600 mb-3"
+            //   />
+            //   <h3 className="text-xl font-secondary font-semibold mb-2">
+            //     {service.title}
+            //   </h3>
+            //   <p className="text-gray-600 text-sm">{service.desc}</p>
+            // </div>
 
-          {/* Service tiles */}
-          <div></div>
+            <Tile
+              key={index}
+              heading={service.title}
+              description={service.desc}
+              image={service.icon.src}
+              imageAlt={service.alt}
+              onHover={false}
+              className={""}
+            />
+          ))}
         </div>
       </div>
     </Section>
   );
-};
-
-export default Services;
+}
