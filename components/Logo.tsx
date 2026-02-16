@@ -1,15 +1,19 @@
 import Link from "next/link";
-import logoImg from "@/assets/images/sencare-logo2.png";
+import semiCareLogo from "@/assets/images/SemiCareLogo.png";
 import Image from "next/image";
 
 const Logo = () => {
   return (
-    <Link href={"/"}>
+    <Link href={"/"} className={"flex items-center justify-center gap-3"}>
       <Image
-        src={logoImg}
+        src={semiCareLogo}
         alt={"Semi Care Logo"}
-        className={"max-w-full h-auto"}
+        className={"h-15 w-auto"}
       />
+
+      <h2 className={"text-5xl text-black  font-secondary"}>
+        Semi<span className={"text-primary"}>Care</span>
+      </h2>
     </Link>
   );
 };
