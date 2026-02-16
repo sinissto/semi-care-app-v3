@@ -32,7 +32,7 @@ const Hero = ({
     },
   },
   image = {
-    src: "/images/index-banner-right-img.png",
+    src: "/images/hero_img.png",
     alt: "Hero section demo image showing interface components",
   },
   className,

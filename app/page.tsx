@@ -9,20 +9,16 @@ import Blogs from "@/components/Blogs";
 export default function Home() {
   return (
     <>
-      <div
-        className={
-          "absolute inset-0 bg-[url(/images/footer-index-img.jpg)] bg-cover bg-center"
-        }
-      ></div>
+      <div className={"absolute inset-0 bg-[url(/images/footer-index-img.jpg)] bg-cover bg-center"}></div>
 
       {/* Hero section */}
       <Hero
-        heading={{ main: "We give seniors the love they", span: "deserve" }}
+        heading={{ main: "Wir geben Senioren die Liebe, die sie", span: "verdienen" }}
         description={
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+          "Pflege bedeutet für uns mehr als Unterstützung im Alltag. Sie bedeutet Nähe, Respekt und echtes Interesse am Menschen. "
         }
         image={{
-          src: "/images/hero_img.png",
+          src: "/images/hero_image_1.png",
           alt: "Hero section demo image showing interface components",
         }}
       />
@@ -30,10 +26,10 @@ export default function Home() {
       {/* Offer section */}
       <OfferSection />
       <AboutUs />
-      <Counter />
-      <Services />
-      <TestimonialCard />
       <Blogs />
+      {/* <Counter /> */}
+      {/* <Services /> */}
+      <TestimonialCard />
     </>
   );
 }

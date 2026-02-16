@@ -9,52 +9,34 @@ const offers = [
   {
     icon: offerImg1.src,
     alt: "Doctor icon",
-    heading: "Home Care",
-    description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+    heading: "Peritonealdialyse (CAPD)",
+    description: "Eine Peritonealdialyse verändert den Alltag – für Betroffene genauso wie für ihre Angehörigen.",
   },
   {
     icon: offerImg2.src,
-    alt: "Heart in hand icon",
-    heading: "Care Services",
+    alt: "Grundpflege",
+    heading: "Grundpflege",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+      "Die Grundpflege unterstützt Menschen bei ihren täglichen Bedürfnissen und sorgt für Wohlbefinden, Hygiene und Sicherheit.",
   },
   {
     icon: offerImg3.src,
-    alt: "Meds icon",
-    heading: "Medical Escort",
-    description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+    alt: "Behandlungspflege",
+    heading: "Behandlungspflege",
+    description: "Behandlungspflege: medizinische Maßnahmen durch Pflegefachkräfte auf ärztliche Anordnung zu Hause.",
   },
 ];
 
 const OfferSection = () => {
   return (
     // todo: Primeniti linear-gradient kada se resi problem sa pozadinom hedera (trenutno se koristi kao obicna bela pozadina zbog problema sa slikom pozadine hedera, i treba prilagoditi kada se heder pozadina reši)
-    <Section
-      sectionClassName={
-        "sm:mt-[30px] lg:mt-[160px]  bg-linear-to-b from-[#fff] to-[#fff]"
-      }
-    >
-      <div
-        className={
-          "max-w-5xl mx-auto flex flex-col items-center justify-center "
-        }
-      >
-        <h1
-          className={
-            "text-[26px]/[30px] lg:text-5xl/[64px] text-black font-secondary font-normal md:mb-16.5"
-          }
-        >
-          We offer you the <span className={"text-primary"}>best support</span>
+    <Section sectionClassName={"sm:mt-[30px] lg:mt-[160px]  bg-linear-to-b from-[#fff] to-[#fff]"}>
+      <div className={"max-w-5xl mx-auto flex flex-col items-center justify-center "}>
+        <h1 className={"text-[26px]/[30px] lg:text-5xl/[64px] text-black font-secondary font-normal md:mb-16.5"}>
+          Unsere beliebtesten <span className={"text-primary"}>Leistungen</span>
         </h1>
 
-        <div
-          className={
-            "flex items-center justify-center gap-4 px-8.25 pt-9.25 flex-wrap md:flex-nowrap pb-13.75"
-          }
-        >
+        <div className={"flex items-center justify-center gap-4 px-8.25 pt-9.25 flex-wrap md:flex-nowrap pb-13.75"}>
           {offers.map((offer, offerIdx) => (
             // <div
             //   key={offerIdx}

@@ -41,13 +41,11 @@ export default function ServicesSection() {
       {/* Header */}
       <div className="text-center px-3.75 mb-8 lg:mb-10 xl:mb-22.75">
         <h2 className="text-[26px]/[30px] lg:text-[42px]/[44px] xl:text-[48px]/[64px] text-black font-secondary mb-4 xl:mb-4.25">
-          Services We <span className="text-primary">Offer</span>
+          Unsere <span className="text-primary">Leistungen</span>
         </h2>
         <p className="text-[16px]/[24px] lg:text-[16px]/[24px] text-gray-primary px-2 lg:max-w-[85%] xl:max-w-[75%] mx-auto ">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
 
