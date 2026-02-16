@@ -17,7 +17,7 @@ export default function Home() {
 
       {/* Hero section */}
       <Hero
-        heading={"We give seniors the love they deserve"}
+        heading={{ main: "We give seniors the love they", span: "deserve" }}
         description={
           "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
         }

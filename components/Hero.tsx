@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import Section from "@/components/layout/Section";
 
 interface HeroProps {
-  heading: string;
+  heading: { main: string; span: string };
   description: string;
   buttons?: {
     primary?: {
@@ -23,7 +23,7 @@ interface HeroProps {
 }
 
 const Hero = ({
-  heading = "We give seniors the love they deserve",
+  heading = { main: "We give seniors the love they", span: "deserve" },
   description = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
   buttons = {
     primary: {
@@ -42,7 +42,7 @@ const Hero = ({
       <div className="grid items-center gap-6 md:grid-cols-2 lg:gap-8 lg:mt-20 2xl:mt-44">
         <div className="flex flex-col items-center text-center md:items-start md:text-left sm:mb-8 lg:ml-18 xl:ml-20">
           <h1 className="text-[34px]/[38px] sm:text-[42px]/[44px] md:text-[46px]/[52px] lg:text-[62px]/[68px] xl:text-[70px]/[70px] text-black font-secondary  text-pretty -tracking-[0.1px] text-center md:text-left mt-7.5 mb-3.75 lg:mb-6.5">
-            {heading}
+            {heading.main} <span className="text-primary">{heading.span}</span>
           </h1>
           <p className="max-w-[95%] sm:max-w-[75%] md:max-w-[90%] lg:max-w-[95%] text-[16px]/[26px] sm:text-[18px]/[30px] md:text-[18px]/[30px] lg:text-[20px]/[34px] text-center md:text-left mx-auto md:mx-0 text-gray-primary mb-6 lg:mb-7.75">
             {description}
