@@ -1,7 +1,6 @@
 import React from "react";
-import { FileText, Ambulance, MessageCircle, Phone } from "lucide-react";
 
-import serviceImg from "@/assets/images/service-offer-left-img.png";
+import serviceImg from "@/assets/images/andrija_zuki_no_bg.png";
 import offerIcon1 from "@/assets/images/offer-icon1.png";
 import offerIcon2 from "@/assets/images/offer-icon2.png";
 import offerIcon3 from "@/assets/images/offer-icon3.png";
@@ -40,11 +39,11 @@ export default function ServicesSection() {
   return (
     <Section sectionClassName={"py-[36px]"}>
       {/* Header */}
-      <div className="text-center">
+      <div className="text-center px-3.75 mb-8 lg:mb-10 xl:mb-22.75">
         <h2 className="text-[26px]/[30px] lg:text-[42px]/[44px] xl:text-[48px]/[64px] text-black font-secondary mb-4 xl:mb-4.25">
           Services We <span className="text-primary">Offer</span>
         </h2>
-        <p className="text-[16px]/[24px] lg:text-[16px]/[24px] text-gray-primary px-2 lg:max-w-[85%] xl:max-w-[75%] mx-auto mb-5 lg:mb-10 xl:mb-22.75">
+        <p className="text-[16px]/[24px] lg:text-[16px]/[24px] text-gray-primary px-2 lg:max-w-[85%] xl:max-w-[75%] mx-auto ">
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
           dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est
@@ -55,12 +54,12 @@ export default function ServicesSection() {
       {/* Content */}
       <div className="grid md:grid-cols-2 gap-6 md:gap-0 items-center">
         {/* Left Image */}
-        <div className={"flex items-center justify-center px-3.75"}>
-          <figure className={""}>
+        <div className={"px-8 "}>
+          <figure className={"flex items-center justify-center px-3.75 "}>
             <img
               src={serviceImg.src}
               alt="Elder care"
-              className="w-full object-cover overflow-hidden px-2"
+              className="w-[80%] object-cover overflow-hidden rounded-[50px] border-[6px] border-secondary"
             />
           </figure>
         </div>

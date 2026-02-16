@@ -20,7 +20,7 @@ const AboutUs = ({ className }: AboutUsProps) => {
       sectionClassName={cn("pb-[30px] lg:pb-32 relative z-20", className)}
     >
       <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
-        <div className="flex flex-col items-center gap-5 text-center md:items-start md:text-left lg:ml-18 ">
+        <div className="flex flex-col items-center gap-5 text-center md:items-start md:text-left lg:ml-18 px-3.75">
           <h1 className="text-4xl/[64px] text-black font-secondary font-semibolds text-pretty -tracking-[0.1px] text-center lg:text-left lg:text-5xl/[64px] mb-6.5">
             Welcome to Semi<span className={"text-primary"}>Care</span>
           </h1>

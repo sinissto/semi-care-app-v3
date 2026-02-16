@@ -29,7 +29,7 @@ const Tile = ({
       {/* shadow-[0px_6px_38px_0_#dae0e5] */}
       <div
         className={cn(
-          `group bg-white flex flex-col items-center px-4 py-4 lg:px-0 lg:py-0 2xl:px-8.25 2xl:pt-9.25 2xl:pb-13.75 border border-white rounded-4xl h-full lg:mb-[27px] ${
+          `group bg-white flex flex-col items-center p-4 sm:p-7.5 lg:p-0 2xl:px-8.25 2xl:pt-9.25 2xl:pb-13.75 border border-white rounded-4xl h-full lg:mb-[27px] ${
             onHover ? "hover:bg-primary hover:border-primary" : ""
           } transition duration-300`,
           backgroundColor
@@ -37,11 +37,11 @@ const Tile = ({
       >
         {/* icon */}
         <div
-          className={`flex flex-col items-center rounded-4xl ${
+          className={`flex flex-col items-center rounded-4xl p-6 mb-1 ${
             onHover ? "group-hover:bg-white" : ""
           }`}
         >
-          <figure className={"md:mb-3 lg:mb-5"}>
+          <figure>
             <img src={image} alt={imageAlt} />
           </figure>
         </div>
@@ -49,7 +49,7 @@ const Tile = ({
         {/* heading */}
         <h5
           className={
-            "text-xl/[22px] lg:text-[30px]/[30px] text-black text-center font-secondary -tracking-[0.9px] lg:mb-[26px] mb-2.5"
+            "text-[24px]/[22px] lg:text-[30px]/[30px] text-black text-center font-secondary -tracking-[0.9px] mb-2.5 lg:mb-6.5"
           }
         >
           {heading}
@@ -58,7 +58,7 @@ const Tile = ({
         {/* description */}
         <p
           className={
-            "text-[16px]/[24px] sm:text-[14px]/[22px] lg:text-[16px]/[24px] text-black text-center"
+            "max-w-[95%] text-[16px]/[24px] lg:text-[16px]/[24px] text-black text-center"
           }
         >
           {description}
