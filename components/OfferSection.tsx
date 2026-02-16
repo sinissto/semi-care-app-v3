@@ -34,7 +34,7 @@ const OfferSection = () => {
     // todo: Primeniti linear-gradient kada se resi problem sa pozadinom hedera (trenutno se koristi kao obicna bela pozadina zbog problema sa slikom pozadine hedera, i treba prilagoditi kada se heder pozadina reši)
     <Section
       sectionClassName={
-        "md:mt-[30px] lg:mt-[160px] mb-[96px] bg-linear-to-b from-[#fff] to-[#fff]"
+        "sm:mt-[30px] lg:mt-[160px]  bg-linear-to-b from-[#fff] to-[#fff]"
       }
     >
       <div
@@ -44,7 +44,7 @@ const OfferSection = () => {
       >
         <h1
           className={
-            "text-[26px]/[30px] lg:text-5xl/[64px] text-black font-secondary font-normal mb-7  md:mb-16.5"
+            "text-[26px]/[30px] lg:text-5xl/[64px] text-black font-secondary font-normal md:mb-16.5"
           }
         >
           We offer you the <span className={"text-primary"}>best support</span>
@@ -52,7 +52,7 @@ const OfferSection = () => {
 
         <div
           className={
-            "flex items-center justify-center px-8.25 pt-9.25 flex-wrap lg:flex-nowrap pb-13.75"
+            "flex items-center justify-center gap-4 px-8.25 pt-9.25 flex-wrap md:flex-nowrap pb-13.75"
           }
         >
           {offers.map((offer, offerIdx) => (
@@ -95,6 +95,7 @@ const OfferSection = () => {
               description={offer.description}
               image={offer.icon}
               imageAlt={offer.alt}
+              onHover={true}
               backgroundColor={"lg:p-6 lg:mb-0 shadow-[0px_6px_38px_0_#dae0e5]"}
             />
           ))}
