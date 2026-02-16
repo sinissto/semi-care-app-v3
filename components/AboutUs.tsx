@@ -55,7 +55,7 @@ const AboutUs = ({ className }: AboutUsProps) => {
           </div>
         </div>
         <div className="w-full h-full flex items-center justify-center">
-          <div className={"relative w-93"}>
+          <div className={"relative w-[80%]"}>
             <figure className="relative z-20">
               <img
                 src={aboutUsImg.src}
