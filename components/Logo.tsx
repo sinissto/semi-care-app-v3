@@ -4,7 +4,10 @@ import Image from "next/image";
 
 const Logo = () => {
   return (
-    <Link href={"/"} className={"flex items-center justify-center gap-3"}>
+    <Link
+      href={"/"}
+      className={"flex items-center justify-center gap-3 relative"}
+    >
       <Image
         src={semiCareLogo}
         alt={"Semi Care Logo"}

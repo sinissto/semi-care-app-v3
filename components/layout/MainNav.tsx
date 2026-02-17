@@ -1,5 +1,6 @@
 import { menusData } from "@/lib/menuData";
 import DesktopMenu from "@/components/layout/DesktopMenu";
+import MobileMenu from "@/components/layout/MobileMenu";
 
 const MainNav = () => {
   return (
@@ -18,6 +19,9 @@ const MainNav = () => {
         ))}
       </ul>
       {/*Mobile nav*/}
+      <div className={"lg:hidden"}>
+        <MobileMenu menus={menusData} />
+      </div>
     </>
   );
 };
