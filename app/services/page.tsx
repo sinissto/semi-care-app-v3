@@ -1,11 +1,11 @@
 import Section from "@/components/layout/Section";
 
-const AboutPage = () => {
+const ServicesPage = () => {
   return (
     <Section>
-      <h1>ABOUT US</h1>
+      <h1>SERVICES PAGE</h1>
     </Section>
   );
 };
 
-export default AboutPage;
+export default ServicesPage;

@@ -2,42 +2,51 @@
 
 import { ComponentType, SVGProps, useEffect, useRef, useState } from "react";
 import {
-  BellDot,
-  Bolt,
-  BookOpenText,
-  BriefcaseBusiness,
   ChevronDown,
-  CircleHelp,
-  Database,
-  Dessert,
-  Figma,
-  Images,
-  Lock,
-  MapPin,
   Menu,
-  MessageCircle,
-  PanelsTopLeft,
-  PanelTop,
-  Play,
-  ShieldPlus,
-  ShoppingBag,
-  TriangleAlert,
-  Users,
   X,
+  Cross,
+  Orbit,
+  Syringe,
+  BrushCleaning,
+  HandHeart,
+  MoveUpRightIcon,
+
+  // BellDot,
+  // Bolt,
+  // BookOpenText,
+  // BriefcaseBusiness,
+  // CircleHelp,
+  // Database,
+  // Dessert,
+  // Figma,
+  // Images,
+  // Lock,
+  // MapPin,
+  // MessageCircle,
+  // PanelsTopLeft,
+  // PanelTop,
+  // Play,
+  // ShieldPlus,
+  // ShoppingBag,
+  // TriangleAlert,
+  // Users,
 } from "lucide-react";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface SubMenuItemProps {
   name: string;
   desc?: string;
   // now a serializable key that will be mapped to an icon component on the client
   icon?: string;
+  url: string;
 }
 
 interface MenuItemProps {
+  url: string;
   name: string;
-  subMenuHeading?: string[];
   subMenu?: SubMenuItemProps[];
   gridCols?: number;
 }
@@ -48,25 +57,32 @@ interface MenuProps {
 
 // map string keys from the menu data to actual lucide-react components
 const ICON_MAP: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
-  PanelsTopLeft: PanelsTopLeft,
-  Bolt: Bolt,
-  PanelTop: PanelTop,
-  Database: Database,
-  ShoppingBag: ShoppingBag,
-  MapPin: MapPin,
-  BellDot: BellDot,
-  Play: Play,
-  BookOpenText: BookOpenText,
-  Figma: Figma,
-  BriefcaseBusiness: BriefcaseBusiness,
-  Images: Images,
-  CircleHelp: CircleHelp,
-  MessageCircle: MessageCircle,
-  TriangleAlert: TriangleAlert,
-  ShieldPlus: ShieldPlus,
-  Users: Users,
-  Dessert: Dessert,
-  Lock: Lock,
+  Cross: Cross,
+  Orbit: Orbit,
+  Syringe: Syringe,
+  BrushCleaning: BrushCleaning,
+  HandHeart: HandHeart,
+  MoveUpRightIcon: MoveUpRightIcon,
+
+  // PanelsTopLeft: PanelsTopLeft,
+  // Bolt: Bolt,
+  // PanelTop: PanelTop,
+  // Database: Database,
+  // ShoppingBag: ShoppingBag,
+  // MapPin: MapPin,
+  // BellDot: BellDot,
+  // Play: Play,
+  // BookOpenText: BookOpenText,
+  // Figma: Figma,
+  // BriefcaseBusiness: BriefcaseBusiness,
+  // Images: Images,
+  // CircleHelp: CircleHelp,
+  // MessageCircle: MessageCircle,
+  // TriangleAlert: TriangleAlert,
+  // ShieldPlus: ShieldPlus,
+  // Users: Users,
+  // Dessert: Dessert,
+  // Lock: Lock,
 };
 
 const MobileMenu = ({ menus }: MenuProps) => {
@@ -239,24 +255,28 @@ const MobileMenu = ({ menus }: MenuProps) => {
             <div className={"relative mt-32 "}>
               <ul className={"w-fit h-full flex flex-col mx-auto relative"}>
                 {menus.map(
-                  ({ name, subMenu }: MenuItemProps, index: number) => {
+                  ({ name, subMenu, url }: MenuItemProps, index: number) => {
                     const hasSubMenu = subMenu && subMenu.length > 0;
                     const isClicked = clicked === index;
                     return (
                       <li key={index} className={"w-[90vw] md:w-[400px]"}>
-                        <span
-                          className={
-                            "flex items-center p-4 hover:bg-white/20 rounded-md cursor-pointer font-bold relative"
-                          }
-                          onClick={() => setClicked(isClicked ? null : index)}
-                        >
-                          {name}
-                          {hasSubMenu && (
-                            <ChevronDown
-                              className={`ml-auto ${isClicked && "rotate-180"}`}
-                            />
-                          )}
-                        </span>
+                        <Link href={url}>
+                          <span
+                            className={
+                              "flex items-center p-4 hover:bg-white/20 rounded-md cursor-pointer font-bold relative"
+                            }
+                            onClick={() => setClicked(isClicked ? null : index)}
+                          >
+                            {name}
+                            {hasSubMenu && (
+                              <ChevronDown
+                                className={`ml-auto ${
+                                  isClicked && "rotate-180"
+                                }`}
+                              />
+                            )}
+                          </span>
+                        </Link>
 
                         {hasSubMenu && (
                           // render SubMenu always; it handles open/closed via max-height to avoid insertion jumps

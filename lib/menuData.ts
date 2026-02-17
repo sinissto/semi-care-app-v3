@@ -1,130 +1,61 @@
 export const menusData = [
   {
-    name: "Features",
-    subMenuHeading: ["Design", "Scale"],
-    subMenu: [
-      {
-        name: "Design",
-        desc: "Responsive design",
-        icon: "PanelsTopLeft",
-      },
-      {
-        name: "Management",
-        desc: "Site control",
-        icon: "Bolt",
-      },
-      {
-        name: "Navigation",
-        desc: "Link pages",
-        icon: "PanelTop",
-      },
-      {
-        name: "CMS",
-        desc: "Management content",
-        icon: "Database",
-      },
-    ],
-    gridCols: 2,
+    url: "/",
+    name: "Home",
   },
   {
-    name: "Resources",
-    subMenuHeading: ["Get started", "Programs", "Recent"],
+    url: "/services",
+    name: "Services",
     subMenu: [
       {
-        name: "Markplace",
-        desc: "Browse templates",
-        icon: "ShoppingBag",
+        name: "Peritoneal Dialysis (CAPD)",
+        desc: "Providing comprehensive peritoneal dialysis care",
+        icon: "Cross",
+        url: "/services/peritoneal-dialysis",
       },
       {
-        name: "Meetups",
-        desc: "Upcoming events",
-        icon: "MapPin",
+        name: "Basic care",
+        desc: "Offering essential healthcare services",
+        icon: "Orbit",
+        url: "/services/basic-care",
       },
       {
-        name: "Updates",
-        desc: "Changelog",
-        icon: "BellDot",
+        name: "Treatment care",
+        desc: "Medical treatment by nursing professionals at home",
+        icon: "Syringe",
+        url: "/services/treatment-care",
       },
       {
-        name: "Academy",
-        desc: "Watch lessions",
-        icon: "Play",
+        name: "Domestic services",
+        desc: "Assisting with daily household tasks and chores",
+        icon: "BrushCleaning",
+        url: "/services/domestic-services",
       },
       {
-        name: "Blog",
-        desc: "Posts",
-        icon: "BookOpenText",
+        name: "Respite care",
+        desc: "Care for your loved ones, giving you a much-needed break",
+        icon: "HandHeart",
+        url: "/services/respite-care",
       },
       {
-        name: "Figma",
-        desc: "Plugin",
-        icon: "Figma",
-      },
-      {
-        name: "Experts",
-        desc: "Jobs",
-        icon: "BriefcaseBusiness",
-      },
-      {
-        name: "Gallery",
-        desc: "Images",
-        icon: "Images",
-      },
-    ],
-    gridCols: 3,
-  },
-  {
-    name: "Support",
-    subMenu: [
-      {
-        name: "Help",
-        desc: "Center",
-        icon: "CircleHelp",
-      },
-      {
-        name: "Community",
-        desc: "Project help",
-        icon: "MessageCircle",
-      },
-      {
-        name: "Emergency",
-        desc: "Urgent issues",
-        icon: "TriangleAlert",
+        name: "All services",
+        desc: "All services we provide to make your life easier and better",
+        icon: "MoveUpRightIcon",
+        url: "/services",
       },
     ],
     gridCols: 1,
   },
   {
-    name: "Enterprise",
-    subMenuHeading: ["Overview", "Features"],
-    subMenu: [
-      {
-        name: "Enterprise",
-        desc: "Overview",
-        icon: "ShieldPlus",
-      },
-      {
-        name: "Collaboration",
-        desc: "Design together",
-        icon: "Users",
-      },
-      {
-        name: "Customers",
-        desc: "Stories",
-        icon: "Dessert",
-      },
-      {
-        name: "Security",
-        desc: "Your site secured",
-        icon: "Lock",
-      },
-    ],
-    gridCols: 2,
+    url: "/fqa",
+    name: "FQA",
   },
   {
-    name: "Pricing",
+    url: "/about",
+    name: "About us",
   },
   {
+    url: "/contact",
     name: "Contact",
   },
 ];

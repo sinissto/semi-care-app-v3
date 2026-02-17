@@ -3,25 +3,31 @@
 import { SVGProps, ComponentType, useState } from "react";
 import {
   ChevronDown,
-  PanelsTopLeft,
-  Bolt,
-  PanelTop,
-  Database,
-  ShoppingBag,
-  MapPin,
-  BellDot,
-  Play,
-  BookOpenText,
-  Figma,
-  BriefcaseBusiness,
-  Images,
-  CircleHelp,
-  MessageCircle,
-  TriangleAlert,
-  ShieldPlus,
-  Users,
-  Dessert,
-  Lock,
+  // PanelsTopLeft,
+  // Bolt,
+  // PanelTop,
+  // Database,
+  // ShoppingBag,
+  // MapPin,
+  // BellDot,
+  // Play,
+  // BookOpenText,
+  // Figma,
+  // BriefcaseBusiness,
+  // Images,
+  // CircleHelp,
+  // MessageCircle,
+  // TriangleAlert,
+  // ShieldPlus,
+  // Users,
+  // Dessert,
+  // Lock,
+  Cross,
+  Orbit,
+  Syringe,
+  BrushCleaning,
+  HandHeart,
+  MoveUpRightIcon,
 } from "lucide-react";
 
 interface SubMenuItemProps {
@@ -29,13 +35,14 @@ interface SubMenuItemProps {
   desc?: string;
   // now a serializable key that will be mapped to an icon component on the client
   icon?: string;
+  url: string;
 }
 
 interface MenuItemProps {
   name: string;
-  subMenuHeading?: string[];
   subMenu?: SubMenuItemProps[];
   gridCols?: number;
+  url: string;
 }
 
 interface MenuProps {
@@ -44,31 +51,40 @@ interface MenuProps {
 
 // map string keys from the menu data to actual lucide-react components
 const ICON_MAP: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
-  PanelsTopLeft: PanelsTopLeft,
-  Bolt: Bolt,
-  PanelTop: PanelTop,
-  Database: Database,
-  ShoppingBag: ShoppingBag,
-  MapPin: MapPin,
-  BellDot: BellDot,
-  Play: Play,
-  BookOpenText: BookOpenText,
-  Figma: Figma,
-  BriefcaseBusiness: BriefcaseBusiness,
-  Images: Images,
-  CircleHelp: CircleHelp,
-  MessageCircle: MessageCircle,
-  TriangleAlert: TriangleAlert,
-  ShieldPlus: ShieldPlus,
-  Users: Users,
-  Dessert: Dessert,
-  Lock: Lock,
+  Cross: Cross,
+  Orbit: Orbit,
+  Syringe: Syringe,
+  BrushCleaning: BrushCleaning,
+  HandHeart: HandHeart,
+  MoveUpRightIcon: MoveUpRightIcon,
+
+  // PanelsTopLeft: PanelsTopLeft,
+  // Bolt: Bolt,
+  // PanelTop: PanelTop,
+  // Database: Database,
+  // ShoppingBag: ShoppingBag,
+  // MapPin: MapPin,
+  // BellDot: BellDot,
+  // Play: Play,
+  // BookOpenText: BookOpenText,
+  // Figma: Figma,
+  // BriefcaseBusiness: BriefcaseBusiness,
+  // Images: Images,
+  // CircleHelp: CircleHelp,
+  // MessageCircle: MessageCircle,
+  // TriangleAlert: TriangleAlert,
+  // ShieldPlus: ShieldPlus,
+  // Users: Users,
+  // Dessert: Dessert,
+  // Lock: Lock,
 };
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const DesktopMenu = ({ menu }: MenuProps) => {
   const [isHover, setIsHover] = useState(false);
-  const { name, subMenu, gridCols } = menu;
+  const { name, subMenu, gridCols, url } = menu;
+  console.log(url);
   const hasSubMenu = subMenu && subMenu.length > 0;
 
   const toggleHoverMenu = () => {
@@ -101,20 +117,22 @@ const DesktopMenu = ({ menu }: MenuProps) => {
       onHoverStart={toggleHoverMenu}
       onHoverEnd={toggleHoverMenu}
     >
-      <span
-        className={
-          "flex items-center gap-1 cursor-pointer px-3 py-1 rounded-xl hover:bg-primary/50"
-        }
-      >
-        {name}
-        {hasSubMenu && (
-          <ChevronDown
-            className={
-              "mt-px group-hover/link:rotate-180 transition duration-500"
-            }
-          />
-        )}
-      </span>
+      <Link href={url}>
+        <span
+          className={
+            "flex items-center gap-1 cursor-pointer px-3 py-1 rounded-xl hover:bg-primary/50"
+          }
+        >
+          {name}
+          {hasSubMenu && (
+            <ChevronDown
+              className={
+                "mt-px group-hover/link:rotate-180 transition duration-500"
+              }
+            />
+          )}
+        </span>
+      </Link>
 
       {hasSubMenu && (
         <motion.div
@@ -143,41 +161,43 @@ const DesktopMenu = ({ menu }: MenuProps) => {
                   key={submenu.name}
                   className={"relative cursor-pointer z-30"}
                 >
-                  <div
-                    className={
-                      "flex items-center gap-x-4 p-2 rounded-md group/menuBox"
-                    }
-                  >
-                    {/* render icon component when provided */}
+                  <Link href={submenu.url}>
                     <div
                       className={
-                        "bg-secondary/20 w-fit p-2 rounded-md group-hover/menuBox:bg-primary/50 group-hover/menuBox:text-gray-primary transition duration-300"
+                        "flex items-center gap-x-4 p-2 rounded-md group/menuBox"
                       }
                     >
-                      {submenu.icon &&
-                        ICON_MAP[submenu.icon] &&
-                        (() => {
-                          const Icon = ICON_MAP[submenu.icon];
-                          return <Icon className="w-5 h-5" aria-hidden />;
-                        })()}
-                    </div>
-                    <div>
-                      <h6
+                      {/* render icon component when provided */}
+                      <div
                         className={
-                          "capitalize font-semibold group-hover/menuBox:text-secondary break-words whitespace-normal"
+                          "bg-secondary/20 w-fit p-2 rounded-md group-hover/menuBox:bg-primary/50 group-hover/menuBox:text-gray-primary transition duration-300"
                         }
                       >
-                        {submenu.name}
-                      </h6>
-                      <p
-                        className={
-                          "text-sm group-hover/menuBox:text-primary text-gray-400 break-words whitespace-normal"
-                        }
-                      >
-                        {submenu.desc}
-                      </p>
+                        {submenu.icon &&
+                          ICON_MAP[submenu.icon] &&
+                          (() => {
+                            const Icon = ICON_MAP[submenu.icon];
+                            return <Icon className="w-5 h-5" aria-hidden />;
+                          })()}
+                      </div>
+                      <div>
+                        <h6
+                          className={
+                            "capitalize font-semibold group-hover/menuBox:text-secondary break-words whitespace-normal"
+                          }
+                        >
+                          {submenu.name}
+                        </h6>
+                        <p
+                          className={
+                            "text-sm group-hover/menuBox:text-primary text-gray-400 break-words whitespace-normal"
+                          }
+                        >
+                          {submenu.desc}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>
