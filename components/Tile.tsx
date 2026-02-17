@@ -30,7 +30,7 @@ const Tile = ({
       <div
         className={cn(
           `group bg-white flex flex-col items-center p-4 sm:p-7.5 lg:p-0 2xl:px-8.25 2xl:pt-9.25 2xl:pb-13.75 border border-white rounded-4xl h-full lg:mb-[27px] ${
-            onHover ? "hover:bg-primary hover:border-primary" : ""
+            onHover ? "hover:bg-[var(--color-primary-light)] hover:border-[var(--color-primary-light)]" : ""
           } transition duration-300`,
           backgroundColor
         )}

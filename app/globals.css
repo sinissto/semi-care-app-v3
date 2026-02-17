@@ -8,7 +8,8 @@
   --font-secondary: var(--font-dm-serif), serif, Georgia;
 
   /*--color-primary: #8bc53e;*/
-  --color-primary: #00acce;
+  --color-primary: #1b71ab;
+  --color-primary-light: #e8f2fa;
   /*--color-secondary: #8b4fb9;*/
   /*--color-secondary: #c80076;*/
   --color-secondary: #fa3677;
@@ -65,6 +66,7 @@
 }
 
 :root {
+  --color-primary-light: #e8f2fa;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);

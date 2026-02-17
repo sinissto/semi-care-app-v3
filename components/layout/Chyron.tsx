@@ -16,33 +16,22 @@ const Chyron = () => {
           </ChyronIcon>
           {/* Text and phone */}
           <p className={"text-gray-primary text-[14px]/[24px] "}>
-            <span>For a free consultation:</span>
-            <a href={"tel:+123456789"} className={"ml-0.75 font-semibold"}>
-              0800 123 45 67 890
+            <span>Für eine kostenlose Beratung:</span>
+            <a href={"tel:08957074219"} className={"ml-0.75 font-semibold"}>
+              089 5707 42 19
             </a>
           </p>
         </div>
 
         {/* Email and Login */}
-        <div
-          className={
-            "flex-1 flex items-center justify-between md:flex-0 md:justify-normal  gap-5.5"
-          }
-        >
-          <div className={"flex items-center gap-2.5"}>
-            {/* Icon Phone */}
+        <div className={"flex-1 flex items-center justify-between md:flex-0 md:justify-normal  gap-5.5"}>
+          <div className={"flex items-center gap-2.5 min-w-0"}>
             <ChyronIcon>
-              <FaEnvelope className={"text-white"} />
+              <FaEnvelope className={"text-white size-3.5 shrink-0"} />
             </ChyronIcon>
-            {/* Text and phone */}
             <p className={"text-gray-primary text-[14px]/[24px]"}>
-              <a
-                href={"mailto:info@sencare.com"}
-                className={
-                  "text-[14px]/[18px] font-semibold hover:text-primary"
-                }
-              >
-                info@sencare.com
+              <a href={"mailto:info@semi-care.de"} className={"text-[14px]/[18px] font-semibold hover:text-primary whitespace-nowrap"}>
+                info@semi-care.de
               </a>
             </p>
           </div>
@@ -53,12 +42,8 @@ const Chyron = () => {
               <FaUser className={"text-white"} />
             </ChyronIcon>
             {/* Text and phone */}
-            <p
-              className={
-                "text-[14px]/[18px] text-secondary-dark font-semibold hover:text-primary"
-              }
-            >
-              <Link href={"/login"}>Login</Link>
+            <p className={"text-[14px]/[18px] text-secondary-dark font-semibold hover:text-primary"}>
+              <Link href={"/login"}>Anmelden</Link>
             </p>
           </div>
         </div>
@@ -73,7 +58,7 @@ const ChyronIcon = ({ children }: { children: ReactNode }) => {
   return (
     <div
       className={
-        "bg-secondary w-7.5 h-7.5 flex items-center justify-center rounded-full"
+        "bg-secondary w-7.5 h-7.5 flex-shrink-0 flex items-center justify-center rounded-full"
       }
     >
       {children}
