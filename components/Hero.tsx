@@ -38,7 +38,7 @@ const Hero = ({
   className,
 }: HeroProps) => {
   return (
-    <Section sectionClassName={cn("pb-[30px] relative z-20", className)}>
+    <Section sectionClassName={cn("pb-[30px] relative", className)}>
       <div className="grid items-center gap-6 md:grid-cols-2 lg:gap-8 lg:mt-20 2xl:mt-44">
         <div className="flex flex-col items-center text-center md:items-start md:text-left sm:mb-8 lg:ml-18 xl:ml-20">
           <h1 className="text-[34px]/[38px] sm:text-[42px]/[44px] md:text-[46px]/[52px] lg:text-[62px]/[68px] xl:text-[70px]/[70px] text-black font-secondary  text-pretty -tracking-[0.1px] text-center md:text-left mt-7.5 mb-3.75 lg:mb-6.5">
