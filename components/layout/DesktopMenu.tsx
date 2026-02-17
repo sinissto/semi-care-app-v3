@@ -64,6 +64,7 @@ const ICON_MAP: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   Dessert: Dessert,
   Lock: Lock,
 };
+import { motion } from "motion/react";
 
 const DesktopMenu = ({ menu }: MenuProps) => {
   const [isHover, setIsHover] = useState(false);
@@ -74,11 +75,31 @@ const DesktopMenu = ({ menu }: MenuProps) => {
     setIsHover((prev) => !prev);
   };
 
+  // animation variants for the submenu
+  const subMenuAnimate = {
+    enter: {
+      opacity: 1,
+      rotateX: 0,
+      transition: {
+        duration: 0.25,
+      },
+      display: "block",
+    },
+    exit: {
+      opacity: 0,
+      rotateX: -15,
+      transition: {
+        duration: 0.2,
+      },
+      display: "none",
+    },
+  };
+
   return (
-    <li
-      className={"group/link font-semibold"}
-      onMouseEnter={toggleHoverMenu}
-      onMouseOut={toggleHoverMenu}
+    <motion.li
+      className={"group/link font-semibold overflow-visible"}
+      onHoverStart={toggleHoverMenu}
+      onHoverEnd={toggleHoverMenu}
     >
       <span
         className={
@@ -96,66 +117,74 @@ const DesktopMenu = ({ menu }: MenuProps) => {
       </span>
 
       {hasSubMenu && (
-        <div
+        <motion.div
+          // span the full header area to avoid clipping; inner container is centered with max-width
           className={
-            "absolute top-24 p-3.75 rounded-[6px] origin-[50%_-170px] backdrop-blur-2xl bg-secondary/4"
+            "absolute   p-3.75 rounded-[6px] origin-[50%_-170px] backdrop-blur-2xl bg-secondary/4"
           }
+          // avoid applying initial animation styles during hydration
+          initial={false}
+          animate={isHover ? "enter" : "exit"}
+          variants={subMenuAnimate}
         >
-          <div
-            className={`grid gap-7 ${
-              gridCols === 3
-                ? "grid-cols-3"
-                : gridCols === 2
-                ? "grid-cols-2"
-                : "grid-cols-1"
-            }`}
-          >
-            {subMenu?.map((submenu) => (
-              <div
-                key={submenu.name}
-                className={"relative cursor-pointer z-30"}
-              >
+          {/* center inner container and limit max width so grid can expand without being clipped */}
+          <div className={"w-fit"}>
+            <div
+              className={`grid gap-7 ${
+                gridCols === 3
+                  ? "grid-cols-3"
+                  : gridCols === 2
+                  ? "grid-cols-2"
+                  : "grid-cols-1"
+              }`}
+            >
+              {subMenu?.map((submenu) => (
                 <div
-                  className={
-                    "flex items-center gap-x-4 p-2 rounded-md group/menuBox"
-                  }
+                  key={submenu.name}
+                  className={"relative cursor-pointer z-30"}
                 >
-                  {/* render icon component when provided */}
                   <div
                     className={
-                      "bg-secondary/20 w-fit p-2 rounded-md group-hover/menuBox:bg-primary/50 group-hover/menuBox:text-gray-primary transition duration-300"
+                      "flex items-center gap-x-4 p-2 rounded-md group/menuBox"
                     }
                   >
-                    {submenu.icon &&
-                      ICON_MAP[submenu.icon] &&
-                      (() => {
-                        const Icon = ICON_MAP[submenu.icon];
-                        return <Icon className="w-5 h-5" aria-hidden />;
-                      })()}
-                  </div>
-                  <div>
-                    <h6
+                    {/* render icon component when provided */}
+                    <div
                       className={
-                        "font-semibold group-hover/menuBox:text-secondary"
+                        "bg-secondary/20 w-fit p-2 rounded-md group-hover/menuBox:bg-primary/50 group-hover/menuBox:text-gray-primary transition duration-300"
                       }
                     >
-                      {submenu.name}
-                    </h6>
-                    <p
-                      className={
-                        "text-sm group-hover/menuBox:text-primary text-gray-400"
-                      }
-                    >
-                      {submenu.desc}
-                    </p>
+                      {submenu.icon &&
+                        ICON_MAP[submenu.icon] &&
+                        (() => {
+                          const Icon = ICON_MAP[submenu.icon];
+                          return <Icon className="w-5 h-5" aria-hidden />;
+                        })()}
+                    </div>
+                    <div>
+                      <h6
+                        className={
+                          "capitalize font-semibold group-hover/menuBox:text-secondary break-words whitespace-normal"
+                        }
+                      >
+                        {submenu.name}
+                      </h6>
+                      <p
+                        className={
+                          "text-sm group-hover/menuBox:text-primary text-gray-400 break-words whitespace-normal"
+                        }
+                      >
+                        {submenu.desc}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        </motion.div>
       )}
-    </li>
+    </motion.li>
   );
 };
 
