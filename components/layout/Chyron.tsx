@@ -6,7 +6,7 @@ import Section from "@/components/layout/Section";
 
 const Chyron = () => {
   return (
-    <Section>
+    <Section sectionClassName={"lg:my-0"} childClassName={"my-0"}>
       <div className={"flex items-center justify-between p-3.75 shadow-chyron"}>
         {/* Tel */}
         <div className={"hidden md:flex items-center gap-2.5"}>
@@ -24,13 +24,22 @@ const Chyron = () => {
         </div>
 
         {/* Email and Login */}
-        <div className={"flex-1 flex items-center justify-between md:flex-0 md:justify-normal  gap-5.5"}>
+        <div
+          className={
+            "flex-1 flex items-center justify-between md:flex-0 md:justify-normal  gap-5.5"
+          }
+        >
           <div className={"flex items-center gap-2.5 min-w-0"}>
             <ChyronIcon>
               <FaEnvelope className={"text-white size-3.5 shrink-0"} />
             </ChyronIcon>
             <p className={"text-gray-primary text-[14px]/[24px]"}>
-              <a href={"mailto:info@semi-care.de"} className={"text-[14px]/[18px] font-semibold hover:text-primary whitespace-nowrap"}>
+              <a
+                href={"mailto:info@semi-care.de"}
+                className={
+                  "text-[14px]/[18px] font-semibold hover:text-primary whitespace-nowrap"
+                }
+              >
                 info@semi-care.de
               </a>
             </p>
@@ -42,7 +51,11 @@ const Chyron = () => {
               <FaUser className={"text-white"} />
             </ChyronIcon>
             {/* Text and phone */}
-            <p className={"text-[14px]/[18px] text-secondary-dark font-semibold hover:text-primary"}>
+            <p
+              className={
+                "text-[14px]/[18px] text-secondary-dark font-semibold hover:text-primary"
+              }
+            >
               <Link href={"/login"}>Anmelden</Link>
             </p>
           </div>

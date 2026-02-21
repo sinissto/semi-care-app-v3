@@ -22,7 +22,6 @@ const pageLinks = {
     { label: "Leistungen", url: "/leistungen" },
     { label: "FAQ", url: "/faq" },
     { label: "Kontakt", url: "/kontakt" },
-    
   ],
 };
 
@@ -54,7 +53,7 @@ const instagramImages = [
 const Footer = () => {
   return (
     <Section
-      sectionClassName={`relative pt-15 pb-[65px] bg-[url(/images/footer-index-img.jpg)] bg-cover bg-center -mt-[136px] pt-[254px] pb-[132px] z-0`}
+      sectionClassName={`relative pb-[65px] bg-[url(/images/footer-index-img.jpg)] bg-cover bg-center lg:mb-0 pt-[65px] z-0`}
     >
       <footer className={"bg-transparent"}>
         <div className="flex flex-col items-start justify-center md:justify-between md:flex-row">
@@ -87,11 +86,18 @@ const Footer = () => {
 
           {/* USEFUL LINKS */}
           <div className={"flex-1 px-3.75 hidden lg:block"}>
-            <h4 className="text-2xl text-black font-normal font-secondary mt-2.5 mb-16.5">Nützliche Links</h4>
+            <h4 className="text-2xl text-black font-normal font-secondary mt-2.5 mb-16.5">
+              Nützliche Links
+            </h4>
             <ul className="space-y-4 text-muted-foreground">
               {pageLinks.links.map((link, linkIdx) => (
                 <li key={linkIdx} className="font-medium ">
-                  <Link href={link.url} className={"text-[16px]/[5px] text-gray-primary font-normal pl-0.75 hover:text-primary"}>
+                  <Link
+                    href={link.url}
+                    className={
+                      "text-[16px]/[5px] text-gray-primary font-normal pl-0.75 hover:text-primary"
+                    }
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -100,38 +106,68 @@ const Footer = () => {
           </div>
 
           {/* CONTACT INFO */}
-          <div className={"flex-1 flex flex-col items-center md:items-start mx-auto md:mx-0 px-3.75"}>
-            <h4 className="text-2xl text-black font-normal font-secondary mt-2.5 mb-2.5 md:mb-16.5">Kontakt</h4>
+          <div
+            className={
+              "flex-1 flex flex-col items-center md:items-start mx-auto md:mx-0 px-3.75"
+            }
+          >
+            <h4 className="text-2xl text-black font-normal font-secondary mt-2.5 mb-2.5 md:mb-16.5">
+              Kontakt
+            </h4>
             <ul className="space-y-4 text-muted-foreground">
               <li className="font-medium mb-4 flex flex-col items-center md:items-start">
-                <h5 className={"text-[16px]/[16px] text-primary text-center font-normal mb-1.75"}>Adresse:</h5>
+                <h5
+                  className={
+                    "text-[16px]/[16px] text-primary text-center font-normal mb-1.75"
+                  }
+                >
+                  Adresse:
+                </h5>
                 <a
                   type={"text"}
                   href={`https://maps.google.com/?q=${contactInfos.address}`}
                   target={"_blank"}
-                  className={"text-[16px]/[16px] font-normal text-gray-primary hover:text-primary"}
+                  className={
+                    "text-[16px]/[16px] font-normal text-gray-primary hover:text-primary"
+                  }
                 >
                   {contactInfos.address}
                 </a>
               </li>
 
               <li className="font-medium mb-4 flex flex-col items-center md:items-start">
-                <h5 className={"text-[16px]/[16px] text-primary font-normal mb-1.75"}>Email:</h5>
+                <h5
+                  className={
+                    "text-[16px]/[16px] text-primary font-normal mb-1.75"
+                  }
+                >
+                  Email:
+                </h5>
                 <a
                   type={"email"}
                   href={`mailto:${contactInfos.email}`}
-                  className={"text-[16px]/[16px] font-normal text-gray-primary hover:text-primary"}
+                  className={
+                    "text-[16px]/[16px] font-normal text-gray-primary hover:text-primary"
+                  }
                 >
                   {contactInfos.email}
                 </a>
               </li>
 
               <li className="font-medium mb-4 flex flex-col items-center md:items-start">
-                <h5 className={"text-[16px]/[16px] text-primary font-normal mb-1.75"}>Telefon:</h5>
+                <h5
+                  className={
+                    "text-[16px]/[16px] text-primary font-normal mb-1.75"
+                  }
+                >
+                  Telefon:
+                </h5>
                 <a
                   type={"text"}
                   href={`tel:${contactInfos.phone}`}
-                  className={"text-[16px]/[16px] font-normal text-gray-primary hover:text-primary"}
+                  className={
+                    "text-[16px]/[16px] font-normal text-gray-primary hover:text-primary"
+                  }
                 >
                   {contactInfos.phone}
                 </a>
@@ -139,9 +175,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Instagram */}
+          {/* Social */}
           <div className={"flex-1 px-3.75 mx-auto"}>
-            <h4 className="text-2xl text-black  text-center font-normal font-secondary mt-5 md:mt-2.5 mb-5 md:mb-16.5">
+            <h4 className="text-2xl text-black  font-normal font-secondary mt-5 md:mt-2.5 mb-5 md:mb-16.5">
               Soziale Medien
             </h4>
             <div className={"flex items-start"}>

@@ -1,12 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
-
-import { cn } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
 import Section from "@/components/layout/Section";
 
-import aboutUsImg from "@/assets/images/semira_i_baba_rounded.png";
+import aboutUsImg from "@/assets/images/ja i zuki.png";
 import topGreenImg from "@/assets/images/video-section-top-img.png";
 import bottomPurpleImg from "@/assets/images/video-section-bottom-img.png";
 
@@ -16,7 +13,7 @@ interface AboutUsProps {
 
 const AboutUs = ({ className }: AboutUsProps) => {
   return (
-    <Section sectionClassName={cn("pb-[30px] lg:pb-32 relative ", className)}>
+    <Section sectionClassName={"relative"}>
       <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
         <div className="flex flex-col items-center gap-5 text-center md:items-start md:text-left lg:ml-18 px-3.75">
           <h1 className="text-4xl/[64px] text-black font-secondary font-semibolds text-pretty -tracking-[0.1px] text-center lg:text-left lg:text-5xl/[64px] mb-6.5">
@@ -57,7 +54,7 @@ const AboutUs = ({ className }: AboutUsProps) => {
               <img
                 src={aboutUsImg.src}
                 alt={"Image of doctor with play button at the center"}
-                className="w-full h-auto"
+                className="w-full h-auto rounded-[40px] border-8 border-white"
               />
             </figure>
 
