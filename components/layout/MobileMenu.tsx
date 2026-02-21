@@ -11,30 +11,11 @@ import {
   BrushCleaning,
   HandHeart,
   MoveUpRightIcon,
-
-  // BellDot,
-  // Bolt,
-  // BookOpenText,
-  // BriefcaseBusiness,
-  // CircleHelp,
-  // Database,
-  // Dessert,
-  // Figma,
-  // Images,
-  // Lock,
-  // MapPin,
-  // MessageCircle,
-  // PanelsTopLeft,
-  // PanelTop,
-  // Play,
-  // ShieldPlus,
-  // ShoppingBag,
-  // TriangleAlert,
-  // Users,
 } from "lucide-react";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Logo from "@/components/Logo";
 
 interface SubMenuItemProps {
   name: string;
@@ -160,13 +141,15 @@ const MobileMenu = ({ menus }: MenuProps) => {
                 "flex items-center gap-3 p-2 rounded-md hover:bg-white/20 cursor-pointer gap-x-2"
               }
             >
-              {IconComponent && <IconComponent className="w-5 h-5" />}
-              <div>
-                <p className={"font-semibold"}>{it.name}</p>
-                {it.desc && (
-                  <p className={"text-sm text-primary/70"}>{it.desc}</p>
-                )}
-              </div>
+              <Link href={it.url}>
+                {IconComponent && <IconComponent className="w-5 h-5" />}
+                <div>
+                  <p className={"font-semibold"}>{it.name}</p>
+                  {it.desc && (
+                    <p className={"text-sm text-primary/70"}>{it.desc}</p>
+                  )}
+                </div>
+              </Link>
             </li>
           );
         })}
@@ -229,7 +212,7 @@ const MobileMenu = ({ menus }: MenuProps) => {
   return (
     <>
       <div className={"flex"}>
-        <Button onClick={toggleDrawer} className={"relative z-50"}>
+        <Button onClick={toggleDrawer} className={"relative "}>
           {isOpen ? <X /> : <Menu />}
         </Button>
       </div>
@@ -243,7 +226,7 @@ const MobileMenu = ({ menus }: MenuProps) => {
             exit={{ x: "-100%" }}
             transition={{ duration: 0.3 }}
             className={
-              "bg-secondary/50 backdrop-blur-sm text-primary p-6 fixed left-0 right-0 top-16 bottom-0 overflow-y-auto z-40 "
+              "bg-white backdrop-blur-sm text-primary p-4 fixed left-0 right-0 top-16 bottom-0 overflow-y-auto z-40 "
             }
             role="dialog"
             aria-modal="true"
@@ -252,14 +235,25 @@ const MobileMenu = ({ menus }: MenuProps) => {
               if (e.target === e.currentTarget) setIsOpen(false);
             }}
           >
-            <div className={"relative mt-32 "}>
+            <div
+              className={
+                "container mx-auto flex items-center justify-between px-4 mt-[48px]"
+              }
+            >
+              <Logo imgClassName={"h-[50px]"} textClassName={"text-3xl"} />
+              <Button onClick={toggleDrawer} className={"relative "}>
+                {isOpen ? <X /> : <Menu />}
+              </Button>
+            </div>
+
+            <div className={"relative mt-10"}>
               <ul className={"w-fit h-full flex flex-col mx-auto relative"}>
                 {menus.map(
                   ({ name, subMenu, url }: MenuItemProps, index: number) => {
                     const hasSubMenu = subMenu && subMenu.length > 0;
                     const isClicked = clicked === index;
                     return (
-                      <li key={index} className={"w-[90vw] md:w-[400px]"}>
+                      <li key={index} className={"max-w-100"}>
                         <Link href={url}>
                           <span
                             className={

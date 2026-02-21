@@ -138,7 +138,7 @@ const DesktopMenu = ({ menu }: MenuProps) => {
         <motion.div
           // span the full header area to avoid clipping; inner container is centered with max-width
           className={
-            "absolute   p-3.75 rounded-[6px] origin-[50%_-170px] backdrop-blur-2xl bg-secondary/4"
+            "absolute   p-3.75 rounded-[6px] origin-[50%_-170px] backdrop-blur-2xl bg-white"
           }
           // avoid applying initial animation styles during hydration
           initial={false}
@@ -164,13 +164,13 @@ const DesktopMenu = ({ menu }: MenuProps) => {
                   <Link href={submenu.url}>
                     <div
                       className={
-                        "flex items-center gap-x-4 p-2 rounded-md group/menuBox"
+                        "flex items-center gap-x-4 p-2 rounded-md group/menuBox hover:bg-secondary/20 transition duration-300"
                       }
                     >
                       {/* render icon component when provided */}
                       <div
                         className={
-                          "bg-secondary/20 w-fit p-2 rounded-md group-hover/menuBox:bg-primary/50 group-hover/menuBox:text-gray-primary transition duration-300"
+                          "bg-secondary/20  p-2 rounded-md group-hover/menuBox:bg-primary/80 group-hover/menuBox:text-white transition duration-300"
                         }
                       >
                         {submenu.icon &&

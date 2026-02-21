@@ -10,7 +10,7 @@ const Header = () => {
         className={"flex flex-row items-center justify-between pt-9.5 px-4 "}
       >
         {/*  Logo */}
-        <Logo />
+        <Logo imgClassName={"h-[50px]"} textClassName={"text-3xl"} />
 
         {/* Main navigation and Book btn */}
         <MainNav />
