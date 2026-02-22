@@ -4,6 +4,8 @@ import { useParams } from "next/navigation";
 import { useAppContext } from "@/hooks/useAppContext";
 
 import Section from "@/components/layout/Section";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const ServiceDetailsPage = () => {
   const { services } = useAppContext().services;
@@ -17,9 +19,20 @@ const ServiceDetailsPage = () => {
     (service) => service.slug.toLowerCase() === needle
   );
 
-  if (!service) return null;
-
-  console.log(service);
+  if (!service) {
+    return (
+      <Section>
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-16 text-center px-4 mb-4 sm:mb-6 md:mb-8 lg:mb-16">
+          <h1 className="max-w-3xl text-5xl text-primary font-semibold text-pretty md:text-6xl">
+            No service found!
+          </h1>
+          <Button variant={"outline"}>
+            <Link href={"/services"}>Go to all services</Link>
+          </Button>
+        </div>
+      </Section>
+    );
+  }
 
   const { title, images, description, serviceList } = service;
   return (
