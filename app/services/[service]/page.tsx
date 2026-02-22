@@ -1,43 +1,35 @@
 "use client";
 
+import { useParams } from "next/navigation";
 import { useAppContext } from "@/hooks/useAppContext";
 
 import Section from "@/components/layout/Section";
-import { useParams } from "next/navigation";
-
-interface ServiceDetailsPageProps {
-  id: number;
-  icon: string;
-  slug: string;
-  title: string;
-  description: string[];
-  serviceList: string[];
-  images: { src: string; alt: string }[];
-  url: string;
-}
 
 const ServiceDetailsPage = () => {
   const { services } = useAppContext().services;
   const params = useParams();
-  console.log(params);
-  console.log(services);
-  if (services.length === 0) return;
 
-  const service: ServiceDetailsPageProps = services.find(
-    (service) => service.slug.toLowerCase() === params.service.toLowerCase()
+  if (!services || services.length === 0) return null;
+
+  const needle = String(params?.service).toLowerCase();
+
+  const service = services.find(
+    (service) => service.slug.toLowerCase() === needle
   );
+
+  if (!service) return null;
 
   console.log(service);
 
   const { title, images, description, serviceList } = service;
   return (
     <Section>
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-16 text-center px-4 mb-4 sm:mb-6 md:mb-8 lg:mb-16">
         <h1 className="max-w-3xl text-5xl text-primary font-semibold text-pretty md:text-6xl">
           {title}
         </h1>
 
-        <div className="flex items-center gap-3 text-sm md:text-base"></div>
+        {/*<div className="flex items-center gap-3 text-sm md:text-base"></div>*/}
         <img
           src={images[0].src}
           alt="placeholder"
@@ -45,7 +37,7 @@ const ServiceDetailsPage = () => {
         />
       </div>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="mx-auto prose max-w-3xl dark:prose-invert">
           {description.map((paragraph, index) => (
             <p
