@@ -1,7 +1,7 @@
 import React from "react";
 import Section from "@/components/layout/Section";
 import CAPD from "@/assets/images/capd.png";
-import grundpflege from "@/assets/images/grundpflege.png"
+import grundpflege from "@/assets/images/grundpflege.png";
 import behandlungspflege from "@/assets/images/Behandlungspflege.png";
 import haushaltsversorgung from "@/assets/images/Hauswirtschaftliche.png";
 import betreuungsleistungen from "@/assets/images/Betreuungsleistungen.png";
@@ -68,18 +68,24 @@ const Blogs = () => {
         {blogs.map((blog) => (
           <div
             key={blog.id}
-            className="h-full flex flex-col bg-gray-50 rounded-3xl shadow-md overflow-hidden hover:shadow-xl hover:bg-[var(--color-primary-light)] transition duration-300 px-3.5"
+            className="h-full flex flex-col bg-gray-50 rounded-3xl shadow-md overflow-hidden hover:shadow-xl hover:bg-[var(--color-primary-light)] transition duration-300"
           >
             {/* Image */}
-            <figure className={"mb-6 lg:mb-10.75"}>
-              <img src={blog.image} alt={blog.title} className="w-full object-cover" />
+            <figure className={"w-full mb-6 lg:mb-10.75"}>
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="w-full object-cover"
+              />
             </figure>
 
             {/* Content */}
             <div className="pb-8 xl:px-8 text-center flex flex-col flex-1 ">
               {/* <p className="text-[14px]/[20px] text-secondary-dark mb-2.5 lg:mb-4.25">{blog.date}</p> */}
               <h5
-                className={"text-[22px]/[26px] lg:text-[26px] xl:text-[30px]/[34px] font-secondary text-black mb-3.75 lg:mb-6.25"}
+                className={
+                  "text-[22px]/[26px] lg:text-[26px] xl:text-[30px]/[34px] font-secondary text-black mb-3.75 lg:mb-6.25"
+                }
               >
                 {blog.title}
               </h5>
