@@ -84,7 +84,7 @@ import Link from "next/link";
 const DesktopMenu = ({ menu }: MenuProps) => {
   const [isHover, setIsHover] = useState(false);
   const { name, subMenu, gridCols, url } = menu;
-  console.log(url);
+
   const hasSubMenu = subMenu && subMenu.length > 0;
 
   const toggleHoverMenu = () => {

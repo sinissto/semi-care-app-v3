@@ -40,4 +40,4 @@ const ServicesHero = () => {
   );
 };
 
-export { ServicesHero };
+export default ServicesHero;

@@ -6,8 +6,6 @@ import ServiceCard from "@/components/services/ServiceCard";
 const ServicesList = () => {
   const { services } = useAppContext().services;
 
-  console.log(services);
-
   return (
     <Section>
       <div
