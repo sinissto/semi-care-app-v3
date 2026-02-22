@@ -1,4 +1,4 @@
-import { menusData } from "@/lib/menuData";
+import { menusData } from "@/store/menuData";
 import DesktopMenu from "@/components/layout/DesktopMenu";
 import MobileMenu from "@/components/layout/MobileMenu";
 

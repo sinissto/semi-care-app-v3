@@ -46,10 +46,10 @@ export const menusData = [
     ],
     gridCols: 1,
   },
-  {
-    url: "/fqa",
-    name: "FQA",
-  },
+  // {
+  //   url: "/fqa",
+  //   name: "FQA",
+  // },
   {
     url: "/about",
     name: "About us",
