@@ -6,7 +6,7 @@ import Section from "@/components/layout/Section";
 
 const Chyron = () => {
   return (
-    <Section sectionClassName={"lg:my-0"} childClassName={"my-0"}>
+    <Section sectionClassName={"lg:my-0"} childClassName={"mt-0"}>
       <div className={"flex items-center justify-between p-3.75 shadow-chyron"}>
         {/* Tel */}
         <div className={"hidden md:flex items-center gap-2.5"}>

@@ -11,7 +11,7 @@ const Logo = ({
 }) => {
   return (
     <Link
-      href={"/public"}
+      href={"/"}
       className={"flex items-center justify-center gap-3 relative"}
     >
       <Image
