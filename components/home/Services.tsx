@@ -1,6 +1,6 @@
 import React from "react";
 
-import serviceImg from "@/assets/images/andrija_zuki_no_bg.png";
+import serviceImg from "@/assets/images/about_us/andrija_zuki_no_bg.png";
 import offerIcon1 from "@/assets/images/offer-icon1.png";
 import offerIcon2 from "@/assets/images/offer-icon2.png";
 import offerIcon3 from "@/assets/images/offer-icon3.png";
@@ -44,8 +44,10 @@ export default function ServicesSection() {
           Unsere <span className="text-primary">Leistungen</span>
         </h2>
         <p className="text-[16px]/[24px] lg:text-[16px]/[24px] text-gray-primary px-2 lg:max-w-[85%] xl:max-w-[75%] mx-auto ">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
         </p>
       </div>
 
