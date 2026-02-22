@@ -15,7 +15,7 @@ import {
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Logo from "@/components/Logo";
+import Logo from "@/components/layout/Logo";
 
 interface SubMenuItemProps {
   name: string;

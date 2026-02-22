@@ -1,5 +1,5 @@
 import Section from "@/components/layout/Section";
-import Logo from "@/components/Logo";
+import Logo from "@/components/layout/Logo";
 import MainNav from "@/components/layout/MainNav";
 
 const Header = () => {

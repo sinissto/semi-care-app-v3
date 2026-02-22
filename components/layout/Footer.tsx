@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Section from "@/components/layout/Section";
-import Logo from "@/components/Logo";
+import Logo from "@/components/layout/Logo";
 
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";

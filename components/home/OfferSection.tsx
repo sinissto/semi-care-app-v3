@@ -31,7 +31,6 @@ const offers = [
 
 const OfferSection = () => {
   return (
-    // todo: Primeniti linear-gradient kada se resi problem sa pozadinom hedera (trenutno se koristi kao obicna bela pozadina zbog problema sa slikom pozadine hedera, i treba prilagoditi kada se heder pozadina reši)
     <Section
       sectionClassName={"sm:mt-[30px] bg-linear-to-b from-[#fff] to-[#fff]"}
     >
@@ -50,7 +49,7 @@ const OfferSection = () => {
 
         <div
           className={
-            "flex items-center justify-center gap-4 px-8.25 pt-9.25 flex-wrap md:flex-nowrap pb-13.75"
+            "flex  justify-center gap-4 px-8.25 pt-9.25 flex-wrap md:flex-nowrap pb-13.75"
           }
         >
           {offers.map((offer, offerIdx) => (
@@ -95,6 +94,7 @@ const OfferSection = () => {
               imageAlt={offer.alt}
               onHover={true}
               backgroundColor={"lg:p-6 lg:mb-0 shadow-[0px_6px_38px_0_#dae0e5]"}
+              className={"w-[33%]"}
             />
           ))}
         </div>
