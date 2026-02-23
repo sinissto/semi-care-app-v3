@@ -14,13 +14,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "radix-ui";
 import { Controller, useForm } from "react-hook-form";
+import { sendMessage } from "@/actions/contact";
 
 const emailRegex =
   /^(?=.{1,254}$)(?=.{1,64}@)(?!.*\.\.)[A-Za-z0-9._%+-]+@(?!-)(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$/;
 
 interface ContactFormValues {
-  firstname: string;
-  lastname: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone: string;
   service: string;
@@ -31,8 +32,8 @@ const ContactForm = () => {
   // Provide defaultValues so controlled components start with a value
   const form = useForm<ContactFormValues>({
     defaultValues: {
-      firstname: "",
-      lastname: "",
+      firstName: "",
+      lastName: "",
       email: "",
       phone: "",
       service: "",
@@ -45,7 +46,19 @@ const ContactForm = () => {
   const { errors } = formState;
 
   const onSubmit = (data: ContactFormValues) => {
-    console.log("Form Data:", data);
+    const formatedService = data.service
+      ? data.service
+          .split("_")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ")
+      : "No service selected";
+
+    const formatedData = {
+      ...data,
+      service: formatedService,
+    };
+
+    sendMessage(formatedData);
   };
 
   return (
@@ -66,7 +79,7 @@ const ContactForm = () => {
               id={"firstname"}
               type={"text"}
               placeholder="First Name"
-              {...register("firstname", {
+              {...register("firstName", {
                 required: {
                   value: true,
                   message: "First name is required",
@@ -74,7 +87,7 @@ const ContactForm = () => {
               })}
               className={"bg-white"}
             />
-            {errors.firstname && <p>{errors.firstname.message}</p>}
+            {errors.firstName && <p>{errors.firstName.message}</p>}
           </div>
 
           <div>
@@ -82,7 +95,7 @@ const ContactForm = () => {
               id={"lastname"}
               type={"text"}
               placeholder="Last Name"
-              {...register("lastname", {
+              {...register("lastName", {
                 required: {
                   value: true,
                   message: "Last name is required",
@@ -90,7 +103,7 @@ const ContactForm = () => {
               })}
               className={"bg-white"}
             />
-            {errors.lastname && <p>{errors.lastname.message}</p>}
+            {errors.lastName && <p>{errors.lastName.message}</p>}
           </div>
           <div>
             <Input
@@ -136,7 +149,7 @@ const ContactForm = () => {
               <SelectContent position={"popper"}>
                 <SelectGroup>
                   <SelectLabel>Select a service</SelectLabel>
-                  <SelectItem value={"peritoneal_dialysis"}>
+                  <SelectItem value={"peritoneal_dialysis_(CADP)"}>
                     Peritoneal Dialysis (CAPD)
                   </SelectItem>
                   <SelectItem value={"basic_care"}>Basic care</SelectItem>
