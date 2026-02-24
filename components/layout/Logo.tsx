@@ -21,7 +21,7 @@ const Logo = ({
       />
 
       <h2 className={`${textClassName} lg:text-5xl text-black  font-secondary`}>
-        Semi<span className={"text-primary"}>Care</span>
+        Semi<span className={"text-secondary"}>Care</span>
       </h2>
     </Link>
   );
