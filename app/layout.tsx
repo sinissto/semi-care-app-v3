@@ -24,6 +24,9 @@ const dmSerifDisplay = DM_Serif_Display({
 export const metadata: Metadata = {
   title: "Semi Care",
   description: "Home page of Semi Care",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

@@ -22,12 +22,27 @@ export const sendMessage = async (data: {
 }): Promise<SendResult> => {
   try {
     const resend = getResendClient();
+    if (!data.phone) data.phone = "No phone provided";
+    console.log("Sending email with data:", data);
+
+    const { firstName, lastName, email, phone, service, message } = data;
 
     await resend.emails.send({
       from: "SemiCare <onboarding@resend.dev>",
       to: process.env.TO_EMAIL!,
       subject: `New contact form submission from ${data.firstName} ${data.lastName}`,
-      text: `From: ${data.email}\n\n${data.message}`,
+      // text: `From: ${data.email}\n\n${data.message}`,
+      html: `<div>
+      <h1>
+        Message from SemiCare web site!
+      </h1>
+      <p>First name: ${firstName}</p>
+      <p>Last name: ${lastName}</p>
+      <p>Email: ${email}</p>
+      <p>Phone: ${phone}</p>
+      <p>Service: ${service}</p>
+      <p>Message: ${message}</p>
+    </div>`,
     });
     return { ok: true };
   } catch (error) {
