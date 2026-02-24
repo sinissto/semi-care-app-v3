@@ -1,27 +1,12 @@
 "use client";
 
+import { motion } from "motion/react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { SVGProps, ComponentType, useState } from "react";
 import {
   ChevronDown,
-  // PanelsTopLeft,
-  // Bolt,
-  // PanelTop,
-  // Database,
-  // ShoppingBag,
-  // MapPin,
-  // BellDot,
-  // Play,
-  // BookOpenText,
-  // Figma,
-  // BriefcaseBusiness,
-  // Images,
-  // CircleHelp,
-  // MessageCircle,
-  // TriangleAlert,
-  // ShieldPlus,
-  // Users,
-  // Dessert,
-  // Lock,
   Cross,
   Orbit,
   Syringe,
@@ -57,33 +42,17 @@ const ICON_MAP: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   BrushCleaning: BrushCleaning,
   HandHeart: HandHeart,
   MoveUpRightIcon: MoveUpRightIcon,
-
-  // PanelsTopLeft: PanelsTopLeft,
-  // Bolt: Bolt,
-  // PanelTop: PanelTop,
-  // Database: Database,
-  // ShoppingBag: ShoppingBag,
-  // MapPin: MapPin,
-  // BellDot: BellDot,
-  // Play: Play,
-  // BookOpenText: BookOpenText,
-  // Figma: Figma,
-  // BriefcaseBusiness: BriefcaseBusiness,
-  // Images: Images,
-  // CircleHelp: CircleHelp,
-  // MessageCircle: MessageCircle,
-  // TriangleAlert: TriangleAlert,
-  // ShieldPlus: ShieldPlus,
-  // Users: Users,
-  // Dessert: Dessert,
-  // Lock: Lock,
 };
-import { motion } from "motion/react";
-import Link from "next/link";
 
-const DesktopMenu = ({ menu }: MenuProps) => {
+const NavLink = ({ menu }: MenuProps) => {
+  const pathName = usePathname();
+
+  const currentPath = `/${pathName.split("/").slice(1).at(0)}`;
+
   const [isHover, setIsHover] = useState(false);
   const { name, subMenu, gridCols, url } = menu;
+
+  const isActive = currentPath === menu.url;
 
   const hasSubMenu = subMenu && subMenu.length > 0;
 
@@ -119,9 +88,11 @@ const DesktopMenu = ({ menu }: MenuProps) => {
     >
       <Link href={url}>
         <span
-          className={
-            "flex items-center gap-1 cursor-pointer px-3 py-1 rounded-xl hover:bg-primary/50"
-          }
+          className={`flex items-center gap-1 cursor-pointer px-3 py-1 rounded-xl ${
+            isActive
+              ? "bg-primary/90 text-white"
+              : "hover:bg-primary/50 text-gray-700"
+          }`}
         >
           {name}
           {hasSubMenu && (
@@ -208,4 +179,4 @@ const DesktopMenu = ({ menu }: MenuProps) => {
   );
 };
 
-export default DesktopMenu;
+export default NavLink;

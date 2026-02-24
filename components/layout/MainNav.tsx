@@ -1,5 +1,5 @@
 import { menusData } from "@/store/menuData";
-import DesktopMenu from "@/components/layout/DesktopMenu";
+import NavLink from "@/components/layout/NavLink";
 import MobileMenu from "@/components/layout/MobileMenu";
 
 const MainNav = () => {
@@ -15,7 +15,7 @@ const MainNav = () => {
       {/*Desktop nav*/}
       <ul className={"hidden lg:flex items-center gap-x-1 "}>
         {menusData.map((menu, index) => (
-          <DesktopMenu key={index} menu={menu} />
+          <NavLink key={index} menu={menu} />
         ))}
       </ul>
       {/*Mobile nav*/}
