@@ -50,6 +50,7 @@ const ContactForm = () => {
   const { register, handleSubmit, control, formState, reset } = form;
 
   const { errors } = formState;
+  console.log(errors.service);
 
   const onSubmit = async (data: ContactFormValues) => {
     setStatus("loading");
@@ -168,7 +169,7 @@ const ContactForm = () => {
               <Input
                 id={"phone"}
                 type={"text"}
-                placeholder="Phone number"
+                placeholder="Phone number (optional)"
                 {...register("phone")}
                 className={"bg-white"}
               />
@@ -178,46 +179,100 @@ const ContactForm = () => {
             <Controller
               control={control}
               name="service"
+              rules={{ required: "Please select a service" }}
               render={({ field }) => (
-                <Select
-                  onValueChange={(value) => field.onChange(value)}
-                  value={field.value}
-                  defaultValue={field.value}
-                >
-                  <SelectTrigger
-                    id={"service"}
-                    className={`w-full bg-white ${
-                      errors.service
-                        ? "placeholder:border-destructive placeholder:text-destructive placeholder:font-bold placeholder:text-md"
-                        : "placeholder:text-grey-primary"
-                    }`}
+                <>
+                  <Select
+                    onValueChange={(value) => field.onChange(value)}
+                    value={field.value}
+                    defaultValue={field.value}
                   >
-                    <SelectValue
-                      placeholder={`Select a service ${
-                        errors.service ? "is required" : ""
+                    <SelectTrigger
+                      id="service"
+                      className={`w-full bg-white ${
+                        errors.service
+                          ? "data-[placeholder]:text-destructive data-[placeholder]:font-bold aria-invalid:border-none"
+                          : ""
                       }`}
-                    />
-                  </SelectTrigger>
-                  <SelectContent position={"popper"}>
-                    <SelectGroup>
-                      <SelectLabel>Select a service</SelectLabel>
-                      <SelectItem value={"peritoneal_dialysis_(CADP)"}>
-                        Peritoneal Dialysis (CAPD)
-                      </SelectItem>
-                      <SelectItem value={"basic_care"}>Basic care</SelectItem>
-                      <SelectItem value={"treatment_care"}>
-                        Treatment care
-                      </SelectItem>
-                      <SelectItem value={"domestic_help"}>
-                        Domestic help
-                      </SelectItem>
-                      <SelectItem value={"respite_care"}>
-                        Respite care
-                      </SelectItem>
-                      <SelectItem value={"other_services"}>Other</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
+                      aria-invalid={!!errors.service}
+                      aria-describedby={
+                        errors.service ? "service-error" : undefined
+                      }
+                    >
+                      <SelectValue
+                        placeholder={
+                          errors.service
+                            ? "Service is required"
+                            : "Select a service"
+                        }
+                        // className={
+                        //   errors.service
+                        //     ? "data-placeholder:text-destructive"
+                        //     : "text-orange-400"
+                        // }
+                      />
+                    </SelectTrigger>
+                    <SelectContent position={"popper"}>
+                      <SelectGroup>
+                        <SelectLabel>Select a service</SelectLabel>
+                        <SelectItem
+                          value={"peritoneal_dialysis_(CADP)"}
+                          className={
+                            "focus:bg-secondary/20 focus:text-accent-foreground"
+                          }
+                        >
+                          Peritoneal Dialysis (CAPD)
+                        </SelectItem>
+                        <SelectItem
+                          value={"basic_care"}
+                          className={
+                            "focus:bg-secondary/20 focus:text-accent-foreground"
+                          }
+                        >
+                          Basic care
+                        </SelectItem>
+                        <SelectItem
+                          value={"treatment_care"}
+                          className={
+                            "focus:bg-secondary/20 focus:text-accent-foreground"
+                          }
+                        >
+                          Treatment care
+                        </SelectItem>
+                        <SelectItem
+                          value={"domestic_help"}
+                          className={
+                            "focus:bg-secondary/20 focus:text-accent-foreground"
+                          }
+                        >
+                          Domestic help
+                        </SelectItem>
+                        <SelectItem
+                          value={"respite_care"}
+                          className={
+                            "focus:bg-secondary/20 focus:text-accent-foreground"
+                          }
+                        >
+                          Respite care
+                        </SelectItem>
+                        <SelectItem
+                          value={"other_services"}
+                          className={
+                            "focus:bg-secondary/20 focus:text-accent-foreground"
+                          }
+                        >
+                          Other
+                        </SelectItem>
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select>
+
+                  {/*{errors.service && (*/}
+                  {/*  <p className="text-sm text-destructive">*/}
+                  {/*    {errors.service.message}*/}
+                  {/*  </p>*/}
+                  {/*)}*/}
+                </>
               )}
             />
 
