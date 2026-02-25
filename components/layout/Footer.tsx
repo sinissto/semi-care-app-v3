@@ -29,8 +29,8 @@ const pageLinks = {
 const contactInfos = {
   address: "Jollystraße 5, 81545 München",
   email: "info@semi-care.de",
-  phone: "089 5707 4219",
-  mobile: "0178 531 4998",
+  phone: "+49 89 5707 4219",
+  mobile: "+49 178 531 4998",
 };
 
 const socialLinks = [

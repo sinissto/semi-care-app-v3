@@ -26,7 +26,13 @@ export default function Home() {
         }
         image={{
           src: "/images/hero_image_1.png",
-          alt: "Hero section demo image showing interface components",
+          alt: "Pflegekraft unterstützt Seniorin zu Hause",
+        }}
+        buttons={{
+          primary: {
+            text: "Unsere Pflegedienstleistungen",
+            url: "/uber-uns",
+          },
         }}
       />
 

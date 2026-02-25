@@ -17,8 +17,8 @@ const Chyron = () => {
           {/* Text and phone */}
           <p className={"text-gray-primary text-[14px]/[24px] "}>
             <span>Für eine kostenlose Beratung:</span>
-            <a href={"tel:08957074219"} className={"ml-0.75 font-semibold"}>
-              089 5707 42 19
+            <a href={"tel:+49895207821"} className={"ml-0.75 font-semibold"}>
+              +49 89 520 78 21
             </a>
           </p>
         </div>
@@ -57,7 +57,7 @@ const Chyron = () => {
               }
             >
               {/* todo: this route should go to login page, but there is no login page, so to clear error in browser dev tool console this lead to kontakt page, chage later or remove */}
-              <Link href={"/contact"}>Anmelden</Link>
+              <Link href={"/kontakt"}>Anmelden</Link>
             </p>
           </div>
         </div>

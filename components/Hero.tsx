@@ -23,17 +23,17 @@ interface HeroProps {
 }
 
 const Hero = ({
-  heading = { main: "We give seniors the love they", span: "deserve" },
-  description = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
+  heading = { main: "", span: "" },
+  description = "",
   buttons = {
     primary: {
-      text: "Unsere Pflegedienstleistungen",
-      url: "/about",
+      text: "",
+      url: "",
     },
   },
   image = {
-    src: "/images/hero_img.png",
-    alt: "Hero section demo image showing interface components",
+    src: "",
+    alt: "",
   },
   className,
 }: HeroProps) => {

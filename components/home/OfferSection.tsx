@@ -39,13 +39,13 @@ const OfferSection = () => {
           "max-w-5xl mx-auto flex flex-col items-center justify-center "
         }
       >
-        <h1
+        <h2
           className={
             "text-[26px]/[30px] lg:text-5xl/[64px] text-black font-secondary font-normal md:mb-16.5"
           }
         >
           Unsere beliebtesten <span className={"text-primary"}>Leistungen</span>
-        </h1>
+        </h2>
 
         <div
           className={
