@@ -9,17 +9,17 @@ import Section from "@/components/layout/Section";
 import ContactForm from "@/components/contact/ContactForm";
 
 const info = [
-  { icon: <PhoneIcon />, title: "Tel / Fax", description: "089 520 78 21" },
+  { icon: <PhoneIcon />, title: "Telefon / Fax", description: "089 520 78 21" },
   {
     icon: <TabletSmartphone />,
     title: "Mobile",
     description: "0178 531 49 98",
   },
-  { icon: <MailIcon />, title: "Email", description: "info@semi-care.de" },
+  { icon: <MailIcon />, title: "E-mail", description: "info@semi-care.de" },
   {
     icon: <MapPinIcon />,
-    title: "Address",
-    description: "Jolly Street 5, 81545 Munich",
+    title: "Adresse",
+    description: "Jollystraße 5, 81545 München",
   },
 ];
 
@@ -33,20 +33,26 @@ const ContactPage = () => {
             "text-3xl md:text-5xl text-primary font-semibold mb-6 mt-10"
           }
         >
-          Interest or Questions - Contact Us!
+          Interesse oder Fragen?
         </h2>
+        <h3
+          className={
+            "text-3xl md:text-3xl text-primary font-semibold mb-6 mt-10"
+          }
+        >
+          Kontaktieren Sie uns!
+        </h3>
         <p className={"text-sm md:text-base text-grey-primary mb-4 max-w-2xl"}>
-          We are here to help you with any questions or concerns you may have.
-          Please feel free to reach out to us using the contact form below, or
-          by using any of the contact details provided. We look forward to
-          hearing from you!
+          Wir helfen Ihnen gerne bei allen Fragen und Anliegen. Nutzen Sie dazu
+          einfach das untenstehende Kontaktformular oder die angegebenen
+          Kontaktdaten. Wir freuen uns, von Ihnen zu hören!
         </p>
         <p
           className={
             "text-md md:text-base text-primary uppercase font-bold mb-14 md:mb-10 max-w-2xl"
           }
         >
-          We offer a free consultation!
+          Wir bieten eine kostenlose Beratung an!
         </p>
       </div>
       <div className={"flex flex-col md:flex-row gap-8 px-4"}>
@@ -75,7 +81,7 @@ const ContactPage = () => {
                   <div className="mb-2 text-xl font-semibold text-grey-primary">
                     <p className={"text-primary"}>{item.title}</p>
                     <h3 className="textg-rey-primary">
-                      {item.title === "Tel / Fax" && (
+                      {item.title === "Telefon / Fax" && (
                         <a type={"tel"} href={`tel:${item.description}`}>
                           {item.description}
                         </a>
@@ -85,12 +91,12 @@ const ContactPage = () => {
                           {item.description}
                         </a>
                       )}
-                      {item.title === "Email" && (
+                      {item.title === "E-mail" && (
                         <a type={"tel"} href={`mailto:${item.description}`}>
                           {item.description}
                         </a>
                       )}
-                      {item.title === "Address" && (
+                      {item.title === "Adresse" && (
                         <a
                           type={"tel"}
                           href={

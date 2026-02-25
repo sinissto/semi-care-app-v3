@@ -21,9 +21,10 @@ export default function TestimonialCard() {
 
         {/* Quote Text */}
         <p className="text-[16px]/[28px] md:text-xl/[30px] lg:text-2xl/[36px] text-gray-primary italic font-secondary max-w-3xl mx-auto">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident deserunt mollit anim id est laborum.
+          Sie kümmerten sich nicht nur um meinen Vater, sondern unterstützten
+          uns auch als Familie. Ihre Kommunikation und ihr Einfühlungsvermögen
+          erleichterten uns diese schwierige Zeit ungemein. Wir fühlten uns
+          stets gehört, verstanden und wirklich gut aufgehoben.
         </p>
 
         {/* Divider */}

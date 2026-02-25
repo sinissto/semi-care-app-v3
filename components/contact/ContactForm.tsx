@@ -88,7 +88,7 @@ const ContactForm = () => {
       className={"md:w-[54%] order-2 md:order-1 bg-primary rounded-2xl p-10"}
     >
       <h3 className={"text-3xl font-semibold text-white mb-6"}>
-        How can we help?
+        Wie können wir helfen?
       </h3>
 
       <AnimatePresence mode={"wait"}>
@@ -104,13 +104,13 @@ const ContactForm = () => {
                 <Input
                   id={"firstname"}
                   type={"text"}
-                  placeholder={`First Name ${
-                    errors.firstName ? "required" : ""
+                  placeholder={`Vorname ${
+                    errors.firstName ? "erforderlich" : ""
                   }`}
                   {...register("firstName", {
                     required: {
                       value: true,
-                      message: "First name is required",
+                      message: "Vorname erforderlich",
                     },
                   })}
                   className={`bg-white ${
@@ -128,11 +128,13 @@ const ContactForm = () => {
                 <Input
                   id={"lastname"}
                   type={"text"}
-                  placeholder={`Last Name ${errors.lastName ? "required" : ""}`}
+                  placeholder={`Nachname ${
+                    errors.lastName ? "erforderlich" : ""
+                  }`}
                   {...register("lastName", {
                     required: {
                       value: true,
-                      message: "Last name is required",
+                      message: "Nachname erforderlich",
                     },
                   })}
                   className={`bg-white ${
@@ -147,11 +149,11 @@ const ContactForm = () => {
                 <Input
                   id={"email"}
                   type={"email"}
-                  placeholder={`Email ${errors.email ? "required" : ""}`}
+                  placeholder={`E-mail ${errors.email ? "erforderlich" : ""}`}
                   {...register("email", {
                     required: {
                       value: true,
-                      message: "Email is required",
+                      message: "E-Mail-Adresse erforderlich",
                     },
                     pattern: {
                       value: emailRegex,
@@ -169,7 +171,7 @@ const ContactForm = () => {
               <Input
                 id={"phone"}
                 type={"text"}
-                placeholder="Phone number (optional)"
+                placeholder="Telefonnummer (optional)"
                 {...register("phone")}
                 className={"bg-white"}
               />
@@ -179,7 +181,7 @@ const ContactForm = () => {
             <Controller
               control={control}
               name="service"
-              rules={{ required: "Please select a service" }}
+              rules={{ required: "Bitte wählen Sie einen Service aus." }}
               render={({ field }) => (
                 <>
                   <Select
@@ -202,8 +204,8 @@ const ContactForm = () => {
                       <SelectValue
                         placeholder={
                           errors.service
-                            ? "Service is required"
-                            : "Select a service"
+                            ? "Service erforderlich"
+                            : "Wählen Sie einen Dienst aus"
                         }
                         // className={
                         //   errors.service
@@ -221,7 +223,7 @@ const ContactForm = () => {
                             "focus:bg-secondary/20 focus:text-accent-foreground"
                           }
                         >
-                          Peritoneal Dialysis (CAPD)
+                          Peritonealdialyse (CAPD)
                         </SelectItem>
                         <SelectItem
                           value={"basic_care"}
@@ -229,7 +231,7 @@ const ContactForm = () => {
                             "focus:bg-secondary/20 focus:text-accent-foreground"
                           }
                         >
-                          Basic care
+                          Grundpflege
                         </SelectItem>
                         <SelectItem
                           value={"treatment_care"}
@@ -237,7 +239,7 @@ const ContactForm = () => {
                             "focus:bg-secondary/20 focus:text-accent-foreground"
                           }
                         >
-                          Treatment care
+                          Behandlungspflege
                         </SelectItem>
                         <SelectItem
                           value={"domestic_help"}
@@ -245,7 +247,7 @@ const ContactForm = () => {
                             "focus:bg-secondary/20 focus:text-accent-foreground"
                           }
                         >
-                          Domestic help
+                          Hauswirtschaftliche Leistungen
                         </SelectItem>
                         <SelectItem
                           value={"respite_care"}
@@ -253,7 +255,7 @@ const ContactForm = () => {
                             "focus:bg-secondary/20 focus:text-accent-foreground"
                           }
                         >
-                          Respite care
+                          Verhinderungspflege
                         </SelectItem>
                         <SelectItem
                           value={"other_services"}
@@ -261,7 +263,7 @@ const ContactForm = () => {
                             "focus:bg-secondary/20 focus:text-accent-foreground"
                           }
                         >
-                          Other
+                          Weitere Leistungen
                         </SelectItem>
                       </SelectGroup>
                     </SelectContent>
@@ -282,11 +284,12 @@ const ContactForm = () => {
                 {...register("message", {
                   required: {
                     value: true,
-                    message: "Message is required",
+                    message: "Eine Nachricht ist erforderlich.",
                   },
                   minLength: {
                     value: 10,
-                    message: "Message must be at least 10 characters",
+                    message:
+                      "Die Nachricht muss mindestens 10 Zeichen lang sein.",
                   },
                 })}
                 className={`h-50 bg-white  placeholder:text-md  ${
@@ -297,7 +300,7 @@ const ContactForm = () => {
                 placeholder={
                   errors.message
                     ? errors.message.message
-                    : "Type your message here..."
+                    : "Geben Sie hier Ihre Nachricht ein..."
                 }
               />
               {/*{errors.message && <p>{errors.message.message}</p>}*/}
@@ -311,7 +314,7 @@ const ContactForm = () => {
                 "bg-white text-grey-primary hover:bg-white/60 w-full md:max-w-40 cursor-pointer self-end transition-colors duration-300"
               }
             >
-              {status === "loading" ? "Sending..." : "Send Message"}
+              {status === "loading" ? "Senden..." : "Nachricht senden"}
             </Button>
 
             <AnimatePresence>
@@ -326,7 +329,10 @@ const ContactForm = () => {
                   }
                 >
                   <span className={"text-3xl"}>❌</span>
-                  <span>Failed to send message. Please try again.</span>
+                  <span>
+                    Nachricht konnte nicht gesendet werden. Bitte versuchen Sie
+                    es erneut.
+                  </span>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -343,14 +349,14 @@ const ContactForm = () => {
             <Card className="text-center p-8 shadow-lg border border-gray-200">
               <CardHeader>
                 <CardTitle className="text-2xl font-semibold text-primary">
-                  🎉 Thank You!
+                  🎉 Danke schön!
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-primary mb-4">
-                  <span>Your message has been sent successfully.</span>
+                  <span>Ihre Nachricht wurde erfolgreich gesendet.</span>
                   <br />
-                  <span>We&apos;ll get back to you as soon as possible!</span>
+                  <span>Wir melden uns so schnell wie möglich bei Ihnen!</span>
                 </p>
               </CardContent>
             </Card>

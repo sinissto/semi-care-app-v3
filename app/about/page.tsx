@@ -11,62 +11,62 @@ import trust_of_relatives_img from "@/assets/images/about_us/trust_of_relatives.
 import Section from "@/components/layout/Section";
 
 const defaultAchievements = [
-  { label: "Peritoneal Dialysis (CADP)", value: "17" },
-  { label: "Basic Care", value: "52" },
-  { label: "Treatment Care", value: "28+" },
-  { label: "Domestic Care", value: "38+" },
-  { label: "Respite Care", value: "83+" },
+  { label: "Peritonealdialyse (CAPD)", value: "17" },
+  { label: "Grundpflege", value: "52" },
+  { label: "Behandlungspflege", value: "28+" },
+  { label: "Hauswirtschaftliche Leistungen", value: "38+" },
+  { label: "Verhinderungspflege", value: "83+" },
 ];
 
 const defaultSpecialUs = [
   {
     img: humanity_and_trust_img.src,
     alt: "Humanity and trust image",
-    label: "Humanity and trust",
+    label: "Menschlichkeit und Vertrauen",
     description:
-      'At SemiCare, people are at the heart of everything we do – not just care services. We don\'t provide care "according to a plan", but with heart. We listen, we understand, we support – even during difficult times. We build long-term relationships – with our clients and their families.',
+      "Bei SemiCare stehen die Menschen im Mittelpunkt unseres Handelns – nicht nur unserer Pflegedienstleistungen. Wir bieten Pflege nicht „nach Plan“, sondern mit Herz. Wir hören zu, wir verstehen, wir unterstützen – auch in schwierigen Zeiten. Wir bauen langfristige Beziehungen auf – zu unseren Klienten und ihren Familien.",
   },
   {
     img: expertise_and_experience_img.src,
     alt: "Expertise and Experience photo",
-    label: "Expertise and Experience",
+    label: "Fachwissen und Erfahrung",
     description:
-      "Our qualified team possesses in-depth expertise and many years of experience in outpatient and inpatient care. We work according to the highest quality standards and participate in regular professional development. This ensures professional care: medically sound and delivered with compassionate care.",
+      "Unser qualifiziertes Team verfügt über fundiertes Fachwissen und langjährige Erfahrung in der ambulanten und stationären Versorgung. Wir arbeiten nach höchsten Qualitätsstandards und bilden uns regelmäßig fort. So gewährleisten wir eine professionelle, medizinisch fundierte und zugleich mitfühlende Betreuung.",
   },
   {
     img: care_in_place_img.src,
     alt: "Care at home photo",
-    label: "Care in a place where you feel safe",
+    label: "Pflege an einem Ort, an dem Sie sich sicher fühlen",
     description:
-      "Your own home is a place full of memories, security and familiarity. That's exactly where we come in. Our outpatient care service enables people to remain in their familiar surroundings, to live independently and autonomously for as long as possible, and yet to feel well cared for.",
+      "Ihr Zuhause ist ein Ort voller Erinnerungen, Geborgenheit und Vertrautheit. Genau hier setzen wir an. Unser ambulanter Pflegedienst ermöglicht es Menschen, in ihrer gewohnten Umgebung zu bleiben, so lange wie möglich selbstständig und selbstbestimmt zu leben und sich dennoch gut betreut zu fühlen.",
   },
   {
     img: individual_consultation_img.src,
     alt: "Individual medical consultation",
-    label: "Individual consultation",
+    label: "Einzelberatung",
     description:
-      "We know that every person has their own story and their own needs. That's what we base our care on. Individually tailored care is our focus. Our care isn't limited to a routine program, but is provided with time, patience, and attention.",
+      "Wir wissen, dass jeder Mensch seine eigene Geschichte und seine eigenen Bedürfnisse hat. Darauf basiert unsere Betreuung. Individuell zugeschnittene Pflege steht bei uns im Mittelpunkt. Unsere Betreuung beschränkt sich nicht auf ein standardisiertes Programm, sondern beinhaltet Zeit, Geduld und Aufmerksamkeit.",
   },
   {
     img: reliability_and_accessibility_img.src,
     alt: "Doctor and patient discussing treatment plan",
-    label: "Reliability and accessibility",
+    label: "Zuverlässigkeit und Zugänglichkeit",
     description:
-      "Reliability, punctuality, and clear communication are a matter of course for us. We are there for you – even when things get difficult. We are available 24 hours a day for emergencies, including Sundays and public holidays.",
+      "Zuverlässigkeit, Pünktlichkeit und klare Kommunikation sind für uns selbstverständlich. Wir sind für Sie da – auch in schwierigen Zeiten. Im Notfall erreichen Sie uns rund um die Uhr, auch an Sonn- und Feiertagen.",
   },
   {
     img: trust_of_relatives_img.src,
     alt: "Family photo",
-    label: "Trust of relatives",
+    label: "Vertrauen der Verwandten",
     description:
-      "The decision to entrust one's parents or a loved one to strangers is never easy. At SemiCare, we understand these feelings perfectly – because for us, caregiving is more than just a service. It's a matter of trust. Trust begins where you can let go, knowing that those in need are in good hands.",
+      "Die Entscheidung, die eigenen Eltern oder einen geliebten Menschen Fremden anzuvertrauen, ist nie leicht. Wir bei SemiCare verstehen diese Gefühle sehr gut – denn für uns ist Pflege mehr als nur eine Dienstleistung. Es ist eine Frage des Vertrauens. Vertrauen beginnt dort, wo man loslassen kann, im Wissen, dass die Hilfsbedürftigen in guten Händen sind.",
   },
 ];
 
 const defaultProps = {
-  title: "About Us",
+  title: "Über uns",
   description:
-    "For us, care means more than just support in everyday life. It means closeness, respect, and genuine interest in the individual. At SemiCare, we support seniors with the goal of maintaining their quality of life and enabling them to live well and safely in their own homes.",
+    "Für uns bedeutet Pflege mehr als nur Unterstützung im Alltag. Sie bedeutet Nähe, Respekt und echtes Interesse am Einzelnen. Bei SemiCare unterstützen wir Senioren mit dem Ziel, ihre Lebensqualität zu erhalten und ihnen ein gutes und sicheres Leben in ihren eigenen vier Wänden zu ermöglichen.",
   mainImage: {
     src: ja_i_zuki_img.src,
     alt: "Andrija in a pink shirt and Zuki smiling",
@@ -76,12 +76,12 @@ const defaultProps = {
     alt: "Andrija in a pink shirt and Zuki smiling",
   },
   breakout: {
-    title: "SemiCare",
-    description: "Outpatient nursing service with heart and responsibility.",
+    title: "Semi<span className='text-secondary'>Care</span>",
+    description: "Ambulante Pflege mit Herz und Verantwortungsbewusstsein.",
   },
   achievementsTitle: "Lives made better in Numbers",
   achievementsDescription:
-    "Providing care with dedication, expertise and warm approach made families to trust in us.",
+    "Die Betreuung mit Hingabe, Fachkompetenz und einer herzlichen Art hat dazu geführt, dass Familien uns vertrauen.",
   achievements: defaultAchievements,
   specialUs: defaultSpecialUs,
 };
@@ -121,10 +121,12 @@ const AboutUsPage = () => {
           <div className="flex flex-col justify-between gap-6 rounded-xl p-7 md:w-1/2 lg:w-auto bg-white">
             <div>
               <p className="text-5xl text-primary text-center font-bold mb-6">
-                {breakout.title}
+                {/*{breakout.title}*/}
+                Semi<span className="text-secondary">Care</span>
               </p>
               <p className="text-grey-primary text-center text-xl">
-                {breakout.description}
+                {/*{breakout.description}*/}
+                Ambulante Pflege mit Herz und Verantwortungsbewusstsein.
               </p>
             </div>
           </div>
@@ -139,20 +141,21 @@ const AboutUsPage = () => {
       <div className="py-18 px-4">
         <div className="mt-6 flex flex-wrap justify-center gap-8 bg-primary/98 p-10 rounded-xl mb-12">
           <p className={"max-w-4xl text-center text-xl text-white"}>
-            We treat each person individually with empathy and respect –
-            regardless of their religion, origin, language, or social status. We
-            provide care the way we would want it for ourselves. We adapt to
-            your wishes. Our team provides care in German, English, Bosnian,
-            Croatian, and Serbian.
+            Wir begegnen jedem Menschen individuell mit Empathie und Respekt –
+            unabhängig von seiner Religion, Herkunft, Sprache oder sozialem
+            Status. Unsere Pflege gestalten wir so, wie wir sie auch für uns
+            wünschen würden. Wir passen uns Ihren Wünschen an. Unser Team
+            übernimmt Pflege in deutscher, englischer, bosnischer, kroatischer
+            und serbischer Sprache.
           </p>
           <p className={"max-w-4xl text-center text-xl text-white"}>
-            We are a reliable partner for family members. We provide relief,
-            advice, and support – transparently, honestly, and accessibly. In
-            this way, we create security for the whole family.
+            Wir sind ein verlässlicher Partner für Familienmitglieder. Wir
+            bieten Entlastung, Beratung und Unterstützung – transparent, ehrlich
+            und unkompliziert. So schaffen wir Sicherheit für die ganze Familie.
           </p>
           <p className={"max-w-4xl text-center text-xl text-white"}>
-            In the end, only one thing matters – that you know with a calm heart
-            that your loved ones are in good hands.
+            Am Ende zählt nur eines – dass Sie mit ruhigem Herzen wissen, dass
+            Ihre Lieben in guten Händen sind.
           </p>
         </div>
       </div>
