@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "de_DE",
     siteName: "Semi Care",
     title: "Semi Care – Professional Home Care Services",
     description:
