@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import Section from "@/components/layout/Section";
 import Logo from "@/components/layout/Logo";
+import LogoLarge from "@/assets/images/LogoLarge.png";
 
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
@@ -54,13 +55,18 @@ const instagramImages = [
 const Footer = () => {
   return (
     <Section
-      sectionClassName={`relative pb-[65px] bg-[url(/images/footer-index-img.jpg)] bg-cover bg-center lg:mb-0 pt-[65px] z-0`}
+      sectionClassName={`relative pb-[65px] bg-[url(/images/footer-index-img.jpg)] bg-cover bg-center lg:mb-0 pt-[65px] z-0 my-0`}
     >
       <footer className={"bg-transparent"}>
         <div className="flex flex-col items-start justify-center md:justify-between md:flex-row">
-          <div className="flex-1 flex flex-col items-center md:items-start mx-auto md:mx-0 lg:mb-0 px-3.75 mb-8">
-            <div className="flex items-center gap-2 md:justify-start mb-2.5 md:mb-13">
-              <Logo textClassName={"lg:text-2xl "} />
+          <div className="flex-1 flex flex-col items-center md:items-start mx-auto md:mx-0 lg:mb-0 px-3.75 mb-0">
+            <div className="flex items-center gap-2 md:justify-start mb-0 md:mb-8">
+              {/*<Logo textClassName={"lg:text-2xl "} />*/}
+              <img
+                src={LogoLarge.src}
+                alt={"Large SemiCare Logo"}
+                className={"w-[50%] md:w-full mx-auto"}
+              />
             </div>
             <p className="w-[75%] text-[14px]/[24px] text-gray-primary text-center md:text-left mb-8">
               Copyright 2026 SemiCare. Alle Rechte vorbehalten.
