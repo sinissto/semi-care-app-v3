@@ -56,7 +56,7 @@ const Chyron = () => {
                 "text-[14px]/[18px] text-secondary-dark font-semibold hover:text-primary"
               }
             >
-              {/* todo: this route should go to login page, but there is no login page, so to clear error in browser dev tool console this lead to contact page, chage later or remove */}
+              {/* todo: this route should go to login page, but there is no login page, so to clear error in browser dev tool console this lead to kontakt page, chage later or remove */}
               <Link href={"/contact"}>Anmelden</Link>
             </p>
           </div>

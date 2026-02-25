@@ -39,7 +39,7 @@ const MobileMenu = ({ menus }: MenuProps) => {
   };
 
   const handleClick = (url: string, subLink: boolean) => {
-    if (url === "/services" && !subLink) return;
+    if (url === "/leistungen" && !subLink) return;
 
     setIsOpen((prev) => !prev);
 
@@ -138,22 +138,22 @@ const MobileMenu = ({ menus }: MenuProps) => {
                     const hasSubMenu = subMenu && subMenu.length > 0;
                     const isClicked = clicked === index;
                     return (
-                      <li
-                        key={index}
-                        className={"max-w-100"}
-                        onClick={() => handleClick(url, false)}
-                      >
+                      <li key={index} className={"max-w-100"}>
                         {/*<Link href={url}>*/}
                         <span
                           className={
                             "flex items-center p-4 hover:bg-white/20 rounded-md cursor-pointer font-bold relative"
                           }
-                          onClick={() => setClicked(isClicked ? null : index)}
                         >
-                          {name}
+                          <span onClick={() => handleClick(url, true)}>
+                            {name}
+                          </span>
                           {hasSubMenu && (
                             <ChevronDown
                               className={`ml-auto ${isClicked && "rotate-180"}`}
+                              onClick={() =>
+                                setClicked(isClicked ? null : index)
+                              }
                             />
                           )}
                         </span>
