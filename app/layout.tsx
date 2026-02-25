@@ -22,23 +22,23 @@ const dmSerifDisplay = DM_Serif_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Semi Care – Professional Home Care Services",
+    default: "Semi Care – Professionelle Häusliche Pflege",
     template: "%s | Semi Care",
   },
   description:
-    "Semi Care provides professional home care services including peritoneal dialysis (CAPD), basic care, treatment care, domestic help, and respite care. Compassionate support right in your own home.",
+    "Semi Care bietet professionelle häusliche Pflegedienste einschließlich Peritonealdialyse (CAPD), Grundpflege, Behandlungspflege, Hauswirtschaftliche Versorgung und Verhinderungspflege. Einfühlsame Unterstützung direkt bei Ihnen zu Hause.",
   keywords: [
-    "home care",
-    "nursing care",
-    "peritoneal dialysis",
+    "Häusliche Pflege",
+    "Pflegedienst",
+    "Peritonealdialyse",
     "CAPD",
-    "basic care",
-    "treatment care",
-    "domestic help",
-    "respite care",
-    "elderly care",
-    "home health services",
-    "Germany",
+    "Grundpflege",
+    "Behandlungspflege",
+    "Hauswirtschaftliche Versorgung",
+    "Verhinderungspflege",
+    "Altenpflege",
+    "Ambulante Pflege",
+    "Deutschland",
   ],
   authors: [{ name: "Semi Care" }],
   creator: "Semi Care",
@@ -54,15 +54,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Semi Care",
-    title: "Semi Care – Professional Home Care Services",
+    title: "Semi Care – Professionelle Häusliche Pflege",
     description:
-      "Compassionate and professional home care services including peritoneal dialysis, basic care, treatment care, domestic help, and respite care.",
+      "Einfühlsame und professionelle häusliche Pflegedienste einschließlich Peritonealdialyse, Grundpflege, Behandlungspflege, Hauswirtschaftliche Versorgung und Verhinderungspflege.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Semi Care – Professional Home Care Services",
+    title: "Semi Care – Professionelle Häusliche Pflege",
     description:
-      "Compassionate and professional home care services including peritoneal dialysis, basic care, treatment care, domestic help, and respite care.",
+      "Einfühlsame und professionelle häusliche Pflegedienste einschließlich Peritonealdialyse, Grundpflege, Behandlungspflege, Hauswirtschaftliche Versorgung und Verhinderungspflege.",
   },
 };
 
@@ -76,7 +76,7 @@ export default function RootLayout({
 
     <html
       suppressHydrationWarning
-      lang="en"
+      lang="de"
       className={`${openSans.variable} ${dmSerifDisplay.variable}`}
     >
       {/* todo: remove "cz-shortcut-listen="false"" when the hydration issue is resolved. This is a temporary workaround to prevent hydration mismatch warnings in development mode.*/}
