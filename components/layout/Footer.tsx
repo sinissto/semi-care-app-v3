@@ -60,7 +60,7 @@ const Footer = () => {
       <footer className={"bg-transparent"}>
         <div className="flex flex-col items-start justify-center md:justify-between md:flex-row">
           <div className="flex-1 flex flex-col items-center md:items-start mx-auto md:mx-0 lg:mb-0 px-3.75 mb-0">
-            <div className="flex items-center gap-2 md:justify-start mb-0 md:mb-8">
+            <div className="flex items-center gap-2 md:justify-start mb-4 md:mb-8">
               {/*<Logo textClassName={"lg:text-2xl "} />*/}
               <img
                 src={LogoLarge.src}
