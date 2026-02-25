@@ -18,17 +18,18 @@ import instaImg6 from "@/assets/images/footer-img6.png";
 const pageLinks = {
   title: "Useful Links",
   links: [
-    { label: "Über uns", url: "/uber-uns" },
-    { label: "Leistungen", url: "/leistungen" },
-    { label: "FAQ", url: "/faq" },
-    { label: "Kontakt", url: "/kontakt" },
+    { label: "Über uns", url: "/uber-uns" }, // /about-us
+    { label: "Leistungen", url: "/leistungen" }, // /services
+    // { label: "FAQ", url: "/faq" },
+    { label: "Kontakt", url: "/kontakt" }, // /kontakt
   ],
 };
 
 const contactInfos = {
-  address: "Jollystraße 2-14, 81545 München",
+  address: "Jollystraße 5, 81545 München",
   email: "info@semi-care.de",
-  phone: "089 5707 42 19",
+  phone: "089 5707 4219",
+  mobile: "0178 531 4998",
 };
 
 const socialLinks = [
@@ -170,6 +171,24 @@ const Footer = () => {
                   }
                 >
                   {contactInfos.phone}
+                </a>
+              </li>
+              <li className="font-medium mb-4 flex flex-col items-center md:items-start">
+                <h5
+                  className={
+                    "text-[16px]/[16px] text-primary font-normal mb-1.75"
+                  }
+                >
+                  Mobile:
+                </h5>
+                <a
+                  type={"text"}
+                  href={`tel:${contactInfos.mobile}`}
+                  className={
+                    "text-[16px]/[16px] font-normal text-gray-primary hover:text-primary"
+                  }
+                >
+                  {contactInfos.mobile}
                 </a>
               </li>
             </ul>
