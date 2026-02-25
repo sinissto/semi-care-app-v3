@@ -60,7 +60,7 @@ const Footer = () => {
         <div className="flex flex-col items-start justify-center md:justify-between md:flex-row">
           <div className="flex-1 flex flex-col items-center md:items-start mx-auto md:mx-0 lg:mb-0 px-3.75 mb-8">
             <div className="flex items-center gap-2 md:justify-start mb-2.5 md:mb-13">
-              <Logo />
+              <Logo textClassName={"lg:text-2xl "} />
             </div>
             <p className="w-[75%] text-[14px]/[24px] text-gray-primary text-center md:text-left mb-8">
               Copyright 2026 SemiCare. Alle Rechte vorbehalten.
