@@ -162,7 +162,7 @@ const AboutUsPage = () => {
 
       {specialUs.map((item, idx) => (
         <div key={idx} className={"px-4"}>
-          <div className="relative overflow-hidden rounded-xl bg-secondary/20 p-7 md:p-16 mb-12 px-4">
+          <div className="relative overflow-hidden rounded-xl bg-primary/5 p-7 md:p-16 mb-12 px-4">
             <div className={"flex flex-col items-center gap-12 md:flex-row"}>
               <img src={item.img} alt={item.alt} className={"max-w-52"} />
               <div>

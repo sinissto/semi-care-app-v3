@@ -18,29 +18,29 @@ import other_services_img_1 from "@/assets/images/other_services_img_1.png";
 import other_services_img_2 from "@/assets/images/other_services_img_2.png";
 
 // const data = {
-//   services: {
+//   leistungen: {
 //     id: 1,
 //     label: "Our Services",
 //     title: "Home care - because home is where the heart is",
 //     description: [
-//       "SemiCare follows a special concept: We offer the same services as any other care service.",
-//       "We offer professional services covered by health insurance. In addition, you can also book medical and non-medical services that are not reimbursable, if desired. The advantage: You can choose the services that you need and want, and we will take care of the rest. ",
-//       "We organize the necessary help in a compact and tailored way, without having to find a multitude of helpers. Which services are covered by health insurance?",
-//       "We will clarify which services you will have to pay for yourself and what that will cost in a non- binding consultation before the contract is concluded.",
+//       "SemiCare follows a special concept: We offer the same leistungen as any other care service.",
+//       "We offer professional leistungen covered by health insurance. In addition, you can also book medical and non-medical leistungen that are not reimbursable, if desired. The advantage: You can choose the leistungen that you need and want, and we will take care of the rest. ",
+//       "We organize the necessary help in a compact and tailored way, without having to find a multitude of helpers. Which leistungen are covered by health insurance?",
+//       "We will clarify which leistungen you will have to pay for yourself and what that will cost in a non- binding consultation before the contract is concluded.",
 //     ],
 //
-//     services: [
+//     leistungen: [
 //       {
 //         id: 1,
 //         title: "Peritoneal Dialysis (CAPD)",
 //         icon: Cross,
-//         url: "/services/peritoneal-dialysis",
+//         url: "/leistungen/peritoneal-dialysis",
 //         slug: "peritoneal-dialysis",
 //         description: [
 //           "Peritoneal dialysis changes everyday life – for patients as well as their families. It brings with it many questions, uncertainties, and anxieties. At SemiCare, we won't leave you alone with these challenges. We provide competent, empathetic, and reliable support to people undergoing peritoneal dialysis – right in your own home. We explain each step clearly, so you can feel confident.",
 //           "Peritoneal dialysis is a kidney replacement therapy used to remove toxins and excess water from the blood in patients with chronic kidney failure. Unlike hemodialysis, this process takes place inside the body, utilizing the body's own peritoneum (the lining of the abdominal cavity) as a filter.",
 //           'A special dialysis solution is introduced via a catheter permanently implanted in the abdominal cavity. The peritoneum acts as a "semi-permeable" membrane through which waste products from the blood pass into the solution.',
-//           "Our services include the following:",
+//           "Our leistungen include the following:",
 //         ],
 //         serviceList: [
 //           "Professional support for peritoneal dialysis (CAPD) at home Environment",
@@ -62,10 +62,10 @@ import other_services_img_2 from "@/assets/images/other_services_img_2.png";
 //         id: 2,
 //         title: "Basic care",
 //         icon: Orbit,
-//         url: "/services/basic-care",
+//         url: "/leistungen/basic-care",
 //         slug: "basic-care",
 //         description: [
-//           "Basic care supports people with their daily needs and ensures well-being, hygiene, and safety. The goal of basic care is to maintain independence as much as possible, promote health, and enable people to live with dignity. Our team offers the following basic care services:",
+//           "Basic care supports people with their daily needs and ensures well-being, hygiene, and safety. The goal of basic care is to maintain independence as much as possible, promote health, and enable people to live with dignity. Our team offers the following basic care leistungen:",
 //           "Basic care is particularly important to prevent infections.",
 //         ],
 //         serviceList: [
@@ -89,7 +89,7 @@ import other_services_img_2 from "@/assets/images/other_services_img_2.png";
 //         id: 3,
 //         title: "Treatment care",
 //         icon: Syringe,
-//         url: "/services/treatment-care",
+//         url: "/leistungen/treatment-care",
 //         slug: "treatment-care",
 //         description: [
 //           "Treatment care encompasses medical measures carried out by nursing professionals in the home environment on the orders of a physician to cure, alleviate, or prevent the worsening of illnesses. It falls under the umbrella of home-based nursing care (German Social Code, Book V) and is regulated by the [relevant authority/organization].",
@@ -108,13 +108,13 @@ import other_services_img_2 from "@/assets/images/other_services_img_2.png";
 //       },
 //       {
 //         id: 4,
-//         title: "Domestic services",
+//         title: "Domestic leistungen",
 //         icon: BrushCleaning,
-//         url: "/services/domestic-services",
-//         slug: "domestic-services",
+//         url: "/leistungen/domestic-leistungen",
+//         slug: "domestic-leistungen",
 //         description: [
-//           "In addition, we offer various supplementary services that are not part of basic and medical care. If needed, our patients can book domestic support services to facilitate daily life. These are billed either as in-kind benefits through the long- term care insurance or as private services.",
-//           "Domestic services support individuals in managing their household tasks and daily chores. These services are designed to help maintain a clean, organized, and comfortable living environment, especially for those who may have difficulty performing these tasks themselves due to age, illness, or disability. Our domestic services include:",
+//           "In addition, we offer various supplementary leistungen that are not part of basic and medical care. If needed, our patients can book domestic support leistungen to facilitate daily life. These are billed either as in-kind benefits through the long- term care insurance or as private leistungen.",
+//           "Domestic leistungen support individuals in managing their household tasks and daily chores. These leistungen are designed to help maintain a clean, organized, and comfortable living environment, especially for those who may have difficulty performing these tasks themselves due to age, illness, or disability. Our domestic leistungen include:",
 //         ],
 //         serviceList: [
 //           "Grocery shopping and errands",
@@ -131,7 +131,7 @@ import other_services_img_2 from "@/assets/images/other_services_img_2.png";
 //         id: 5,
 //         title: "Respite care",
 //         icon: HandHeart,
-//         url: "/services/respite-care",
+//         url: "/leistungen/respite-care",
 //         slug: "respite-care",
 //         description: [
 //           "Respite care provides temporary relief for primary caregivers, allowing them to take a break from their caregiving responsibilities. This service is designed to support caregivers who may be experiencing burnout or need time to attend to their own needs while ensuring that their loved ones continue to receive quality care.",
@@ -157,17 +157,17 @@ import other_services_img_2 from "@/assets/images/other_services_img_2.png";
 //       },
 //       {
 //         id: 6,
-//         title: "Other services",
+//         title: "Other leistungen",
 //         icon: TrendingUpDownIcon,
-//         url: "/services/other-services",
-//         slug: "other-services",
+//         url: "/leistungen/other-leistungen",
+//         slug: "other-leistungen",
 //         description: [
-//           "In addition to the core services we offer, we also provide a range of other services to meet the diverse needs of our clients. These services are designed to enhance the quality of life and provide additional support beyond basic and medical care. Our other services include:",
+//           "In addition to the core leistungen we offer, we also provide a range of other leistungen to meet the diverse needs of our clients. These leistungen are designed to enhance the quality of life and provide additional support beyond basic and medical care. Our other leistungen include:",
 //         ],
 //         serviceList: [
 //           "Walks",
 //           "Support in organizing daily life at home",
-//           "Transportation services for medical appointments, hairdresser and other errands",
+//           "Transportation leistungen for medical appointments, hairdresser and other errands",
 //           "Companionship and social engagement activities",
 //           "Assistance with technology and communication devices",
 //           "Support for managing finances and paperwork",
@@ -205,8 +205,8 @@ const data = {
         id: 1,
         title: "Peritonealdialyse (CAPD)",
         icon: Cross,
-        url: "/services/peritoneal-dialysis",
-        slug: "peritoneal-dialysis",
+        url: "/leistungen/peritonealdialyse-(CAPD)",
+        slug: "peritonealdialyse-(CAPD)",
         description: [
           "Die Peritonealdialyse verändert den Alltag – für Patientinnen und Patienten ebenso wie für ihre Familien. Sie bringt viele Fragen, Unsicherheiten und Ängste mit sich. Bei SemiCare lassen wir Sie mit diesen Herausforderungen nicht allein. Wir begleiten Menschen mit Peritonealdialyse kompetent, einfühlsam und zuverlässig – direkt bei Ihnen zu Hause. Jeden Schritt erklären wir verständlich, damit Sie sich sicher fühlen können.",
           "Die Peritonealdialyse ist ein Nierenersatzverfahren zur Entfernung von Giftstoffen und überschüssigem Wasser aus dem Blut bei chronischem Nierenversagen. Im Gegensatz zur Hämodialyse findet dieser Prozess im Körper statt, wobei das körpereigene Bauchfell (Peritoneum) als Filter genutzt wird.",
@@ -233,8 +233,8 @@ const data = {
         id: 2,
         title: "Grundpflege",
         icon: Orbit,
-        url: "/services/basic-care",
-        slug: "basic-care",
+        url: "/leistungen/grundpflege",
+        slug: "grundpflege",
         description: [
           "Die Grundpflege unterstützt Menschen bei ihren täglichen Bedürfnissen und sorgt für Wohlbefinden, Hygiene und Sicherheit. Ziel der Grundpflege ist es, die Selbstständigkeit so weit wie möglich zu erhalten, die Gesundheit zu fördern und ein würdevolles Leben zu ermöglichen. Unser Team bietet folgende Leistungen an:",
           "Die Grundpflege ist besonders wichtig zur Vorbeugung von Infektionen.",
@@ -260,8 +260,8 @@ const data = {
         id: 3,
         title: "Behandlungspflege",
         icon: Syringe,
-        url: "/services/treatment-care",
-        slug: "treatment-care",
+        url: "/leistungen/behandlungspflege",
+        slug: "behandlungspflege",
         description: [
           "Die Behandlungspflege umfasst medizinische Maßnahmen, die auf ärztliche Anordnung von Pflegefachkräften im häuslichen Umfeld durchgeführt werden, um Krankheiten zu heilen, zu lindern oder eine Verschlimmerung zu verhindern. Sie gehört zur häuslichen Krankenpflege (SGB V).",
           "Die Kosten werden von der Krankenkasse übernommen – unabhängig vom Pflegegrad. Dazu zählen alle Tätigkeiten, die auf ärztliche Verordnung von Gesundheits- und Altenpflegefachkräften durchgeführt werden, wie zum Beispiel:",
@@ -281,8 +281,8 @@ const data = {
         id: 4,
         title: "Hauswirtschaftliche Leistungen",
         icon: BrushCleaning,
-        url: "/services/domestic-services",
-        slug: "domestic-services",
+        url: "/leistungen/hauswirtschaftliche-leistungen",
+        slug: "hauswirtschaftliche-leistungen",
         description: [
           "Zusätzlich bieten wir verschiedene ergänzende Leistungen an, die nicht zur Grund- oder Behandlungspflege gehören. Bei Bedarf können unsere Patientinnen und Patienten hauswirtschaftliche Unterstützung buchen, um den Alltag zu erleichtern. Die Abrechnung erfolgt über die Pflegeversicherung oder als private Leistung.",
           "Hauswirtschaftliche Leistungen unterstützen bei der Bewältigung von Haushaltsaufgaben und alltäglichen Tätigkeiten. Ziel ist es, ein sauberes, geordnetes und angenehmes Wohnumfeld zu erhalten – insbesondere für Menschen, die diese Aufgaben alters- oder krankheitsbedingt nicht selbst ausführen können.",
@@ -302,8 +302,8 @@ const data = {
         id: 5,
         title: "Verhinderungspflege",
         icon: HandHeart,
-        url: "/services/respite-care",
-        slug: "respite-care",
+        url: "/leistungen/verhinderungspflege",
+        slug: "verhinderungspflege",
         description: [
           "Die Verhinderungspflege bietet eine vorübergehende Entlastung für pflegende Angehörige. Sie ermöglicht eine Auszeit, während die pflegebedürftige Person weiterhin zuverlässig versorgt wird.",
           "Sie möchten verreisen, sind selbst erkrankt oder fühlen sich erschöpft? Und dennoch kümmern Sie sich täglich liebevoll um einen Menschen. Wer übernimmt die Pflege, wenn Sie es nicht können? Genau dafür gibt es die Verhinderungspflege.",
@@ -330,8 +330,8 @@ const data = {
         id: 6,
         title: "Weitere Leistungen",
         icon: TrendingUpDownIcon,
-        url: "/services/other-services",
-        slug: "other-services",
+        url: "/leistungen/weitere-leistungen",
+        slug: "weitere-leistungen",
         description: [
           "Neben unseren Kernleistungen bieten wir weitere unterstützende Angebote an, um den unterschiedlichen Bedürfnissen unserer Kundinnen und Kunden gerecht zu werden. Diese Leistungen tragen dazu bei, die Lebensqualität zu verbessern und zusätzliche Unterstützung im Alltag zu bieten.",
         ],

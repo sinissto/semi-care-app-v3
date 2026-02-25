@@ -13,7 +13,7 @@ interface ServiceCardProps {
   url: string;
   image: any;
   title: string;
-  description: string;
+  description?: string;
 }
 
 const ServiceCard = ({ url, image, title, description }: ServiceCardProps) => {

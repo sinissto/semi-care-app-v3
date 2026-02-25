@@ -9,11 +9,11 @@ import Section from "@/components/layout/Section";
 import ContactForm from "@/components/contact/ContactForm";
 
 const info = [
-  { icon: <PhoneIcon />, title: "Telefon / Fax", description: "089 520 78 21" },
+  { icon: <PhoneIcon />, title: "Telefon / Fax", description: "089 520 7821" },
   {
     icon: <TabletSmartphone />,
     title: "Mobile",
-    description: "0178 531 49 98",
+    description: "0178 531 4998",
   },
   { icon: <MailIcon />, title: "E-mail", description: "info@semi-care.de" },
   {
