@@ -6,6 +6,7 @@ import Section from "@/components/layout/Section";
 import aboutUsImg from "@/assets/images/ja i zuki.png";
 import topGreenImg from "@/assets/images/video-section-top-img.png";
 import bottomPurpleImg from "@/assets/images/video-section-bottom-img.png";
+import Image from "next/image";
 
 interface AboutUsProps {
   className?: string;
@@ -44,32 +45,38 @@ const AboutUs = ({ className }: AboutUsProps) => {
               Brauchen Sie Beratung?
             </h4>
             <h4 className={"text-4xl/[42px] text-primary font-secondary mb-1"}>
-              089 5707 42 19
+              +49 89 5707 4219
             </h4>
           </div>
         </div>
         <div className="w-full h-full flex items-center justify-center">
           <div className={"relative w-[80%]"}>
             <figure className="relative z-20">
-              <img
+              <Image
                 src={aboutUsImg.src}
                 alt={"Image of doctor with play button at the center"}
+                width={1024}
+                height={1114}
                 className="w-full h-auto rounded-[40px] border-8 border-white"
               />
             </figure>
 
             <figure className="absolute -top-7.5 -right-7.5">
-              <img
+              <Image
                 src={topGreenImg.src}
                 alt={"Green retangle image"}
+                width={90}
+                height={90}
                 className="w-22.5 h-22.5"
               />
             </figure>
 
             <figure className="absolute -bottom-7.5 -left-7.5 ">
-              <img
+              <Image
                 src={bottomPurpleImg.src}
                 alt={"White retangle image with purple border"}
+                width={90}
+                height={90}
                 className="w-22.5 h-22.5"
               />
             </figure>

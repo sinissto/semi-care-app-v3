@@ -17,6 +17,8 @@ const Logo = ({
       <Image
         src={semiCareLogo}
         alt={"Semi Care Logo"}
+        width={320}
+        height={450}
         className={`h-15 w-auto `}
       />
 

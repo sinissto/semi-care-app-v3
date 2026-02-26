@@ -62,9 +62,11 @@ const Footer = () => {
           <div className="flex-1 flex flex-col items-center md:items-start mx-auto md:mx-0 lg:mb-0 px-3.75 mb-0">
             <div className="flex items-center gap-2 md:justify-start mb-4 md:mb-8">
               {/*<Logo textClassName={"lg:text-2xl "} />*/}
-              <img
+              <Image
                 src={LogoLarge.src}
                 alt={"Large SemiCare Logo"}
+                width={1024}
+                height={1024}
                 className={"w-[50%] md:w-full mx-auto"}
               />
             </div>

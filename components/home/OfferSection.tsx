@@ -53,39 +53,6 @@ const OfferSection = () => {
           }
         >
           {offers.map((offer, offerIdx) => (
-            // <div
-            //   key={offerIdx}
-            //   className="basis-full md:basis-1/2 lg:basis-1/3 px-3.75 mb-4 lg:mb-0"
-            // >
-            //   <div
-            //     className={
-            //       "group bg-white flex flex-col items-center px-8.25 pt-9.25 pb-13.75 shadow-[0px_6px_38px_0_#dae0e5] border border-white rounded-4xl hover:bg-primary hover:border-primary transition duration-300"
-            //     }
-            //   >
-            //     {/* icon */}
-            //     <div
-            //       className={
-            //         "flex flex-col items-center group-hover:bg-white p-6  rounded-4xl mb-2"
-            //       }
-            //     >
-            //       <img src={offer.icon} alt={offer.alt} />
-            //     </div>
-            //
-            //     {/* heading */}
-            //     <h5
-            //       className={
-            //         "text-[30px]/[30px] text-black font-secondary -tracking-[0.9px] mb-2.5"
-            //       }
-            //     >
-            //       {offer.heading}
-            //     </h5>
-            //
-            //     {/* description */}
-            //     <p className={"text-[16px]/[24px] text-black text-center"}>
-            //       {offer.description}
-            //     </p>
-            //   </div>
-            // </div>
             <Tile
               key={offerIdx}
               heading={offer.heading}

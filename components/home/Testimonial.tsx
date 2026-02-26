@@ -4,6 +4,7 @@ import Section from "@/components/layout/Section";
 import quoteImg from "@/assets/images/happy-clients-section-img2.png";
 import crossInHeartImg from "@/assets/images/carousel-bottom-img.png";
 import logoImg from "@/assets/images/SemiCareLogo.png";
+import Image from "next/image";
 
 export default function TestimonialCard() {
   return (
@@ -12,9 +13,11 @@ export default function TestimonialCard() {
         {/* Quote Icon */}
         {/*<Quote className="w-10 h-10 mx-auto text-green-600 mb-6" />*/}
         <figure>
-          <img
+          <Image
             src={quoteImg.src}
             alt={"Quote Icon"}
+            width={110}
+            height={84}
             className="w-[55px] h-[42px] mx-auto mb-8"
           />
         </figure>
@@ -39,14 +42,19 @@ export default function TestimonialCard() {
         </p>
 
         {/* Bottom Floating Icon */}
-        <div className="absolute left-1/2 -translate-x-1/2 -bottom-18">
-          <div className="p-4 rounded-full">
-            {/*<HeartPulse className="w-10 h-10 text-green-600" />*/}
-            {/* <figure>
-              <img src={logoImg.src} alt={"Cross in Heart Icon"} className="w-[68px] h-auto mx-auto" />
-            </figure> */}
-          </div>
-        </div>
+        {/*<div className="absolute left-1/2 -translate-x-1/2 -bottom-18">*/}
+        {/*  <div className="p-4 rounded-full">*/}
+        {/*    <figure>*/}
+        {/*      <Image*/}
+        {/*        src={logoImg.src}*/}
+        {/*        width={320}*/}
+        {/*        height={450}*/}
+        {/*        alt={"Cross in Heart Icon"}*/}
+        {/*        className="w-[68px] h-auto mx-auto"*/}
+        {/*      />*/}
+        {/*    </figure>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
     </Section>
   );

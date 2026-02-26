@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
 
 interface ServiceCardProps {
   url: string;
@@ -21,9 +22,11 @@ const ServiceCard = ({ url, image, title, description }: ServiceCardProps) => {
     <Link href={url} className={"group h-full w-full"}>
       <Card className="relative mx-auto w-full h-full pt-0 overflow-hidden transition-shadow duration-200 group-hover:shadow-md">
         {/* <div className="absolute inset-0 z-30 aspect-video bg-black/35" /> */}
-        <img
+        <Image
           src={image}
           alt="Service image"
+          width={1050}
+          height={600}
           className="relative z-20 aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         <CardHeader className={"flex-1"}>

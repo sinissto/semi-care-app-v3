@@ -7,6 +7,7 @@ import offerIcon3 from "@/assets/images/offer-icon3.png";
 import offerIcon4 from "@/assets/images/offer-icon4.png";
 import Section from "@/components/layout/Section";
 import Tile from "@/components/Tile";
+import Image from "next/image";
 
 const services = [
   {
@@ -56,9 +57,11 @@ export default function ServicesSection() {
         {/* Left Image */}
         <div className={"px-8 "}>
           <figure className={"flex items-center justify-center px-3.75 "}>
-            <img
+            <Image
               src={serviceImg.src}
-              alt="Elder care"
+              alt={"Elder care"}
+              width={1024}
+              height={1024}
               className="w-[80%] object-cover overflow-hidden rounded-[50px] border-[6px] border-secondary"
             />
           </figure>
@@ -67,17 +70,6 @@ export default function ServicesSection() {
         {/* Right Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 px-3.75">
           {services.map((service, index) => (
-            // <div key={index}>
-            //   <img
-            //     src={imgSrc.src}
-            //     className="w-10 h-10 text-green-600 mb-3"
-            //   />
-            //   <h3 className="text-xl font-secondary font-semibold mb-2">
-            //     {service.title}
-            //   </h3>
-            //   <p className="text-gray-600 text-sm">{service.desc}</p>
-            // </div>
-
             <Tile
               key={index}
               heading={service.title}

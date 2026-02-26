@@ -41,7 +41,7 @@ export default function Home() {
       <AboutUs />
       <Blogs />
       {/* <Counter /> */}
-      {/* <Services /> */}
+      {/*<Services />*/}
       <TestimonialCard />
     </>
   );

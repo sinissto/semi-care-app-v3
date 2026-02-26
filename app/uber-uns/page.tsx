@@ -9,6 +9,7 @@ import individual_consultation_img from "@/assets/images/about_us/individual_con
 import reliability_and_accessibility_img from "@/assets/images/about_us/reliability_and_accessibility.jpg";
 import trust_of_relatives_img from "@/assets/images/about_us/trust_of_relatives.jpg";
 import Section from "@/components/layout/Section";
+import Image from "next/image";
 
 const defaultAchievements = [
   { label: "Peritonealdialyse (CAPD)", value: "17" },
@@ -111,9 +112,11 @@ const AboutUsPage = () => {
       </div>
       <div className="grid gap-7 lg:grid-cols-3 px-4">
         <div className={"lg:col-span-2 flex items-center justify-center"}>
-          <img
+          <Image
             src={mainImage.src}
             alt={mainImage.alt}
+            width={1024}
+            height={1114}
             className="h-full w-auto max-h-[620px] rounded-[50%] object-cover ring-8 ring-primary/30 "
           />
         </div>
@@ -130,9 +133,11 @@ const AboutUsPage = () => {
               </p>
             </div>
           </div>
-          <img
+          <Image
             src={secondaryImage.src}
             alt={secondaryImage.alt}
+            width={860}
+            height={860}
             className="grow basis-0  rounded-xl object-cover md:w-1/2 lg:min-h-0 lg:w-auto ring-8 ring-primary/30"
           />
         </div>
@@ -164,7 +169,13 @@ const AboutUsPage = () => {
         <div key={idx} className={"px-4"}>
           <div className="relative overflow-hidden rounded-xl bg-primary/5 p-7 md:p-16 mb-12 px-4">
             <div className={"flex flex-col items-center gap-12 md:flex-row"}>
-              <img src={item.img} alt={item.alt} className={"max-w-52"} />
+              <Image
+                src={item.img}
+                alt={item.alt}
+                width={500}
+                height={500}
+                className={"max-w-52"}
+              />
               <div>
                 <h2 className="text-2xl text-center text-primary font-semibold md:text-3xl mb-4 md:text-left">
                   {item.label}

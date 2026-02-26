@@ -7,6 +7,7 @@ import haushaltsversorgung from "@/assets/images/Hauswirtschaftliche.png";
 import betreuungsleistungen from "@/assets/images/Betreuungsleistungen.png";
 import sonstige_leistungen from "@/assets/images/Leistungen.png";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const blogs = [
   {
@@ -72,9 +73,11 @@ const Blogs = () => {
           >
             {/* Image */}
             <figure className={"w-full mb-6 lg:mb-10.75"}>
-              <img
+              <Image
                 src={blog.image}
                 alt={blog.title}
+                width={350}
+                height={200}
                 className="w-full object-cover"
               />
             </figure>

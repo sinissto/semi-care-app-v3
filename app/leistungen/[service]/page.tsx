@@ -8,6 +8,7 @@ import { X } from "lucide-react";
 import Section from "@/components/layout/Section";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 const ServiceDetailsPage = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -46,9 +47,11 @@ const ServiceDetailsPage = () => {
         </h1>
 
         {/*<div className="flex items-center gap-3 text-sm md:text-base"></div>*/}
-        <img
+        <Image
           src={images[0].src}
           alt="placeholder"
+          width={850}
+          height={600}
           className="mt-4 mb-8 aspect-video w-full rounded-lg border object-cover"
         />
       </div>
@@ -77,9 +80,11 @@ const ServiceDetailsPage = () => {
           </ul>
           {images.at(1) && (
             <>
-              <img
+              <Image
                 src={images[1].src}
                 alt="placeholder"
+                width={850}
+                height={600}
                 className="my-8 w-full h-auto rounded-md object-fit cursor-pointer md:cursor-default"
                 onClick={() => setIsFullscreen(true)}
               />
@@ -97,9 +102,11 @@ const ServiceDetailsPage = () => {
                   >
                     <X size={24} />
                   </button>
-                  <img
+                  <Image
                     src={images[1].src}
                     alt="placeholder"
+                    width={850}
+                    height={600}
                     className="max-w-full max-h-full object-contain p-4"
                     onClick={(e) => e.stopPropagation()}
                   />
