@@ -157,7 +157,7 @@ const ContactForm = () => {
                     },
                     pattern: {
                       value: emailRegex,
-                      message: "Invalid email address",
+                      message: "Ungültige E-Mail-Adresse",
                     },
                   })}
                   className={`bg-white ${
@@ -216,7 +216,7 @@ const ContactForm = () => {
                     </SelectTrigger>
                     <SelectContent position={"popper"}>
                       <SelectGroup>
-                        <SelectLabel>Select a service</SelectLabel>
+                        <SelectLabel>Wählen Sie einen Dienst aus</SelectLabel>
                         <SelectItem
                           value={"peritoneal_dialysis_(CADP)"}
                           className={

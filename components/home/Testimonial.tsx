@@ -15,7 +15,7 @@ export default function TestimonialCard() {
         <figure>
           <Image
             src={quoteImg.src}
-            alt={"Quote Icon"}
+            alt={"Zitat-Symbol"}
             width={110}
             height={84}
             className="w-[55px] h-[42px] mx-auto mb-8"
@@ -49,7 +49,7 @@ export default function TestimonialCard() {
         {/*        src={logoImg.src}*/}
         {/*        width={320}*/}
         {/*        height={450}*/}
-        {/*        alt={"Cross in Heart Icon"}*/}
+        {/*        alt={"Kreuz im Herz-Symbol"}*/}
         {/*        className="w-[68px] h-auto mx-auto"*/}
         {/*      />*/}
         {/*    </figure>*/}

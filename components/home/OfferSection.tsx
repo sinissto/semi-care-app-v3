@@ -8,7 +8,7 @@ import Tile from "@/components/Tile";
 const offers = [
   {
     icon: offerImg1.src,
-    alt: "Doctor icon",
+    alt: "Arzt-Symbol",
     heading: "Peritonealdialyse (CAPD)",
     description:
       "Eine Peritonealdialyse verändert den Alltag – für Betroffene genauso wie für ihre Angehörigen.",

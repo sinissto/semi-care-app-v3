@@ -28,10 +28,10 @@ const ServiceDetailsPage = () => {
       <Section>
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-16 text-center px-4 mb-4 sm:mb-6 md:mb-8 lg:mb-16">
           <h1 className="max-w-3xl text-5xl text-primary font-semibold text-pretty md:text-6xl">
-            No service found!
+            Kein Netzempfang!
           </h1>
           <Button variant={"outline"}>
-            <Link href={"/services"}>Go to all services</Link>
+            <Link href={"/leistungen"}>Alle Dienste anzeigen!</Link>
           </Button>
         </div>
       </Section>
@@ -49,7 +49,7 @@ const ServiceDetailsPage = () => {
         {/*<div className="flex items-center gap-3 text-sm md:text-base"></div>*/}
         <Image
           src={images[0].src}
-          alt="placeholder"
+          alt={`${title} servicebild`}
           width={850}
           height={600}
           className="mt-4 mb-8 aspect-video w-full rounded-lg border object-cover"
@@ -82,7 +82,7 @@ const ServiceDetailsPage = () => {
             <>
               <Image
                 src={images[1].src}
-                alt="placeholder"
+                alt={`${title} servicebild`}
                 width={850}
                 height={600}
                 className="my-8 w-full h-auto rounded-md object-fit cursor-pointer md:cursor-default"
@@ -102,9 +102,10 @@ const ServiceDetailsPage = () => {
                   >
                     <X size={24} />
                   </button>
+
                   <Image
                     src={images[1].src}
-                    alt="placeholder"
+                    alt={`${title} servicebild`}
                     width={850}
                     height={600}
                     className="max-w-full max-h-full object-contain p-4"

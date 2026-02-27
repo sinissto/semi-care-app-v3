@@ -12,26 +12,26 @@ import Image from "next/image";
 const services = [
   {
     icon: offerIcon1,
-    alt: "Medical record icon",
-    title: "Medical Record",
+    alt: "Symbol für medizinische Akte",
+    title: "Krankenakte",
     desc: "Duis aute irure dolor in reprehen voluptate velit esse cillum.",
   },
   {
     icon: offerIcon2,
-    alt: "Ambulance icon",
-    title: "Ambulance",
+    alt: "Symbol für Krankenwagen",
+    title: "Ambulanz",
     desc: "Duis aute irure dolor in reprehen voluptate velit esse cillum.",
   },
   {
     icon: offerIcon3,
-    alt: "Doctor icon",
-    title: "Medical Advice",
+    alt: "Arzt-Symbol",
+    title: "Medizinischer Rat",
     desc: "Duis aute irure dolor in reprehen voluptate velit esse cillum.",
   },
   {
     icon: offerIcon4,
-    alt: "Phone icon",
-    title: "24/7 Support",
+    alt: "Telefonsymbol",
+    title: "24/7-Support",
     desc: "Duis aute irure dolor in reprehen voluptate velit esse cillum.",
   },
 ];
@@ -44,6 +44,7 @@ export default function ServicesSection() {
         <h2 className="text-[26px]/[30px] lg:text-[42px]/[44px] xl:text-[48px]/[64px] text-black font-secondary mb-4 xl:mb-4.25">
           Unsere <span className="text-primary">Leistungen</span>
         </h2>
+        {/* TODO: review and translate to german if needed */}
         <p className="text-[16px]/[24px] lg:text-[16px]/[24px] text-gray-primary px-2 lg:max-w-[85%] xl:max-w-[75%] mx-auto ">
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
           dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
@@ -59,7 +60,7 @@ export default function ServicesSection() {
           <figure className={"flex items-center justify-center px-3.75 "}>
             <Image
               src={serviceImg.src}
-              alt={"Elder care"}
+              alt={"Junger Pfleger umarmt alte Dame"}
               width={1024}
               height={1024}
               className="w-[80%] object-cover overflow-hidden rounded-[50px] border-[6px] border-secondary"

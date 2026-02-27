@@ -3,7 +3,7 @@ import Section from "@/components/layout/Section";
 const FqaPage = () => {
   return (
     <Section>
-      <div>FQA Page</div>
+      <div>FAQ-Seite</div>
     </Section>
   );
 };

@@ -22,42 +22,42 @@ const defaultAchievements = [
 const defaultSpecialUs = [
   {
     img: humanity_and_trust_img.src,
-    alt: "Humanity and trust image",
+    alt: "Das Bild zeigt Menschlichkeit und Vertrauen.",
     label: "Menschlichkeit und Vertrauen",
     description:
       "Bei SemiCare stehen die Menschen im Mittelpunkt unseres Handelns – nicht nur unserer Pflegedienstleistungen. Wir bieten Pflege nicht „nach Plan“, sondern mit Herz. Wir hören zu, wir verstehen, wir unterstützen – auch in schwierigen Zeiten. Wir bauen langfristige Beziehungen auf – zu unseren Klienten und ihren Familien.",
   },
   {
     img: expertise_and_experience_img.src,
-    alt: "Expertise and Experience photo",
+    alt: "Bild zeigt Fachkompetenz und Erfahrung",
     label: "Fachwissen und Erfahrung",
     description:
       "Unser qualifiziertes Team verfügt über fundiertes Fachwissen und langjährige Erfahrung in der ambulanten und stationären Versorgung. Wir arbeiten nach höchsten Qualitätsstandards und bilden uns regelmäßig fort. So gewährleisten wir eine professionelle, medizinisch fundierte und zugleich mitfühlende Betreuung.",
   },
   {
     img: care_in_place_img.src,
-    alt: "Care at home photo",
+    alt: "Bild zur häuslichen Pflege",
     label: "Pflege an einem Ort, an dem Sie sich sicher fühlen",
     description:
       "Ihr Zuhause ist ein Ort voller Erinnerungen, Geborgenheit und Vertrautheit. Genau hier setzen wir an. Unser ambulanter Pflegedienst ermöglicht es Menschen, in ihrer gewohnten Umgebung zu bleiben, so lange wie möglich selbstständig und selbstbestimmt zu leben und sich dennoch gut betreut zu fühlen.",
   },
   {
     img: individual_consultation_img.src,
-    alt: "Individual medical consultation",
+    alt: "Abbildung einer individuellen ärztlichen Beratung",
     label: "Einzelberatung",
     description:
       "Wir wissen, dass jeder Mensch seine eigene Geschichte und seine eigenen Bedürfnisse hat. Darauf basiert unsere Betreuung. Individuell zugeschnittene Pflege steht bei uns im Mittelpunkt. Unsere Betreuung beschränkt sich nicht auf ein standardisiertes Programm, sondern beinhaltet Zeit, Geduld und Aufmerksamkeit.",
   },
   {
     img: reliability_and_accessibility_img.src,
-    alt: "Doctor and patient discussing treatment plan",
+    alt: "Bild von Arzt und Patient im Gespräch über den Behandlungsplan",
     label: "Zuverlässigkeit und Zugänglichkeit",
     description:
       "Zuverlässigkeit, Pünktlichkeit und klare Kommunikation sind für uns selbstverständlich. Wir sind für Sie da – auch in schwierigen Zeiten. Im Notfall erreichen Sie uns rund um die Uhr, auch an Sonn- und Feiertagen.",
   },
   {
     img: trust_of_relatives_img.src,
-    alt: "Family photo",
+    alt: "Familienfoto vom Boden aus, das eine Familie mit drei Generationen zeigt, die lächelnd einander umarmen.",
     label: "Vertrauen der Verwandten",
     description:
       "Die Entscheidung, die eigenen Eltern oder einen geliebten Menschen Fremden anzuvertrauen, ist nie leicht. Wir bei SemiCare verstehen diese Gefühle sehr gut – denn für uns ist Pflege mehr als nur eine Dienstleistung. Es ist eine Frage des Vertrauens. Vertrauen beginnt dort, wo man loslassen kann, im Wissen, dass die Hilfsbedürftigen in guten Händen sind.",
@@ -70,17 +70,17 @@ const defaultProps = {
     "Für uns bedeutet Pflege mehr als nur Unterstützung im Alltag. Sie bedeutet Nähe, Respekt und echtes Interesse am Einzelnen. Bei SemiCare unterstützen wir Senioren mit dem Ziel, ihre Lebensqualität zu erhalten und ihnen ein gutes und sicheres Leben in ihren eigenen vier Wänden zu ermöglichen.",
   mainImage: {
     src: ja_i_zuki_img.src,
-    alt: "Andrija in a pink shirt and Zuki smiling",
+    alt: "Eine junge Pflegekraft in einem rosa Hemd und eine lächelnde ältere Dame",
   },
   secondaryImage: {
     src: andrija_zuki_img.src,
-    alt: "Andrija in a pink shirt and Zuki smiling",
+    alt: "Ein junger Mann im rosa Hemd und eine lächelnde ältere Dame, die von einem Pflegedienst betreut wird",
   },
   breakout: {
     title: "Semi<span className='text-secondary'>Care</span>",
     description: "Ambulante Pflege mit Herz und Verantwortungsbewusstsein.",
   },
-  achievementsTitle: "Lives made better in Numbers",
+  achievementsTitle: "Leben, die durch Zahlen verbessert wurden",
   achievementsDescription:
     "Die Betreuung mit Hingabe, Fachkompetenz und einer herzlichen Art hat dazu geführt, dass Familien uns vertrauen.",
   achievements: defaultAchievements,

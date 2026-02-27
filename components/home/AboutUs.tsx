@@ -54,7 +54,9 @@ const AboutUs = ({ className }: AboutUsProps) => {
             <figure className="relative z-20">
               <Image
                 src={aboutUsImg.src}
-                alt={"Image of doctor with play button at the center"}
+                alt={
+                  "Bild einer jungen Frau und einer alten Dame, die sich umarmen"
+                }
                 width={1024}
                 height={1114}
                 className="w-full h-auto rounded-[40px] border-8 border-white"
@@ -64,7 +66,7 @@ const AboutUs = ({ className }: AboutUsProps) => {
             <figure className="absolute -top-7.5 -right-7.5">
               <Image
                 src={topGreenImg.src}
-                alt={"Green retangle image"}
+                alt={"Grünes Rechteckbild"}
                 width={90}
                 height={90}
                 className="w-22.5 h-22.5"
@@ -74,7 +76,7 @@ const AboutUs = ({ className }: AboutUsProps) => {
             <figure className="absolute -bottom-7.5 -left-7.5 ">
               <Image
                 src={bottomPurpleImg.src}
-                alt={"White retangle image with purple border"}
+                alt={"Weißes Rechteck mit violettem Rand"}
                 width={90}
                 height={90}
                 className="w-22.5 h-22.5"

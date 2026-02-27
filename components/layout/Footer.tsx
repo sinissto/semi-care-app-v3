@@ -17,7 +17,7 @@ import instaImg5 from "@/assets/images/footer-img5.png";
 import instaImg6 from "@/assets/images/footer-img6.png";
 
 const pageLinks = {
-  title: "Useful Links",
+  title: "Nützliche Links",
   links: [
     { label: "Über uns", url: "/uber-uns" }, // /about-us
     { label: "Leistungen", url: "/leistungen" }, // /services
@@ -44,12 +44,12 @@ const socialLinks = [
 ];
 
 const instagramImages = [
-  { src: instaImg1, alt: "Instagram Image 1" },
-  { src: instaImg2, alt: "Instagram Image 2" },
-  { src: instaImg3, alt: "Instagram Image 3" },
-  { src: instaImg4, alt: "Instagram Image 4" },
-  { src: instaImg5, alt: "Instagram Image 5" },
-  { src: instaImg6, alt: "Instagram Image 6" },
+  { src: instaImg1, alt: "Instagram-Bild 1" },
+  { src: instaImg2, alt: "Instagram-Bild 2" },
+  { src: instaImg3, alt: "Instagram-Bild 3" },
+  { src: instaImg4, alt: "Instagram-Bild 4" },
+  { src: instaImg5, alt: "Instagram-Bild 5" },
+  { src: instaImg6, alt: "Instagram-Bild 6" },
 ];
 
 const Footer = () => {
@@ -62,9 +62,10 @@ const Footer = () => {
           <div className="flex-1 flex flex-col items-center md:items-start mx-auto md:mx-0 lg:mb-0 px-3.75 mb-0">
             <div className="flex items-center gap-2 md:justify-start mb-4 md:mb-8">
               {/*<Logo textClassName={"lg:text-2xl "} />*/}
+
               <Image
                 src={LogoLarge.src}
-                alt={"Large SemiCare Logo"}
+                alt={"Großes SemiCare-Logo"}
                 width={1024}
                 height={1024}
                 className={"w-[50%] md:w-full mx-auto"}
