@@ -63,7 +63,7 @@ const Hero = ({
           </div>
         </div>
         <div className="relative w-full h-full">
-          <figure className="relative mx-auto md:absolute md:top-1/2 md:left-1/2  md:-translate-1/2 w-[60%] md:w-full h-full lg:w-[90%]">
+          <figure className="relative mx-auto md:top-1/2 md:left-1/2  md:-translate-1/2 w-[60%] md:w-full h-full lg:w-[90%]">
             <Image
               src={image.src}
               alt={image.alt}

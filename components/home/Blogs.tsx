@@ -1,8 +1,8 @@
 import React from "react";
 import Section from "@/components/layout/Section";
-import CAPD from "@/assets/images/capd.png";
+import CAPD from "@/assets/images/peritoneal_dialysis_1.png";
 import grundpflege from "@/assets/images/grundpflege.png";
-import behandlungspflege from "@/assets/images/Behandlungspflege.png";
+import behandlungspflege from "@/assets/images/Behandlungspflege2.png";
 import haushaltsversorgung from "@/assets/images/Hauswirtschaftliche.png";
 import betreuungsleistungen from "@/assets/images/Betreuungsleistungen.png";
 import sonstige_leistungen from "@/assets/images/Leistungen.png";
@@ -72,13 +72,15 @@ const Blogs = () => {
             className="h-full flex flex-col bg-gray-50 rounded-3xl shadow-md overflow-hidden hover:shadow-xl hover:bg-[var(--color-primary-light)] transition duration-300"
           >
             {/* Image */}
-            <figure className={"w-full mb-6 lg:mb-10.75"}>
+            <figure
+              className={"w-full h-[200px] mb-6 lg:mb-10.75 overflow-hidden"}
+            >
               <Image
                 src={blog.image}
                 alt={blog.title}
                 width={350}
                 height={200}
-                className="w-full object-cover"
+                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
               />
             </figure>
 

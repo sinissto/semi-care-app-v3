@@ -9,13 +9,13 @@ import {
 
 import peritoneal_dialysis_img_1 from "@/assets/images/peritoneal_dialysis_1.png";
 import peritoneal_dialysis_img_2 from "@/assets/images/peritoneal_dialysis_2.png";
-import basic_care_img from "@/assets/images/basic_care.jpeg";
-import treatment_care_img from "@/assets/images/treatment_care.jpg";
-import domestic_care_img from "@/assets/images/domestic_care.jpg";
-import respite_care_man_img from "@/assets/images/respite_care_man.jpg";
-import respite_care_woman_img from "@/assets/images/respite_care_women.jpg";
-import other_services_img_1 from "@/assets/images/other_services_img_1.png";
-import other_services_img_2 from "@/assets/images/other_services_img_2.png";
+import basic_care_img from "@/assets/images/basic_care2.png";
+import treatment_care_img from "@/assets/images/treatment_care2.png";
+import domestic_care_img from "@/assets/images/domestic_care2.png";
+import respite_care_man_img from "@/assets/images/respite_care_man2.png";
+import respite_care_woman_img from "@/assets/images/respite_care_woman2.png";
+import other_services_img_1 from "@/assets/images/other_services_img_12.png";
+import other_services_img_2 from "@/assets/images/other_services_img_22.png";
 
 // const data = {
 //   leistungen: {

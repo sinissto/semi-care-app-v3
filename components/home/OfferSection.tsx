@@ -32,7 +32,7 @@ const offers = [
 const OfferSection = () => {
   return (
     <Section
-      sectionClassName={"sm:mt-[30px] bg-linear-to-b from-[#fff] to-[#fff]"}
+      sectionClassName={"sm:mt-[30px] bg-linear-to-b from-[#fff] to-[#fff] "}
     >
       <div
         className={
