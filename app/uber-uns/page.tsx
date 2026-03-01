@@ -1,15 +1,14 @@
-import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Section from "@/components/layout/Section";
 
 import andrija_zuki_img from "@/assets/images/about_us/andrija_zuki_no_bg.png";
 import ja_i_zuki_img from "@/assets/images/about_us/ja_i_zuki_no_bg.png";
-import humanity_and_trust_img from "@/assets/images/about_us/humanity_and_trust.jpg";
-import expertise_and_experience_img from "@/assets/images/about_us/expertise_and_experience.png";
+import humanity_and_trust_img from "@/assets/images/about_us/humanity_and_trust2.jpg";
+import expertise_and_experience_img from "@/assets/images/about_us/expertise_and_experience2.png";
 import care_in_place_img from "@/assets/images/about_us/care_at_home.png";
-import individual_consultation_img from "@/assets/images/about_us/individual_consultation.png";
-import reliability_and_accessibility_img from "@/assets/images/about_us/reliability_and_accessibility.jpg";
-import trust_of_relatives_img from "@/assets/images/about_us/trust_of_relatives.jpg";
-import Section from "@/components/layout/Section";
-import Image from "next/image";
+import individual_consultation_img from "@/assets/images/about_us/individual_consultation2.png";
+import reliability_and_accessibility_img from "@/assets/images/about_us/reliability_and_accessibility2.jpg";
+import trust_of_relatives_img from "@/assets/images/about_us/trust_of_relatives2.jpg";
 
 const defaultAchievements = [
   { label: "Peritonealdialyse (CAPD)", value: "17" },
@@ -138,7 +137,7 @@ const AboutUsPage = () => {
             alt={secondaryImage.alt}
             width={860}
             height={860}
-            className="grow basis-0  rounded-xl object-cover md:w-1/2 lg:min-h-0 lg:w-auto ring-8 ring-primary/30"
+            className="grow basis-0  rounded-xl object-cover md:w-1/2  lg:w-auto  ring-8 ring-primary/30"
           />
         </div>
       </div>
