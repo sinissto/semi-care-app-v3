@@ -189,6 +189,13 @@ import other_services_img_2 from "@/assets/images/other_services_img_22.png";
 // };
 
 const data = {
+  contactInfo: {
+    phone: "+49 89 520 74219",
+    fax: "+49 89 327 63110",
+    mobile: "+49 178 531 4998",
+    email: "info@semi-care.de",
+    address: "Jollystraße 5, 81545 München",
+  },
   services: {
     id: 1,
     label: "Unsere Leistungen",

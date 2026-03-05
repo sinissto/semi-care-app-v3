@@ -1,33 +1,65 @@
+"use client";
+
 import {
   PhoneIcon,
   TabletSmartphone,
   MailIcon,
   MapPinIcon,
+  Printer,
 } from "lucide-react";
 
 import Section from "@/components/layout/Section";
 import ContactForm from "@/components/contact/ContactForm";
+import { useAppContext } from "@/hooks/useAppContext";
 
-const info = [
-  {
-    icon: <PhoneIcon />,
-    title: "Telefon / Fax",
-    description: "+49 89 520 7821",
-  },
-  {
-    icon: <TabletSmartphone />,
-    title: "Mobile",
-    description: "+49 178 531 4998",
-  },
-  { icon: <MailIcon />, title: "E-mail", description: "info@semi-care.de" },
-  {
-    icon: <MapPinIcon />,
-    title: "Adresse",
-    description: "Jollystraße 5, 81545 München",
-  },
-];
+// const info = [
+//   {
+//     icon: <PhoneIcon />,
+//     title: "Telefon / Fax",
+//     description: "+49 89 520 7821",
+//   },
+//   {
+//     icon: <TabletSmartphone />,
+//     title: "Mobile",
+//     description: "+49 178 531 4998",
+//   },
+//   { icon: <MailIcon />, title: "E-mail", description: "info@semi-care.de" },
+//   {
+//     icon: <MapPinIcon />,
+//     title: "Adresse",
+//     description: "Jollystraße 5, 81545 München",
+//   },
+// ];
 
 const ContactPage = () => {
+  const { contactInfo } = useAppContext();
+  console.log(contactInfo);
+  const { phone, fax, mobile, email, address } = contactInfo;
+
+  const info = [
+    {
+      icon: <PhoneIcon />,
+      title: "Telefon",
+      description: phone,
+    },
+    {
+      icon: <Printer />,
+      title: "Fax",
+      description: fax,
+    },
+    {
+      icon: <TabletSmartphone />,
+      title: "Mobile",
+      description: mobile,
+    },
+    { icon: <MailIcon />, title: "E-mail", description: email },
+    {
+      icon: <MapPinIcon />,
+      title: "Adresse",
+      description: address,
+    },
+  ];
+
   return (
     <Section sectionClassName={"bg-primary-tint rounded-b-2xl"}>
       {/*<div className="container mx-auto">*/}
@@ -85,11 +117,12 @@ const ContactPage = () => {
                   <div className="mb-2 text-xl font-semibold text-grey-primary">
                     <p className={"text-primary"}>{item.title}</p>
                     <h3 className="textg-rey-primary">
-                      {item.title === "Telefon / Fax" && (
+                      {item.title === "Telefon" && (
                         <a type={"tel"} href={`tel:${item.description}`}>
                           {item.description}
                         </a>
                       )}
+                      {item.title === "Fax" && <p>{item.description}</p>}
                       {item.title === "Mobile" && (
                         <a type={"tel"} href={`tel:${item.description}`}>
                           {item.description}
