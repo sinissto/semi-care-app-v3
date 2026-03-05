@@ -11,14 +11,8 @@ import bottomPurpleImg from "@/assets/images/video-section-bottom-img.png";
 import Image from "next/image";
 import { useAppContext } from "@/hooks/useAppContext";
 
-interface AboutUsProps {
-  className?: string;
-}
-
-const AboutUs = ({ className }: AboutUsProps) => {
+const AboutUs = () => {
   const { contactInfo } = useAppContext();
-
-  console.log("Contact Info:", contactInfo); // Debugging: Log the contact info to verify it's being retrieved correctly
 
   return (
     <Section sectionClassName={"relative"}>

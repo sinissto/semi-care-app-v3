@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -15,6 +17,7 @@ import instaImg3 from "@/assets/images/footer-img3.png";
 import instaImg4 from "@/assets/images/footer-img4.png";
 import instaImg5 from "@/assets/images/footer-img5.png";
 import instaImg6 from "@/assets/images/footer-img6.png";
+import { useAppContext } from "@/hooks/useAppContext";
 
 const pageLinks = {
   title: "Nützliche Links",
@@ -24,13 +27,6 @@ const pageLinks = {
     // { label: "FAQ", url: "/faq" },
     { label: "Kontakt", url: "/kontakt" }, // /kontakt
   ],
-};
-
-const contactInfos = {
-  address: "Jollystraße 5, 81545 München",
-  email: "info@semi-care.de",
-  phone: "+49 89 5707 4219",
-  mobile: "+49 178 531 4998",
 };
 
 const socialLinks = [
@@ -53,6 +49,7 @@ const instagramImages = [
 ];
 
 const Footer = () => {
+  const { contactInfo } = useAppContext();
   return (
     <Section
       sectionClassName={`relative pb-[65px] bg-[url(/images/footer-index-img.jpg)] bg-cover bg-center lg:mb-0 pt-[65px] z-0 my-0`}
@@ -135,13 +132,13 @@ const Footer = () => {
                 </h5>
                 <a
                   type={"text"}
-                  href={`https://maps.google.com/?q=${contactInfos.address}`}
+                  href={`https://maps.google.com/?q=${contactInfo.address}`}
                   target={"_blank"}
                   className={
                     "text-[16px]/[16px] font-normal text-gray-primary hover:text-primary"
                   }
                 >
-                  {contactInfos.address}
+                  {contactInfo.address}
                 </a>
               </li>
 
@@ -155,12 +152,12 @@ const Footer = () => {
                 </h5>
                 <a
                   type={"email"}
-                  href={`mailto:${contactInfos.email}`}
+                  href={`mailto:${contactInfo.email}`}
                   className={
                     "text-[16px]/[16px] font-normal text-gray-primary hover:text-primary"
                   }
                 >
-                  {contactInfos.email}
+                  {contactInfo.email}
                 </a>
               </li>
 
@@ -174,13 +171,29 @@ const Footer = () => {
                 </h5>
                 <a
                   type={"text"}
-                  href={`tel:${contactInfos.phone}`}
+                  href={`tel:${contactInfo.phone}`}
                   className={
                     "text-[16px]/[16px] font-normal text-gray-primary hover:text-primary"
                   }
                 >
-                  {contactInfos.phone}
+                  {contactInfo.phone}
                 </a>
+              </li>
+              <li className="font-medium mb-4 flex flex-col items-center md:items-start">
+                <h5
+                  className={
+                    "text-[16px]/[16px] text-primary font-normal mb-1.75"
+                  }
+                >
+                  Fax:
+                </h5>
+                <p
+                  className={
+                    "text-[16px]/[16px] font-normal text-gray-primary hover:text-primary"
+                  }
+                >
+                  {contactInfo.fax}
+                </p>
               </li>
               <li className="font-medium mb-4 flex flex-col items-center md:items-start">
                 <h5
@@ -192,12 +205,12 @@ const Footer = () => {
                 </h5>
                 <a
                   type={"text"}
-                  href={`tel:${contactInfos.mobile}`}
+                  href={`tel:${contactInfo.mobile}`}
                   className={
                     "text-[16px]/[16px] font-normal text-gray-primary hover:text-primary"
                   }
                 >
-                  {contactInfos.mobile}
+                  {contactInfo.mobile}
                 </a>
               </li>
             </ul>
