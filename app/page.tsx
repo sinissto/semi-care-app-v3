@@ -4,7 +4,7 @@ import { AboutUs } from "@/components/home/AboutUs";
 import Counter from "@/components/home/Counter";
 import Services from "@/components/home/Services";
 import TestimonialCard from "@/components/home/Testimonial";
-import Blogs from "@/components/home/Blogs";
+import Blogs from "@/components/home/ServiceCards";
 
 export default function Home() {
   return (
