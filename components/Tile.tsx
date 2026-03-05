@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -45,7 +46,13 @@ const Tile = ({
           }`}
         >
           <figure>
-            <Image src={image} alt={imageAlt} width={60} height={60} />
+            <Image
+              src={image}
+              alt={imageAlt}
+              width={60}
+              height={60}
+              className={"w-[60px] h-[60px]"}
+            />
           </figure>
         </div>
 
