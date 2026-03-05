@@ -8,7 +8,7 @@
   --font-secondary: var(--font-dm-serif), serif, Georgia;
 
   /*--color-primary: #8bc53e;*/
-  --color-primary: #1b71ab;
+  --color-primary: #3a7ea8;
   --color-primary-light: #e8f2fa;
   /*--color-secondary: #8b4fb9;*/
   /*--color-secondary: #c80076;*/
@@ -147,4 +147,38 @@
 body {
   font-family: var(--font-primary), sans-serif;
   background-color: #fff;
+}
+
+/* Pagination container */
+.testimonial-swiper .swiper-pagination {
+  bottom: -40px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Bullet styling */
+.testimonial-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #d1d5db;
+  opacity: 1;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Active bullet */
+.testimonial-swiper .swiper-pagination-bullet-active {
+  background-color: var(--color-primary);
+  width: 32px;
+  border-radius: 6px;
+}
+
+/* Hover effect */
+.testimonial-swiper .swiper-pagination-bullet:hover {
+  background-color: #9ca3af;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active:hover {
+  background-color: var(--color-primary);
 }

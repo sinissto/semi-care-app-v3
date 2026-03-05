@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -7,12 +9,17 @@ import aboutUsImg from "@/assets/images/ja i zuki.png";
 import topGreenImg from "@/assets/images/video-section-top-img.png";
 import bottomPurpleImg from "@/assets/images/video-section-bottom-img.png";
 import Image from "next/image";
+import { useAppContext } from "@/hooks/useAppContext";
 
 interface AboutUsProps {
   className?: string;
 }
 
 const AboutUs = ({ className }: AboutUsProps) => {
+  const { contactInfo } = useAppContext();
+
+  console.log("Contact Info:", contactInfo); // Debugging: Log the contact info to verify it's being retrieved correctly
+
   return (
     <Section sectionClassName={"relative"}>
       <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
@@ -45,7 +52,7 @@ const AboutUs = ({ className }: AboutUsProps) => {
               Brauchen Sie Beratung?
             </h4>
             <h4 className={"text-4xl/[42px] text-primary font-secondary mb-1"}>
-              +49 89 5707 4219
+              {contactInfo.phone}
             </h4>
           </div>
         </div>
