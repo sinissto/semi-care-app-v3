@@ -2,15 +2,13 @@
 
 import { FaPhoneVolume } from "react-icons/fa6";
 import { ReactNode } from "react";
-import { FaEnvelope, FaUser } from "react-icons/fa";
-import Link from "next/link";
+import { FaEnvelope } from "react-icons/fa";
 import Section from "@/components/layout/Section";
 import { useAppContext } from "@/hooks/useAppContext";
 
 const Chyron = () => {
   const { contactInfo } = useAppContext();
   const { phone, email } = contactInfo;
-  console.log(contactInfo);
 
   return (
     <Section sectionClassName={"my-0 lg:my-0"} childClassName={"mt-0"}>
@@ -22,9 +20,16 @@ const Chyron = () => {
             <FaPhoneVolume className={"rotate-45 text-white"} />
           </ChyronIcon>
           {/* Text and phone */}
-          <p className={"text-gray-primary text-[14px]/[24px] "}>
+          <p
+            className={
+              "text-gray-primary text-[14px]/[24px] flex items-center "
+            }
+          >
             <span>Für eine kostenlose Beratung:</span>
-            <a href={`tel:${phone}`} className={"ml-0.75 font-semibold"}>
+            <a
+              href={`tel:${phone}`}
+              className={"ml-0.75 font-semibold hover:text-primary"}
+            >
               {phone}
             </a>
           </p>
@@ -51,22 +56,6 @@ const Chyron = () => {
               </a>
             </p>
           </div>
-
-          {/*<div className={"flex items-center gap-2.5"}>*/}
-          {/*  /!* Icon Phone *!/*/}
-          {/*  <ChyronIcon>*/}
-          {/*    <FaUser className={"text-white"} />*/}
-          {/*  </ChyronIcon>*/}
-          {/*  /!* Text and phone *!/*/}
-          {/*  <p*/}
-          {/*    className={*/}
-          {/*      "text-[14px]/[18px] text-secondary-dark font-semibold hover:text-primary"*/}
-          {/*    }*/}
-          {/*  >*/}
-          {/*    /!* todo: this route should go to login page, but there is no login page, so to clear error in browser dev tool console this lead to kontakt page, chage later or remove *!/*/}
-          {/*    <Link href={"/kontakt"}>Anmelden</Link>*/}
-          {/*  </p>*/}
-          {/*</div>*/}
         </div>
       </div>
     </Section>

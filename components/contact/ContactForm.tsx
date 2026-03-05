@@ -50,7 +50,6 @@ const ContactForm = () => {
   const { register, handleSubmit, control, formState, reset } = form;
 
   const { errors } = formState;
-  console.log(errors.service);
 
   const onSubmit = async (data: ContactFormValues) => {
     setStatus("loading");
