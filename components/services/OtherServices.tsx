@@ -2,7 +2,6 @@
 
 import Section from "@/components/layout/Section";
 import { useAppContext } from "@/hooks/useAppContext";
-import Tile from "@/components/Tile";
 
 const OtherServices = () => {
   const { otherServices } = useAppContext();

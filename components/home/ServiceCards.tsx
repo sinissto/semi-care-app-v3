@@ -2,62 +2,10 @@
 
 import React from "react";
 import Section from "@/components/layout/Section";
-import CAPD from "@/assets/images/peritoneal_dialysis_1.png";
-import grundpflege from "@/assets/images/grundpflege.png";
-import behandlungspflege from "@/assets/images/Behandlungspflege2.png";
-import haushaltsversorgung from "@/assets/images/Hauswirtschaftliche.png";
-import betreuungsleistungen from "@/assets/images/Betreuungsleistungen.png";
-import sonstige_leistungen from "@/assets/images/Leistungen.png";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useAppContext } from "@/hooks/useAppContext";
 import { useRouter } from "next/navigation";
-import Tile from "@/components/Tile";
-
-const serviceCards = [
-  {
-    id: 1,
-    image: CAPD.src,
-    alt: "Durchführung der Peritonealdialyse",
-    date: "29. Februar 2025 in München",
-    title: "Durchführung der Peritonealdialyse (CAPD)",
-  },
-  {
-    id: 2,
-    image: grundpflege.src,
-    alt: "Grundpflege",
-    date: "29. Februar 2025 in München",
-    title: "Grundpflege",
-  },
-  {
-    id: 3,
-    image: behandlungspflege.src,
-    alt: "Behandlungspflege",
-    date: "29. Februar 2025 in München",
-    title: "Behandlungspflege",
-  },
-  {
-    id: 4,
-    image: betreuungsleistungen.src,
-    alt: "Zusätzlich buchbare häusliche Betreuungsleistungen",
-    date: "29. Februar 2025 in München",
-    title: "Zusätzlich buchbare häusliche Betreuungsleistungen",
-  },
-  {
-    id: 5,
-    image: haushaltsversorgung.src,
-    alt: "Hauswirtschaftliche Versorgung",
-    date: "29. Februar 2025 in München",
-    title: "Hauswirtschaftliche Versorgung",
-  },
-  {
-    id: 7,
-    image: sonstige_leistungen.src,
-    alt: "Sonstige Leistungen",
-    date: "29. Februar 2025 in München",
-    title: "Sonstige Leistungen",
-  },
-];
 
 const ServiceCards = () => {
   const { services } = useAppContext().services;
@@ -74,45 +22,48 @@ const ServiceCards = () => {
 
       {/* Blog Cards */}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 auto-rows-fr gap-8 max-w-[90%] mx-auto items-stretch">
-        {services.map((service) => (
-          <div
-            key={service.id}
-            className="h-full flex flex-col bg-gray-50 rounded-3xl shadow-md overflow-hidden hover:shadow-xl hover:bg-[var(--color-primary-light)] transition duration-300"
-          >
-            {/* Image */}
-            <figure
-              className={"w-full h-[200px] mb-6 lg:mb-10.75 overflow-hidden"}
+        {services.map((service) => {
+          const imageSrc = service.images[0]?.src;
+          return (
+            <div
+              key={service.id}
+              className="h-full flex flex-col bg-gray-50 rounded-3xl shadow-md overflow-hidden hover:shadow-xl hover:bg-[var(--color-primary-light)] transition duration-300"
             >
-              <Image
-                src={service.images.at(0)?.src}
-                alt={service.title}
-                width={350}
-                height={200}
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </figure>
-
-            {/* Content */}
-            <div className="pb-8 xl:px-8 text-center flex flex-col flex-1 ">
-              {/* <p className="text-[14px]/[20px] text-secondary-dark mb-2.5 lg:mb-4.25">{service.date}</p> */}
-              <h5
-                className={
-                  "text-[22px]/[26px] lg:text-[26px] xl:text-[30px]/[34px] font-secondary text-black mb-3.75 lg:mb-6.25"
-                }
+              {/* Image */}
+              <figure
+                className={"w-full h-[200px] mb-6 lg:mb-10.75 overflow-hidden"}
               >
-                {service.title}
-              </h5>
+                <Image
+                  src={imageSrc}
+                  alt={service.title}
+                  width={350}
+                  height={200}
+                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </figure>
 
-              <Button
-                variant={"outline"}
-                className="w-auto self-center text-[14px]/[18px] px-5.5 py-2 lg:px-10 lg:py-3.25 rounded-full border-2 border-secondary-dark text-secondary-dark hover:bg-secondary-dark hover:text-white transition mt-auto"
-                onClick={() => router.push(service.url)}
-              >
-                Mehr erfahren
-              </Button>
+              {/* Content */}
+              <div className="pb-8 xl:px-8 text-center flex flex-col flex-1 ">
+                {/* <p className="text-[14px]/[20px] text-secondary-dark mb-2.5 lg:mb-4.25">{service.date}</p> */}
+                <h5
+                  className={
+                    "text-[22px]/[26px] lg:text-[26px] xl:text-[30px]/[34px] font-secondary text-black mb-3.75 lg:mb-6.25"
+                  }
+                >
+                  {service.title}
+                </h5>
+
+                <Button
+                  variant={"outline"}
+                  className="w-auto self-center text-[14px]/[18px] px-5.5 py-2 lg:px-10 lg:py-3.25 rounded-full border-2 border-secondary-dark text-secondary-dark hover:bg-secondary-dark hover:text-white transition mt-auto"
+                  onClick={() => router.push(service.url)}
+                >
+                  Mehr erfahren
+                </Button>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </Section>
   );
