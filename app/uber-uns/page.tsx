@@ -9,14 +9,7 @@ import care_in_place_img from "@/assets/images/about_us/care_at_home.png";
 import individual_consultation_img from "@/assets/images/about_us/individual_consultation2.png";
 import reliability_and_accessibility_img from "@/assets/images/about_us/reliability_and_accessibility2.jpg";
 import trust_of_relatives_img from "@/assets/images/about_us/trust_of_relatives2.jpg";
-
-const defaultAchievements = [
-  { label: "Peritonealdialyse (CAPD)", value: "17" },
-  { label: "Grundpflege", value: "52" },
-  { label: "Behandlungspflege", value: "28+" },
-  { label: "Hauswirtschaftliche Leistungen", value: "38+" },
-  { label: "Verhinderungspflege", value: "83+" },
-];
+// import Achievements from "@/components/about-us/Achievements";
 
 const defaultSpecialUs = [
   {
@@ -76,33 +69,22 @@ const defaultProps = {
     alt: "Ein junger Mann im rosa Hemd und eine lächelnde ältere Dame, die von einem Pflegedienst betreut wird",
   },
   breakout: {
-    title: "Semi<span className='text-secondary'>Care</span>",
+    title: "SemiCare",
     description: "Ambulante Pflege mit Herz und Verantwortungsbewusstsein.",
   },
   achievementsTitle: "Leben, die durch Zahlen verbessert wurden",
   achievementsDescription:
     "Die Betreuung mit Hingabe, Fachkompetenz und einer herzlichen Art hat dazu geführt, dass Familien uns vertrauen.",
-  achievements: defaultAchievements,
   specialUs: defaultSpecialUs,
 };
 
 const AboutUsPage = () => {
-  const {
-    title,
-    description,
-    mainImage,
-    secondaryImage,
-    breakout,
-    achievementsTitle,
-    achievementsDescription,
-    achievements,
-    specialUs,
-  } = { ...defaultProps };
+  const { title, description, mainImage, secondaryImage, specialUs } = {
+    ...defaultProps,
+  };
 
   return (
     <Section>
-      {/*<div className={cn("", className)}>*/}
-      {/*  <div className="container mx-auto">*/}
       <div className="mb-14 grid gap-5 text-center md:grid-cols-2 md:text-left px-4">
         <h1 className="text-5xl lg:text-6xl text-primary font-semibold lg:ml-32">
           {title}
@@ -124,7 +106,7 @@ const AboutUsPage = () => {
             <div>
               <p className="text-5xl text-primary text-center font-bold mb-6">
                 {/*{breakout.title}*/}
-                Semi<span className="text-secondary">Care</span>
+                SemiCare
               </p>
               <p className="text-grey-primary text-center text-xl">
                 {/*{breakout.description}*/}
@@ -188,28 +170,7 @@ const AboutUsPage = () => {
         </div>
       ))}
 
-      <div className="relative overflow-hidden rounded-xl bg-primary/15 p-7 md:p-16 mx-4">
-        <div className="flex flex-col gap-4 text-center md:text-left">
-          <h2 className="text-3xl text-primary font-semibold md:text-4xl">
-            {achievementsTitle}
-          </h2>
-          <p className="max-w-2xl text-xl text-grey-primary ">
-            {achievementsDescription}
-          </p>
-        </div>
-        <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 text-center md:grid-cols-3 lg:grid-cols-5">
-          {achievements.map((item, idx) => (
-            <div className="flex flex-col gap-2" key={item.label + idx}>
-              <span className="text-4xl text-primary font-semibold md:text-5xl">
-                {item.value}
-              </span>
-              <p className="text-sm md:text-base">{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/*  </div>*/}
-      {/*</div>*/}
+      {/*<Achievements /> components to be added when there are existing patients */}
     </Section>
   );
 };
