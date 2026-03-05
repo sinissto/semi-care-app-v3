@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Section from "@/components/layout/Section";
 import CAPD from "@/assets/images/peritoneal_dialysis_1.png";
@@ -8,8 +10,11 @@ import betreuungsleistungen from "@/assets/images/Betreuungsleistungen.png";
 import sonstige_leistungen from "@/assets/images/Leistungen.png";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useAppContext } from "@/hooks/useAppContext";
+import { useRouter } from "next/navigation";
+import Tile from "@/components/Tile";
 
-const blogs = [
+const serviceCards = [
   {
     id: 1,
     image: CAPD.src,
@@ -54,7 +59,10 @@ const blogs = [
   },
 ];
 
-const Blogs = () => {
+const ServiceCards = () => {
+  const { services } = useAppContext().services;
+  const router = useRouter();
+
   return (
     <Section sectionClassName={"mt-[120px]"}>
       {/* Section Header */}
@@ -66,9 +74,9 @@ const Blogs = () => {
 
       {/* Blog Cards */}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 auto-rows-fr gap-8 max-w-[90%] mx-auto items-stretch">
-        {blogs.map((blog) => (
+        {services.map((service) => (
           <div
-            key={blog.id}
+            key={service.id}
             className="h-full flex flex-col bg-gray-50 rounded-3xl shadow-md overflow-hidden hover:shadow-xl hover:bg-[var(--color-primary-light)] transition duration-300"
           >
             {/* Image */}
@@ -76,8 +84,8 @@ const Blogs = () => {
               className={"w-full h-[200px] mb-6 lg:mb-10.75 overflow-hidden"}
             >
               <Image
-                src={blog.image}
-                alt={blog.title}
+                src={service.images.at(0)?.src}
+                alt={service.title}
                 width={350}
                 height={200}
                 className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
@@ -86,18 +94,19 @@ const Blogs = () => {
 
             {/* Content */}
             <div className="pb-8 xl:px-8 text-center flex flex-col flex-1 ">
-              {/* <p className="text-[14px]/[20px] text-secondary-dark mb-2.5 lg:mb-4.25">{blog.date}</p> */}
+              {/* <p className="text-[14px]/[20px] text-secondary-dark mb-2.5 lg:mb-4.25">{service.date}</p> */}
               <h5
                 className={
                   "text-[22px]/[26px] lg:text-[26px] xl:text-[30px]/[34px] font-secondary text-black mb-3.75 lg:mb-6.25"
                 }
               >
-                {blog.title}
+                {service.title}
               </h5>
 
               <Button
                 variant={"outline"}
                 className="w-auto self-center text-[14px]/[18px] px-5.5 py-2 lg:px-10 lg:py-3.25 rounded-full border-2 border-secondary-dark text-secondary-dark hover:bg-secondary-dark hover:text-white transition mt-auto"
+                onClick={() => router.push(service.url)}
               >
                 Mehr erfahren
               </Button>
@@ -109,4 +118,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default ServiceCards;

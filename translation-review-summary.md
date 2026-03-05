@@ -40,7 +40,7 @@ All English text strings in the project have been marked with TODO comments: `//
 ### 6. **app/layout.tsx**
 - ✅ Marked day names in JSON-LD structured data: "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
 
-### 7. **components/home/Blogs.tsx**
+### 7. **components/home/ServiceCards.tsx**
 - ✅ Marked date strings: "February 29, 2020 in London" (6 instances)
 
 ### 8. **components/home/OfferSection.tsx**
