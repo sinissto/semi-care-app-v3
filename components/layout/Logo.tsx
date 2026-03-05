@@ -23,11 +23,11 @@ const Logo = ({
       />
 
       <h2
-        className={`text-3xl  text-black  font-secondary ${
+        className={`text-3xl  text-secondary  font-secondary ${
           textClassName ? textClassName : "lg:text-5xl"
         }`}
       >
-        Semi<span className={"text-secondary"}>Care</span>
+        SemiCare
       </h2>
     </Link>
   );
