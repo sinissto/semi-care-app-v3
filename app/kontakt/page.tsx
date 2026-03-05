@@ -33,7 +33,6 @@ import { useAppContext } from "@/hooks/useAppContext";
 
 const ContactPage = () => {
   const { contactInfo } = useAppContext();
-  console.log(contactInfo);
   const { phone, fax, mobile, email, address } = contactInfo;
 
   const info = [
