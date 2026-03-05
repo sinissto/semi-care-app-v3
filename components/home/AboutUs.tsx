@@ -18,7 +18,7 @@ const AboutUs = ({ className }: AboutUsProps) => {
       <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
         <div className="flex flex-col items-center gap-5 text-center md:items-start md:text-left lg:ml-18 px-3.75">
           <h2 className="text-4xl/[64px] text-black font-secondary font-semibolds text-pretty -tracking-[0.1px] text-center lg:text-left lg:text-5xl/[64px] mb-6.5">
-            Willkommen bei Semi<span className={"text-primary"}>Care</span>
+            Willkommen bei SemiCare
           </h2>
           <p className="max-w-xl md:text-[20px]/[34px] text-center md:text-left mx-auto md:mx-0 text-gray-primary mb-7.75">
             Pflege bedeutet für uns mehr als Unterstützung im Alltag. Sie
