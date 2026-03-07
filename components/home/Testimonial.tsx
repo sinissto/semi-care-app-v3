@@ -23,7 +23,7 @@ const testimonialData = [
   },
   {
     quote:
-      "DiJeder Besuch war geprägt von Respekt, Geduld und echter Fürsorge. Man merkt sofort, dass hier Menschen arbeiten, die ihren Beruf mit Herz ausüben. Sie haben nicht nur gepflegt, sondern auch Mut gemacht, zugehört und ein Gefühl von Sicherheit gegeben.",
+      "Jeder Besuch war geprägt von Respekt, Geduld und echter Fürsorge. Man merkt sofort, dass hier Menschen arbeiten, die ihren Beruf mit Herz ausüben. Sie haben nicht nur gepflegt, sondern auch Mut gemacht, zugehört und ein Gefühl von Sicherheit gegeben.",
     name: "Lea Barthold",
   },
   {
