@@ -109,6 +109,18 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+
+              {/* Impressum link*/}
+              <li className="font-medium ">
+                <Link
+                  href={"/impressum"}
+                  className={
+                    "text-[16px]/[5px] text-gray-primary font-normal pl-0.75 hover:text-primary"
+                  }
+                >
+                  Impressum
+                </Link>
+              </li>
             </ul>
           </div>
 
