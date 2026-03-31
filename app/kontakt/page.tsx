@@ -12,25 +12,6 @@ import Section from "@/components/layout/Section";
 import ContactForm from "@/components/contact/ContactForm";
 import { useAppContext } from "@/hooks/useAppContext";
 
-// const info = [
-//   {
-//     icon: <PhoneIcon />,
-//     title: "Telefon / Fax",
-//     description: "+49 89 520 7821",
-//   },
-//   {
-//     icon: <TabletSmartphone />,
-//     title: "Mobile",
-//     description: "+49 178 531 4998",
-//   },
-//   { icon: <MailIcon />, title: "E-mail", description: "info@semi-care.de" },
-//   {
-//     icon: <MapPinIcon />,
-//     title: "Adresse",
-//     description: "Jollystraße 5, 81545 München",
-//   },
-// ];
-
 const ContactPage = () => {
   const { contactInfo } = useAppContext();
   const { phone, fax, mobile, email, address } = contactInfo;
