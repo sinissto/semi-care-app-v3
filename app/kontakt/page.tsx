@@ -117,7 +117,7 @@ const ContactPage = () => {
                         <a
                           type={"tel"}
                           href={
-                            "http://maps.google.com/?q=Jolly Straße 5,81545 München"
+                            "https://maps.google.com/?q=Jolly Straße 5,81545 München"
                           }
                           target={"_blank"}
                         >
