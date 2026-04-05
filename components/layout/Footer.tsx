@@ -55,7 +55,8 @@ const Footer = () => {
       sectionClassName={`relative pb-[65px] bg-[url(/images/footer-index-img.jpg)] bg-cover bg-center lg:mb-0 pt-[65px] z-0 my-0`}
     >
       <footer className={"bg-transparent"}>
-        <div className="flex flex-col items-start justify-center md:justify-between md:flex-row">
+        <div className="flex flex-col items-start justify-center md:justify-between md:flex-row md:gap-20">
+          {/* LOGO */}
           <div className="flex-1 flex flex-col items-center md:items-start mx-auto md:mx-0 lg:mb-0 px-3.75 mb-0">
             <div className="flex items-center gap-2 md:justify-start mb-4 md:mb-8">
               {/*<Logo textClassName={"lg:text-2xl "} />*/}
@@ -65,30 +66,12 @@ const Footer = () => {
                 alt={"Großes SemiCare-Logo"}
                 width={1024}
                 height={1024}
-                className={"w-[50%] md:w-full mx-auto"}
+                className={"w-[50%] md:w-full md:max-w-[300px] mx-auto"}
               />
             </div>
             <p className="w-[75%] text-[14px]/[24px] text-gray-primary text-center md:text-left mb-8">
               Copyright 2026 SemiCare. Alle Rechte vorbehalten.
             </p>
-
-            {/* todo: Footer Social icons */}
-            {/* <div className={"flex items-start"}>
-              <ul className={`flex gap-3.25`}>
-                {socialLinks.map((social, socialIdx) => (
-                  <li key={socialIdx}>
-                    <a
-                      href={"#"}
-                      className={
-                        "text-primary hover:text-white text-[16px] w-10 h-10 flex items-center justify-center rounded-full bg-transparent hover:bg-primary border border-primary transition-all duration-300"
-                      }
-                    >
-                      {social.icon}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div> */}
           </div>
 
           {/* USEFUL LINKS */}
@@ -229,27 +212,27 @@ const Footer = () => {
           </div>
 
           {/* Social */}
-          <div className={"flex-1 px-3.75 mx-auto"}>
-            <h4 className="text-2xl text-black  font-normal font-secondary mt-5 md:mt-2.5 mb-5 md:mb-16.5">
-              Soziale Medien
-            </h4>
-            <div className={"flex items-start"}>
-              <ul className={`flex gap-3.25`}>
-                {socialLinks.map((social, socialIdx) => (
-                  <li key={socialIdx}>
-                    <a
-                      href={"#"}
-                      className={
-                        "text-primary hover:text-white text-[16px] w-10 h-10 flex items-center justify-center rounded-full bg-transparent hover:bg-primary border border-primary transition-all duration-300"
-                      }
-                    >
-                      {social.icon}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          {/*<div className={"flex-1 px-3.75 mx-auto"}>*/}
+          {/*  <h4 className="text-2xl text-black  font-normal font-secondary mt-5 md:mt-2.5 mb-5 md:mb-16.5">*/}
+          {/*    Soziale Medien*/}
+          {/*  </h4>*/}
+          {/*  <div className={"flex items-start"}>*/}
+          {/*    <ul className={`flex gap-3.25`}>*/}
+          {/*      {socialLinks.map((social, socialIdx) => (*/}
+          {/*        <li key={socialIdx}>*/}
+          {/*          <a*/}
+          {/*            href={"#"}*/}
+          {/*            className={*/}
+          {/*              "text-primary hover:text-white text-[16px] w-10 h-10 flex items-center justify-center rounded-full bg-transparent hover:bg-primary border border-primary transition-all duration-300"*/}
+          {/*            }*/}
+          {/*          >*/}
+          {/*            {social.icon}*/}
+          {/*          </a>*/}
+          {/*        </li>*/}
+          {/*      ))}*/}
+          {/*    </ul>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
         </div>
       </footer>
     </Section>
