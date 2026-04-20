@@ -21,6 +21,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const emailRegex =
   /^(?=.{1,254}$)(?=.{1,64}@)(?!.*\.\.)[A-Za-z0-9._%+-]+@(?!-)(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$/;
 
+const SERVICE_OPTIONS: { value: string; label: string }[] = [
+  { value: "peritoneal_dialysis_(CADP)", label: "Peritonealdialyse (CAPD)" },
+  { value: "basic_care", label: "Grundpflege" },
+  { value: "treatment_care", label: "Behandlungspflege" },
+  { value: "domestic_help", label: "Hauswirtschaftliche Leistungen" },
+  { value: "respite_care", label: "Verhinderungspflege" },
+  { value: "other_services", label: "Weitere Leistungen" },
+];
+
 interface ContactFormValues {
   firstName: string;
   lastName: string;
@@ -200,70 +209,44 @@ const ContactForm = () => {
                         errors.service ? "service-error" : undefined
                       }
                     >
-                      <SelectValue
-                        placeholder={
-                          errors.service
-                            ? "Service erforderlich"
-                            : "Wählen Sie einen Dienst aus"
-                        }
-                        // className={
-                        //   errors.service
-                        //     ? "data-placeholder:text-destructive"
-                        //     : "text-orange-400"
-                        // }
-                      />
+                      {!field.value && (
+                        <SelectValue
+                          placeholder={
+                            <span>
+                              {errors.service
+                                ? "Service erforderlich"
+                                : "Wählen Sie einen Dienst aus"}
+                            </span>
+                          }
+                        />
+                      )}
+                      {SERVICE_OPTIONS.map((o) => (
+                        <span
+                          key={o.value}
+                          className={`truncate ${
+                            field.value === o.value ? "block" : "hidden"
+                          }`}
+                        >
+                          {o.label}
+                        </span>
+                      ))}
                     </SelectTrigger>
                     <SelectContent position={"popper"}>
                       <SelectGroup>
-                        <SelectLabel>Wählen Sie einen Dienst aus</SelectLabel>
-                        <SelectItem
-                          value={"peritoneal_dialysis_(CADP)"}
-                          className={
-                            "focus:bg-secondary/20 focus:text-accent-foreground"
-                          }
-                        >
-                          Peritonealdialyse (CAPD)
-                        </SelectItem>
-                        <SelectItem
-                          value={"basic_care"}
-                          className={
-                            "focus:bg-secondary/20 focus:text-accent-foreground"
-                          }
-                        >
-                          Grundpflege
-                        </SelectItem>
-                        <SelectItem
-                          value={"treatment_care"}
-                          className={
-                            "focus:bg-secondary/20 focus:text-accent-foreground"
-                          }
-                        >
-                          Behandlungspflege
-                        </SelectItem>
-                        <SelectItem
-                          value={"domestic_help"}
-                          className={
-                            "focus:bg-secondary/20 focus:text-accent-foreground"
-                          }
-                        >
-                          Hauswirtschaftliche Leistungen
-                        </SelectItem>
-                        <SelectItem
-                          value={"respite_care"}
-                          className={
-                            "focus:bg-secondary/20 focus:text-accent-foreground"
-                          }
-                        >
-                          Verhinderungspflege
-                        </SelectItem>
-                        <SelectItem
-                          value={"other_services"}
-                          className={
-                            "focus:bg-secondary/20 focus:text-accent-foreground"
-                          }
-                        >
-                          Weitere Leistungen
-                        </SelectItem>
+                        <SelectLabel>
+                          <span>Wählen Sie einen Dienst aus</span>
+                        </SelectLabel>
+                        {SERVICE_OPTIONS.map((option) => (
+                          <SelectItem
+                            key={option.value}
+                            value={option.value}
+                            className={
+                              "focus:bg-secondary/20 focus:text-accent-foreground"
+                            }
+                          >
+                            <span>{option.label}</span>
+                          </SelectItem>
+                        ))}
                       </SelectGroup>
                     </SelectContent>
                   </Select>
