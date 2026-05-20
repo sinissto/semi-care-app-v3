@@ -13,9 +13,15 @@ const Chyron = () => {
 
   return (
     <Section sectionClassName={"my-0 lg:my-0"} childClassName={"mt-0"}>
-      <div className={"flex items-center justify-between p-3.75 shadow-chyron"}>
+      <div
+        className={
+          "flex flex-col gap-2.75 sm:gap-0 sm:flex-row sm:items-center sm:justify-between p-3.75 shadow-chyron"
+        }
+      >
         {/* Tel */}
-        <div className={"flex flex-row items-center gap-2.5"}>
+        <div
+          className={"flex flex-row items-center justify-center xs:jus gap-2.5"}
+        >
           {/* Icon Phone */}
           <ChyronIcon>
             <FaPhoneVolume className={"rotate-45 text-white"} />
@@ -43,7 +49,7 @@ const Chyron = () => {
         {/* Email  */}
         <div
           className={
-            "flex-1 flex items-center justify-center md:flex-0 md:justify-normal gap-5.5"
+            "flex items-center justify-center lg:flex-0 md:justify-normal gap-5.5"
           }
         >
           <div className={"hidden lg:flex"}>
