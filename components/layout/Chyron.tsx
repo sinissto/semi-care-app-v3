@@ -15,7 +15,7 @@ const Chyron = () => {
     <Section sectionClassName={"my-0 lg:my-0"} childClassName={"mt-0"}>
       <div className={"flex items-center justify-between p-3.75 shadow-chyron"}>
         {/* Tel */}
-        <div className={"hidden md:flex items-center gap-2.5"}>
+        <div className={"flex flex-row items-center gap-2.5"}>
           {/* Icon Phone */}
           <ChyronIcon>
             <FaPhoneVolume className={"rotate-45 text-white"} />
@@ -23,13 +23,17 @@ const Chyron = () => {
           {/* Text and phone */}
           <p
             className={
-              "text-gray-primary text-[14px]/[24px] flex items-center "
+              "text-gray-primary text-[16px]/[24px] flex items-center "
             }
           >
-            <span>Für eine kostenlose Beratung:</span>
+            <span className={"hidden lg:flex"}>
+              Für eine kostenlose Beratung:
+            </span>
             <a
               href={`tel:${phone}`}
-              className={"ml-0.75 font-semibold hover:text-primary"}
+              className={
+                "text-[18px]/[18px] ml-0.75 font-semibold hover:text-primary"
+              }
             >
               {phone}
             </a>
@@ -39,10 +43,10 @@ const Chyron = () => {
         {/* Email  */}
         <div
           className={
-            "flex-1 flex items-center justify-between md:flex-0 md:justify-normal  gap-5.5"
+            "flex-1 flex items-center justify-center md:flex-0 md:justify-normal gap-5.5"
           }
         >
-          <div className={"hidden md:flex"}>
+          <div className={"hidden lg:flex"}>
             <div className={"flex items-center gap-2.5 min-w-0"}>
               <ChyronIcon>
                 <FaEnvelope className={"text-white size-3.5 shrink-0"} />
@@ -51,7 +55,7 @@ const Chyron = () => {
                 <a
                   href={`mailto:${email}`}
                   className={
-                    "text-[14px]/[18px] font-semibold hover:text-primary whitespace-nowrap"
+                    "text-[18px]/[18px] font-semibold hover:text-primary whitespace-nowrap"
                   }
                 >
                   {email}
@@ -60,14 +64,15 @@ const Chyron = () => {
             </div>
           </div>
 
-          <div className={"flex md:hidden"}>
+          {/* Mobile Phone */}
+          <div className={"flex lg:hidden"}>
             <div className={"flex items-center gap-2.5 min-w-0"}>
               <ChyronIcon>
                 <FaMobileScreenButton
                   className={"text-white size-4 shrink-0"}
                 />
               </ChyronIcon>
-              <p className={"text-gray-primary text-[14px]/[24px]"}>
+              <p className={"text-gray-primary"}>
                 <a
                   href={`tel:${mobile}`}
                   className={
